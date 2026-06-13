@@ -8,9 +8,9 @@ export default defineConfig({
 	site: 'https://meridiannotes.vercel.app',
 	integrations: [
 		starlight({
-			title: 'Catatan LP DLMM',
+			title: 'Catatan LP DLMM Meteora',
 			description:
-				'Catatan publik belajar likuiditas DLMM, memecoin, dan psikologi trading. Konsep, tips, dan pelajaran — bukan saran finansial.',
+				'Catatan publik belajar likuiditas DLMM Meteora di Solana, memecoin, dan psikologi trading. Konsep, tips, dan pelajaran — bukan saran finansial.',
 			defaultLocale: 'root',
 			locales: {
 				root: { label: 'Bahasa Indonesia', lang: 'id' },
@@ -31,6 +31,7 @@ export default defineConfig({
 					items: [
 						{ label: 'Apa itu DLMM & Bin', slug: 'dasar/dlmm-dan-bin' },
 						{ label: 'Range, In-Range vs OOR', slug: 'dasar/range-dan-oor' },
+						{ label: 'Fitur Khas DLMM Meteora', slug: 'dasar/fitur-meteora' },
 					],
 				},
 				{
