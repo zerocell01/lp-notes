@@ -4,8 +4,8 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
-	// Ganti dengan domain Vercel final kamu (mis. https://lp-notes.vercel.app)
-	site: 'https://lp-notes.vercel.app',
+	// Domain final situs (untuk sitemap & SEO)
+	site: 'https://meridiannotes.vercel.app',
 	integrations: [
 		starlight({
 			title: 'Catatan LP DLMM',
@@ -16,8 +16,7 @@ export default defineConfig({
 				root: { label: 'Bahasa Indonesia', lang: 'id' },
 			},
 			social: [
-				// Ganti href ini dengan repo GitHub kamu setelah push:
-				{ icon: 'github', label: 'GitHub', href: 'https://github.com/' },
+				{ icon: 'github', label: 'GitHub', href: 'https://github.com/zerocell01/lp-notes' },
 			],
 			sidebar: [
 				{
