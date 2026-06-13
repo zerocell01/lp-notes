@@ -14,25 +14,21 @@ hero:
       icon: information
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { CardGrid, LinkCard } from '@astrojs/starlight/components';
 
 ## Apa ini?
 
 Kumpulan catatan dari belajar jadi penyedia likuiditas (LP) di pool **DLMM Meteora** (Dynamic Liquidity Market Maker) di blockchain Solana. Isinya konsep, pelajaran, dan tips yang aku rangkum sepanjang jalan — supaya orang lain (dan aku sendiri di masa depan) bisa paham fondasinya tanpa harus mulai dari nol.
 
-<CardGrid stagger>
-	<Card title="Dasar DLMM" icon="open-book">
-		Apa itu bin, range, dan kenapa likuiditas terkonsentrasi mengubah cara fee dihasilkan.
-	</Card>
-	<Card title="Volatilitas & Range" icon="random">
-		Cara mengukur goyangan harga dengan ATR dan menyesuaikan lebar range biar tahan banting.
-	</Card>
-	<Card title="Fee & Pool" icon="setting">
-		Kenapa fee yield itu soal turnover (volume ÷ TVL), bukan market cap yang gede.
-	</Card>
-	<Card title="Psikologi Trading" icon="heart">
-		Pelajaran terpenting: sabar itu edge. Kapan menahan posisi, kapan memotong.
-	</Card>
+## Mulai dari mana?
+
+<CardGrid>
+	<LinkCard title="Dasar DLMM" href="/dasar/dlmm-dan-bin/" description="Apa itu bin, range, dan kenapa likuiditas terkonsentrasi mengubah cara fee dihasilkan." />
+	<LinkCard title="Fitur Khas Meteora" href="/dasar/fitur-meteora/" description="Spot, Curve, Bid-Ask, dynamic fee, dan bin step yang membedakan Meteora." />
+	<LinkCard title="Volatilitas & Range" href="/volatilitas/atr/" description="Mengukur goyangan harga dengan ATR dan menyesuaikan lebar range biar tahan banting." />
+	<LinkCard title="Fee & Pemilihan Pool" href="/fee/volume-tvl/" description="Kenapa fee yield itu soal turnover (volume ÷ TVL), bukan market cap yang gede." />
+	<LinkCard title="Psikologi Trading" href="/psikologi/sabar/" description="Pelajaran terpenting: sabar itu edge. Kapan menahan posisi, kapan memotong." />
+	<LinkCard title="Tips Singkat" href="/tips/memilih-pool/" description="Catatan cepat saat memilih pool dan mengelola posisi yang sudah berjalan." />
 </CardGrid>
 
 :::caution[Bukan saran finansial]

@@ -32,6 +32,7 @@ export default defineConfig({
 						{ label: 'Apa itu DLMM & Bin', slug: 'dasar/dlmm-dan-bin' },
 						{ label: 'Range, In-Range vs OOR', slug: 'dasar/range-dan-oor' },
 						{ label: 'Fitur Khas DLMM Meteora', slug: 'dasar/fitur-meteora' },
+						{ label: 'Impermanent Loss di DLMM', slug: 'dasar/impermanent-loss' },
 					],
 				},
 				{
@@ -58,6 +59,7 @@ export default defineConfig({
 					label: 'Tips Singkat',
 					items: [{ autogenerate: { directory: 'tips' } }],
 				},
+				{ label: 'Glossary Istilah', slug: 'glossary' },
 			],
 		}),
 	],
