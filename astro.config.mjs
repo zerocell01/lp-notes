@@ -9,6 +9,7 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'Catatan LP DLMM Meteora',
+			customCss: ['./src/styles/custom.css'],
 			description:
 				'Catatan publik belajar likuiditas DLMM Meteora di Solana, memecoin, dan psikologi trading. Konsep, tips, dan pelajaran — bukan saran finansial.',
 			defaultLocale: 'root',
