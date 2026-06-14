@@ -60,6 +60,7 @@ export default defineConfig({
 					items: [
 						{ label: 'Sabar: Edge yang Sering Dilupakan', slug: 'psikologi/sabar' },
 						{ label: 'Kapan Hold, Kapan Cut', slug: 'psikologi/hold-vs-cut' },
+						{ label: 'Kapan LP Menang vs Kalah', slug: 'psikologi/kapan-lp-menang' },
 					],
 				},
 				{
