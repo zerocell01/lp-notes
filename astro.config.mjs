@@ -44,6 +44,7 @@ export default defineConfig({
 						{ label: 'Lebar Range Mengikuti Volatilitas', slug: 'volatilitas/lebar-range' },
 						{ label: 'RSI: Cara Baca & Konfigurasi', slug: 'volatilitas/rsi' },
 						{ label: 'Supertrend: Pengukur Arah Tren', slug: 'volatilitas/supertrend' },
+						{ label: 'Bollinger Bands: Pita Volatilitas', slug: 'volatilitas/bollinger' },
 					],
 				},
 				{
