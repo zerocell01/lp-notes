@@ -128,7 +128,7 @@ Setelah wizard, buka `.env` dan atur bagian provider sesuai pilihanmu:
 
 Tambahkan / pastikan baris ini ada di `.env`:
 
-```env
+```ini
 LLM_BASE_URL=https://openrouter.ai/api/v1
 OPENROUTER_API_KEY=sk-or-...your-key...
 LLM_MODEL=openrouter/auto
@@ -147,7 +147,7 @@ tmux new-session -d -s ninerouter '9router start'
 
 Lalu di `.env` cukup set model-nya (9Router nggak wajib API key lokal):
 
-```env
+```ini
 # LLM_BASE_URL dibiarkan kosong → default ke 9Router lokal
 LLM_MODEL=kr/claude-sonnet-4.5
 ```
