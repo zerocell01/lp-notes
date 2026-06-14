@@ -67,6 +67,7 @@ export default defineConfig({
 					items: [
 						{ label: 'Install Hermes Agent di VPS', slug: 'operator/install-hermes-vps' },
 						{ label: 'Install Meridian (Agent LP) di VPS', slug: 'operator/install-meridian-vps' },
+						{ label: 'Troubleshooting Operator', slug: 'operator/troubleshooting' },
 					],
 				},
 				{
