@@ -29,7 +29,24 @@ Kamu nggak mau model yang sama yang mengeksekusi trading juga yang kamu mintai t
 git --version
 ```
 
-Kalau muncul nomor versi, aman. Python, Node.js, dan tetek bengek lain **diurus otomatis** sama installer — kamu nggak perlu pasang apa-apa lagi.
+Kalau muncul nomor versi (mis. `git version 2.40.1`), aman — lanjut.
+
+**Kalau muncul `command not found`,** berarti git belum ada. Install dulu sesuai jenis VPS-mu:
+
+```bash
+# Ubuntu / Debian (paling umum)
+sudo apt update && sudo apt install -y git
+
+# CentOS / RHEL / Rocky / AlmaLinux
+sudo dnf install -y git      # atau: sudo yum install -y git
+
+# Fedora
+sudo dnf install -y git
+```
+
+Habis install, cek lagi `git --version` buat memastikan sudah masuk.
+
+Python, Node.js, dan tetek bengek lain **diurus otomatis** sama installer — kamu nggak perlu pasang apa-apa lagi.
 
 ---
 
