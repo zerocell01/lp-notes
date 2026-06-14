@@ -46,6 +46,7 @@ export default defineConfig({
 						{ label: 'Supertrend: Pengukur Arah Tren', slug: 'volatilitas/supertrend' },
 						{ label: 'Bollinger Bands: Pita Volatilitas', slug: 'volatilitas/bollinger' },
 						{ label: 'Fibonacci: Support & Resistance', slug: 'volatilitas/fibonacci' },
+						{ label: 'Cheat Sheet: Membaca Laporan Posisi', slug: 'volatilitas/cheat-sheet' },
 					],
 				},
 				{
