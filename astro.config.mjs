@@ -24,6 +24,7 @@ export default defineConfig({
 					label: 'Mulai di Sini',
 					items: [
 						{ label: 'Tentang Catatan Ini', slug: 'mulai/tentang' },
+						{ label: 'LP Manual vs LP dengan Agent', slug: 'mulai/lp-manual-vs-agent' },
 						{ label: 'Disclaimer', slug: 'mulai/disclaimer' },
 					],
 				},

@@ -3,7 +3,7 @@ title: Catatan LP DLMM
 description: Catatan publik belajar likuiditas DLMM, memecoin, dan psikologi trading. Konsep, tips, dan pelajaran nyata.
 template: splash
 hero:
-  tagline: Catatan publik dari perjalanan belajar likuiditas DLMM Meteora di Solana, memecoin, dan psikologi trading. Fokus ke "kenapa"-nya, bukan angka rahasia.
+  tagline: Catatan publik belajar likuiditas DLMM Meteora di Solana — dijalankan lewat agent otonom (Meridian) yang mengandalkan model LLM, bukan LP manual. Fokus ke "kenapa"-nya, bukan angka rahasia.
   actions:
     - text: Mulai dari Dasar
       link: /dasar/dlmm-dan-bin/
@@ -18,11 +18,12 @@ import { CardGrid, LinkCard } from '@astrojs/starlight/components';
 
 ## Apa ini?
 
-Kumpulan catatan dari belajar jadi penyedia likuiditas (LP) di pool **DLMM Meteora** (Dynamic Liquidity Market Maker) di blockchain Solana. Isinya konsep, pelajaran, dan tips yang aku rangkum sepanjang jalan — supaya orang lain (dan aku sendiri di masa depan) bisa paham fondasinya tanpa harus mulai dari nol.
+Kumpulan catatan dari belajar jadi penyedia likuiditas (LP) di pool **DLMM Meteora** (Dynamic Liquidity Market Maker) di blockchain Solana. Bedanya: LP-nya **tidak dijalankan manual**, tapi lewat **agent otonom** (Meridian) yang screening, deploy, memantau, dan menutup posisi sendiri — dengan **model LLM** sebagai otak pengambil keputusan. Isinya konsep, pelajaran, dan tips yang aku rangkum sepanjang jalan — supaya orang lain (dan aku sendiri di masa depan) bisa paham fondasinya tanpa harus mulai dari nol.
 
 ## Mulai dari mana?
 
 <CardGrid>
+	<LinkCard title="LP Manual vs LP dengan Agent" href="/mulai/lp-manual-vs-agent/" description="Kenapa menjalankan LP lewat agent LLM beda rasanya dari LP manual: keputusan, kecepatan, dan jenis kesalahannya." />
 	<LinkCard title="Dasar DLMM" href="/dasar/dlmm-dan-bin/" description="Apa itu bin, range, dan kenapa likuiditas terkonsentrasi mengubah cara fee dihasilkan." />
 	<LinkCard title="Fitur Khas Meteora" href="/dasar/fitur-meteora/" description="Spot, Curve, Bid-Ask, dynamic fee, dan bin step yang membedakan Meteora." />
 	<LinkCard title="Volatilitas & Range" href="/volatilitas/atr/" description="Mengukur goyangan harga dengan ATR dan menyesuaikan lebar range biar tahan banting." />

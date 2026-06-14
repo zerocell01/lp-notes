@@ -5,6 +5,10 @@ description: Kenapa catatan ini ada dan untuk siapa.
 
 Ini catatan publik dari perjalanan belajar jadi penyedia likuiditas (LP) di pool **DLMM** (Dynamic Liquidity Market Maker), terutama untuk token memecoin yang volatil.
 
+Bedanya dari kebanyakan catatan LP: di sini LP-nya **tidak dijalankan manual**. Aku menjalankannya lewat **agent otonom** (namanya Meridian) yang screening pool, deploy, memantau, dan menutup posisi sendiri — dengan **model LLM** sebagai otak pengambil keputusan. Jadi banyak pelajaran di sini datang dari mengamati, mengoreksi, dan menata ulang *cara berpikir si agent*, bukan dari klik manual di aplikasi.
+
+Kalau kamu LP manual, konsep dasarnya tetap sama dan tetap berguna. Tapi sebagian catatan akan menyinggung hal yang khusus muncul saat LP dijalankan oleh agent — lihat [LP Manual vs LP dengan Agent](/mulai/lp-manual-vs-agent/).
+
 ## Kenapa ditulis
 
 Belajar LP itu penuh istilah dan jebakan. Banyak yang baru kelihatan setelah kena sendiri. Aku tulis ulang pelajaran-pelajaran itu dengan bahasa sederhana — supaya:
@@ -18,6 +22,7 @@ Belajar LP itu penuh istilah dan jebakan. Banyak yang baru kelihatan setelah ken
 - **Konsep**: cara kerja DLMM, bin, range, fee
 - **Cara berpikir**: gimana mengukur volatilitas, menilai pool, baca risiko
 - **Psikologi**: pelajaran soal sabar dan disiplin — bagian yang paling sering bikin rugi
+- **LP dengan agent**: kenapa menjalankan LP lewat agent LLM beda rasanya dari LP manual
 - **Tips singkat**: catatan kecil yang berguna
 
 ## Apa yang TIDAK ada di sini
