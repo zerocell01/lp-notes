@@ -45,6 +45,7 @@ export default defineConfig({
 						{ label: 'RSI: Cara Baca & Konfigurasi', slug: 'volatilitas/rsi' },
 						{ label: 'Supertrend: Pengukur Arah Tren', slug: 'volatilitas/supertrend' },
 						{ label: 'Bollinger Bands: Pita Volatilitas', slug: 'volatilitas/bollinger' },
+						{ label: 'Fibonacci: Support & Resistance', slug: 'volatilitas/fibonacci' },
 					],
 				},
 				{
