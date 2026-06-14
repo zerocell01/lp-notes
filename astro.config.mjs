@@ -58,6 +58,12 @@ export default defineConfig({
 					],
 				},
 				{
+					label: 'Operator & Otomasi',
+					items: [
+						{ label: 'Install Hermes Agent di VPS', slug: 'operator/install-hermes-vps' },
+					],
+				},
+				{
 					label: 'Tips Singkat',
 					items: [{ autogenerate: { directory: 'tips' } }],
 				},
