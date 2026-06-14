@@ -139,24 +139,108 @@ LLM_MODEL=openrouter/auto
 
 ### Kalau pilih 9Router
 
-9Router jalan lokal dan **tidak butuh** `LLM_BASE_URL` di-set (default kode sudah ke `localhost:20128`). Tapi kamu harus **menjalankan proses 9Router** dulu. Cara umum (di tmux biar tetap hidup):
+9Router itu **gateway lokal** yang jalan di VPS-mu. Meridian secara default sudah mengarah ke sana (`http://localhost:20128/v1`), jadi `LLM_BASE_URL` di `.env` **dibiarkan kosong**. Yang perlu kamu lakukan: pasang dan nyalakan 9Router-nya, lalu colok minimal satu provider. Ikuti pelan-pelan.
+
+#### 9a. Install 9Router
+
+9Router dipasang global lewat npm (Node.js sudah ada dari langkah sebelumnya):
 
 ```bash
-tmux new-session -d -s ninerouter '9router start'
+npm install -g 9router
 ```
 
-Lalu di `.env` cukup set model-nya (9Router nggak wajib API key lokal):
+#### 9b. Nyalakan 9Router (biar tetap hidup pakai tmux)
+
+Karena ini proses yang harus terus jalan, kita pakai tmux supaya nggak mati saat SSH ditutup:
+
+```bash
+tmux new-session -d -s ninerouter '9router'
+```
+
+Penjelasan: `tmux new-session -d -s ninerouter` bikin sesi background bernama `ninerouter`, lalu `'9router'` adalah perintah yang dijalankan di dalamnya.
+
+Cek 9Router sudah hidup:
+
+```bash
+curl -s http://localhost:20128/api/health
+```
+
+Kalau balas `{"ok":true}`, berarti jalan. 🎉
+
+Mau lihat isi sesi tmux-nya? `tmux attach -t ninerouter` (keluar lagi tanpa mematikan: tekan `Ctrl+B` lalu `D`).
+
+#### 9c. Colok provider (minimal satu)
+
+9Router cuma router — dia butuh setidaknya satu provider buat diteruskan. Ada **provider gratis** yang nggak perlu daftar (mis. Kiro, OpenCode Free) dan provider berbayar pakai API key (OpenRouter, GLM, dll).
+
+Cara paling gampang lewat **dashboard**:
+
+1. Buka dashboard 9Router di browser: `http://localhost:20128`
+2. Login. Password-nya ada di file ini (jalankan di VPS, copy hasilnya):
+
+   ```bash
+   cat ~/.9router/auth/cli-secret
+   ```
+3. Masuk menu **Providers**, pilih satu, ikuti langkah connect-nya (provider OAuth seperti Kiro tinggal authorize; provider API key tinggal tempel key).
+
+:::tip[Buka dashboard dari laptop]
+Dashboard jalan di `localhost` VPS, jadi dari laptop kamu perlu **SSH tunnel**. Di laptop, jalankan:
+
+```bash
+ssh -L 20128:localhost:20128 root@ALAMAT_IP_VPS
+```
+
+Biarkan terminal itu terbuka, lalu buka `http://localhost:20128` di browser laptop. Itu "menembus" ke dashboard di VPS.
+:::
+
+#### 9d. Cek model apa saja yang tersedia
+
+Setelah provider tercolok, lihat daftar model yang bisa dipakai:
+
+```bash
+curl -s http://localhost:20128/v1/models -o /tmp/models.json
+```
+
+Lalu lihat isinya (jangan di-pipe langsung ke python — tulis ke file dulu, baru baca, biar aman):
+
+```bash
+python3 -c "import json; d=json.load(open('/tmp/models.json')); [print(m['id']) for m in d['data']]"
+```
+
+Nama model di 9Router pakai awalan provider, contohnya:
+- `kr/claude-sonnet-4.5`, `kr/claude-opus-4.8` (provider subscription utama)
+- `cmc/...` (provider sekunder: DeepSeek, GLM, MiniMax, dll)
+
+Catatan: katalog model berubah-ubah, jadi **selalu cek `/v1/models`** daripada menebak nama model.
+
+#### 9e. Set model di `.env` Meridian
+
+Terakhir, di `.env` Meridian cukup set nama model (base URL dibiarkan default):
 
 ```ini
-# LLM_BASE_URL dibiarkan kosong → default ke 9Router lokal
+# LLM_BASE_URL dibiarkan kosong → otomatis ke 9Router lokal (localhost:20128)
 LLM_MODEL=kr/claude-sonnet-4.5
 ```
 
-:::tip[Cara gampang ingat bedanya]
-- **OpenRouter** = ubah `LLM_BASE_URL` ke URL openrouter + isi `OPENROUTER_API_KEY`.
-- **9Router** = biarkan `LLM_BASE_URL` kosong, tapi jalankan proses `9router start` dulu.
+Pilih nama model dari daftar `/v1/models` di langkah 9d. Untuk agent yang banyak pakai tool seperti Meridian, model `kr/claude-*` (Claude) lebih andal soal pemanggilan tool dibanding model GPT.
 
-Kalau Meridian error "connection refused" ke `localhost:20128`, itu artinya dia nyari 9Router tapi 9Router-nya belum jalan — entah jalankan 9Router, atau pindah ke OpenRouter dengan set `LLM_BASE_URL`.
+#### Ringkasan langkah 9Router
+
+```bash
+npm install -g 9router                                  # pasang
+tmux new-session -d -s ninerouter '9router'             # nyalakan
+curl -s http://localhost:20128/api/health               # cek hidup → {"ok":true}
+cat ~/.9router/auth/cli-secret                           # password dashboard
+# buka http://localhost:20128 → Providers → colok 1 provider
+curl -s http://localhost:20128/v1/models -o /tmp/models.json   # lihat model
+# set LLM_MODEL di .env Meridian, LLM_BASE_URL biarkan kosong
+```
+
+:::tip[Cara gampang ingat bedanya]
+- **OpenRouter** = ubah `LLM_BASE_URL` ke URL openrouter + isi `OPENROUTER_API_KEY`. Selesai, nggak ada proses tambahan.
+- **9Router** = biarkan `LLM_BASE_URL` kosong, tapi pasang + nyalakan `9router` dulu DAN colok minimal satu provider lewat dashboard.
+
+Kalau Meridian error **"connection refused"** ke `localhost:20128`, artinya dia nyari 9Router tapi 9Router-nya belum jalan — jalankan 9Router, atau pindah ke OpenRouter dengan set `LLM_BASE_URL`.
 :::
 
 ### Model per-peran (opsional)
