@@ -42,6 +42,7 @@ export default defineConfig({
 					items: [
 						{ label: 'ATR: Mengukur Goyangan Harga', slug: 'volatilitas/atr' },
 						{ label: 'Lebar Range Mengikuti Volatilitas', slug: 'volatilitas/lebar-range' },
+						{ label: 'RSI: Cara Baca & Konfigurasi', slug: 'volatilitas/rsi' },
 					],
 				},
 				{
