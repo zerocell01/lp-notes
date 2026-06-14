@@ -11,10 +11,10 @@ Catatan ini **bukan saran finansial, investasi, atau perdagangan.** Ini murni ma
 
 Menyediakan likuiditas untuk token volatil (terutama memecoin) bisa membuat kamu kehilangan sebagian besar atau seluruh modal. Beberapa risiko utama:
 
-- **Impermanent loss (IL)** — harga bergerak, nilai posisimu bisa lebih kecil daripada kalau cuma hold.
-- **Rug pull / scam** — banyak token baru dirancang untuk menipu.
-- **Likuiditas tipis** — harga bisa anjlok cepat saat keluar.
-- **Smart contract** — bug atau eksploit bisa menghabiskan dana.
+- **Impermanent loss (IL)** - harga bergerak, nilai posisimu bisa lebih kecil daripada kalau cuma hold.
+- **Rug pull / scam** - banyak token baru dirancang untuk menipu.
+- **Likuiditas tipis** - harga bisa anjlok cepat saat keluar.
+- **Smart contract** - bug atau eksploit bisa menghabiskan dana.
 
 ## Batasan catatan ini
 
@@ -26,7 +26,7 @@ Menyediakan likuiditas untuk token volatil (terutama memecoin) bisa membuat kamu
 
 1. Jangan pakai uang yang kamu tidak siap kehilangan.
 2. Mulai kecil sampai benar-benar paham.
-3. Verifikasi sendiri, jangan percaya buta — termasuk catatan ini.
+3. Verifikasi sendiri, jangan percaya buta - termasuk catatan ini.
 4. Kalau bingung, jangan masuk.
 
 Tetap kritis. Tujuan catatan ini bikin kamu **lebih paham**, bukan bikin kamu yakin.

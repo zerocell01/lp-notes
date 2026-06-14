@@ -5,7 +5,7 @@ sidebar:
   order: 1
 ---
 
-Catatan cepat saat menilai apakah sebuah pool layak dimasuki. Bukan aturan baku — sekadar hal yang sering terbukti berguna.
+Catatan cepat saat menilai apakah sebuah pool layak dimasuki. Bukan aturan baku - sekadar hal yang sering terbukti berguna.
 
 ## Lihat turnover, bukan ukuran
 

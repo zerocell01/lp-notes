@@ -1,6 +1,6 @@
 ---
 title: Fitur Khas DLMM Meteora
-description: Hal-hal yang membedakan DLMM Meteora dari AMM biasa — strategi likuiditas, dynamic fee, dan bin step.
+description: Hal-hal yang membedakan DLMM Meteora dari AMM biasa - strategi likuiditas, dynamic fee, dan bin step.
 ---
 
 DLMM (Dynamic Liquidity Market Maker) adalah produk likuiditas terkonsentrasi dari **Meteora** di Solana. Selain konsep [bin dan range](/dasar/dlmm-dan-bin/) yang umum, Meteora punya beberapa ciri khas yang penting dipahami sebelum jadi LP.
@@ -9,9 +9,9 @@ DLMM (Dynamic Liquidity Market Maker) adalah produk likuiditas terkonsentrasi da
 
 Saat membuka posisi, Meteora memberi pilihan **bagaimana modal disebar** ke dalam bin:
 
-- **Spot** — likuiditas dibagi rata ke semua bin dalam range. Serbaguna, cocok untuk kebanyakan kondisi. Pilihan default yang aman buat pemula.
-- **Curve** — likuiditas dipadatkan di tengah range. Cocok saat kamu yakin harga bakal banyak bergerak di sekitar harga sekarang — fee lebih padat selama harga "betah" di tengah.
-- **Bid-Ask** — kebalikan dari Curve: likuiditas dipadatkan di ujung-ujung range. Cocok untuk strategi DCA atau menangkap volatilitas, karena modal menunggu di harga jauh dari titik sekarang.
+- **Spot** - likuiditas dibagi rata ke semua bin dalam range. Serbaguna, cocok untuk kebanyakan kondisi. Pilihan default yang aman buat pemula.
+- **Curve** - likuiditas dipadatkan di tengah range. Cocok saat kamu yakin harga bakal banyak bergerak di sekitar harga sekarang - fee lebih padat selama harga "betah" di tengah.
+- **Bid-Ask** - kebalikan dari Curve: likuiditas dipadatkan di ujung-ujung range. Cocok untuk strategi DCA atau menangkap volatilitas, karena modal menunggu di harga jauh dari titik sekarang.
 
 Pemilihan strategi mengubah di mana fee paling banyak dipanen dan bagaimana posisi bereaksi terhadap pergerakan harga.
 
@@ -35,15 +35,15 @@ Ini berbeda dari AMM klasik yang fee-nya flat. Buat LP memecoin, dynamic fee bis
 
 ## Fee diklaim terpisah
 
-Di DLMM Meteora, fee yang kamu hasilkan **tidak otomatis di-reinvest** — dia menumpuk sebagai fee yang bisa diklaim (unclaimed). Ini relevan buat keputusan [hold vs cut](/psikologi/hold-vs-cut/): fee yang belum diklaim adalah nilai nyata yang sudah kamu kantongi, walau posisinya sendiri lagi merah sementara.
+Di DLMM Meteora, fee yang kamu hasilkan **tidak otomatis di-reinvest** - dia menumpuk sebagai fee yang bisa diklaim (unclaimed). Ini relevan buat keputusan [hold vs cut](/psikologi/hold-vs-cut/): fee yang belum diklaim adalah nilai nyata yang sudah kamu kantongi, walau posisinya sendiri lagi merah sementara.
 
 ## Likuiditas satu sisi (single-sided)
 
-Kamu bisa menyetor likuiditas **hanya dengan satu token** (misal cuma SOL), bukan harus pasangan seimbang. Ini memungkinkan strategi seperti menaruh modal di bawah harga sekarang untuk "menangkap" token saat harga turun — pendekatan yang umum dipakai untuk entry bertahap.
+Kamu bisa menyetor likuiditas **hanya dengan satu token** (misal cuma SOL), bukan harus pasangan seimbang. Ini memungkinkan strategi seperti menaruh modal di bawah harga sekarang untuk "menangkap" token saat harga turun - pendekatan yang umum dipakai untuk entry bertahap.
 
 ## Intinya
 
-DLMM Meteora bukan sekadar AMM dengan range. Strategi sebaran (Spot/Curve/Bid-Ask), bin step, dynamic fee, dan likuiditas satu sisi memberi LP banyak kendali — tapi juga banyak keputusan. Paham alat-alat ini dulu sebelum mempertaruhkan modal.
+DLMM Meteora bukan sekadar AMM dengan range. Strategi sebaran (Spot/Curve/Bid-Ask), bin step, dynamic fee, dan likuiditas satu sisi memberi LP banyak kendali - tapi juga banyak keputusan. Paham alat-alat ini dulu sebelum mempertaruhkan modal.
 
 :::note
 Halaman ini menjelaskan fitur publik DLMM Meteora secara umum. Cara persis memanfaatkannya (parameter, threshold, timing) tergantung strategi dan toleransi risiko masing-masing.

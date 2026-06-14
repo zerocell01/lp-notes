@@ -5,13 +5,13 @@ description: Kenapa catatan ini ada dan untuk siapa.
 
 Ini catatan publik dari perjalanan belajar jadi penyedia likuiditas (LP) di pool **DLMM** (Dynamic Liquidity Market Maker), terutama untuk token memecoin yang volatil.
 
-Bedanya dari kebanyakan catatan LP: di sini LP-nya **tidak dijalankan manual**. Aku menjalankannya lewat **agent otonom** (namanya Meridian) yang screening pool, deploy, memantau, dan menutup posisi sendiri — dengan **model LLM** sebagai otak pengambil keputusan. Jadi banyak pelajaran di sini datang dari mengamati, mengoreksi, dan menata ulang *cara berpikir si agent*, bukan dari klik manual di aplikasi.
+Bedanya dari kebanyakan catatan LP: di sini LP-nya **tidak dijalankan manual**. Aku menjalankannya lewat **agent otonom** (namanya Meridian) yang screening pool, deploy, memantau, dan menutup posisi sendiri - dengan **model LLM** sebagai otak pengambil keputusan. Jadi banyak pelajaran di sini datang dari mengamati, mengoreksi, dan menata ulang *cara berpikir si agent*, bukan dari klik manual di aplikasi.
 
-Kalau kamu LP manual, konsep dasarnya tetap sama dan tetap berguna. Tapi sebagian catatan akan menyinggung hal yang khusus muncul saat LP dijalankan oleh agent — lihat [LP Manual vs LP dengan Agent](/mulai/lp-manual-vs-agent/).
+Kalau kamu LP manual, konsep dasarnya tetap sama dan tetap berguna. Tapi sebagian catatan akan menyinggung hal yang khusus muncul saat LP dijalankan oleh agent - lihat [LP Manual vs LP dengan Agent](/mulai/lp-manual-vs-agent/).
 
 ## Kenapa ditulis
 
-Belajar LP itu penuh istilah dan jebakan. Banyak yang baru kelihatan setelah kena sendiri. Aku tulis ulang pelajaran-pelajaran itu dengan bahasa sederhana — supaya:
+Belajar LP itu penuh istilah dan jebakan. Banyak yang baru kelihatan setelah kena sendiri. Aku tulis ulang pelajaran-pelajaran itu dengan bahasa sederhana - supaya:
 
 - Konsepnya nempel (nulis = belajar dua kali)
 - Orang lain yang baru mulai punya titik berangkat
@@ -21,12 +21,12 @@ Belajar LP itu penuh istilah dan jebakan. Banyak yang baru kelihatan setelah ken
 
 - **Konsep**: cara kerja DLMM, bin, range, fee
 - **Cara berpikir**: gimana mengukur volatilitas, menilai pool, baca risiko
-- **Psikologi**: pelajaran soal sabar dan disiplin — bagian yang paling sering bikin rugi
+- **Psikologi**: pelajaran soal sabar dan disiplin - bagian yang paling sering bikin rugi
 - **LP dengan agent**: kenapa menjalankan LP lewat agent LLM beda rasanya dari LP manual
 - **Tips singkat**: catatan kecil yang berguna
 
 ## Apa yang TIDAK ada di sini
 
-Catatan ini sengaja **tidak** memuat angka threshold spesifik, parameter rahasia, atau strategi persis yang aku pakai. Bukan pelit — tapi (1) angka itu sangat tergantung kondisi dan modal masing-masing, dan (2) menyalin setting orang lain mentah-mentah biasanya malah bikin rugi. Yang berharga itu **paham kenapanya**, bukan ngapalin angkanya.
+Catatan ini sengaja **tidak** memuat angka threshold spesifik, parameter rahasia, atau strategi persis yang aku pakai. Bukan pelit - tapi (1) angka itu sangat tergantung kondisi dan modal masing-masing, dan (2) menyalin setting orang lain mentah-mentah biasanya malah bikin rugi. Yang berharga itu **paham kenapanya**, bukan ngapalin angkanya.
 
 Fokusnya: bekali kamu cara berpikir, biar kamu bisa nyetel angkamu sendiri.

@@ -1,17 +1,17 @@
 ---
-title: Bollinger Bands — Pita Volatilitas
-description: Memahami Bollinger Bands di agent LP DLMM — cara membaca zona BB, apa arti %B, dan kenapa "harga nembus band" bukan sinyal beli/jual otomatis.
+title: Bollinger Bands - Pita Volatilitas
+description: Memahami Bollinger Bands di agent LP DLMM - cara membaca zona BB, apa arti %B, dan kenapa "harga nembus band" bukan sinyal beli/jual otomatis.
 ---
 
 Bollinger Bands (BB) sering muncul di laporan posisi sebagai baris `BB`. Indikator ini menggambar **tiga garis** yang membungkus harga seperti pita, dan dipakai untuk menjawab: **harga ini sekarang relatif mahal atau murah dibanding pergerakannya sendiri belakangan?**
 
-## Konsep dasar — tiga garis
+## Konsep dasar - tiga garis
 
 Bollinger Bands terdiri dari:
 
-- **Garis tengah (middle)** — rata-rata harga (moving average) beberapa candle terakhir.
-- **Garis atas (upper)** — middle + sekian kali standar deviasi.
-- **Garis bawah (lower)** — middle − sekian kali standar deviasi.
+- **Garis tengah (middle)** - rata-rata harga (moving average) beberapa candle terakhir.
+- **Garis atas (upper)** - middle + sekian kali standar deviasi.
+- **Garis bawah (lower)** - middle − sekian kali standar deviasi.
 
 Karena atas dan bawah dihitung dari **standar deviasi** (ukuran sebaran), pita ini **melebar saat harga liar** dan **menyempit saat harga tenang**. Itu inti Bollinger: pita itu sendiri sudah mencerminkan volatilitas.
 
@@ -27,11 +27,11 @@ BB  : below lower │ %B 0.04
 
 Zona menunjukkan posisi harga relatif ke pita:
 
-- **`below lower`** — harga di bawah garis bawah. Bergerak turun ekstrem dibanding biasanya.
-- **`above upper`** — harga di atas garis atas. Bergerak naik ekstrem dibanding biasanya.
-- **`upper half`** — di atas garis tengah tapi masih dalam pita (condong kuat).
-- **`lower half`** — di bawah garis tengah tapi masih dalam pita (condong lemah).
-- **`mid`** — pas di sekitar tengah.
+- **`below lower`** - harga di bawah garis bawah. Bergerak turun ekstrem dibanding biasanya.
+- **`above upper`** - harga di atas garis atas. Bergerak naik ekstrem dibanding biasanya.
+- **`upper half`** - di atas garis tengah tapi masih dalam pita (condong kuat).
+- **`lower half`** - di bawah garis tengah tapi masih dalam pita (condong lemah).
+- **`mid`** - pas di sekitar tengah.
 
 ## Apa itu %B?
 
@@ -43,7 +43,7 @@ Zona menunjukkan posisi harga relatif ke pita:
 - **%B < 0** → harga **di bawah** garis bawah (lebih ekstrem dari sekadar menyentuh)
 - **%B > 1** → harga **di atas** garis atas
 
-Jadi `%B 0.04` artinya harga nyaris menempel garis bawah — sangat rendah dalam pita. `%B 0.96` berarti nyaris menyentuh garis atas. %B itu cara baca paling presisi dibanding sekadar label zona.
+Jadi `%B 0.04` artinya harga nyaris menempel garis bawah - sangat rendah dalam pita. `%B 0.96` berarti nyaris menyentuh garis atas. %B itu cara baca paling presisi dibanding sekadar label zona.
 
 ## Jebakan terbesar: "nembus band" ≠ sinyal otomatis
 
@@ -54,9 +54,9 @@ Ini kesalahan paling umum soal Bollinger. Banyak pemula mengira:
 **Itu sering salah.** Ada dua tafsir yang berlawanan, dan keduanya bisa benar tergantung kondisi:
 
 1. **Mean reversion (mantul balik):** harga nembus band → ekstrem → kemungkinan balik ke tengah. Cocok di pasar **sideways/tenang**.
-2. **Breakout (lanjut jalan):** harga nembus band justru tanda **tren kuat** yang baru mulai — saat token lagi pump keras, harga bisa "berjalan di sepanjang garis atas" (band walking) lama sekali tanpa balik.
+2. **Breakout (lanjut jalan):** harga nembus band justru tanda **tren kuat** yang baru mulai - saat token lagi pump keras, harga bisa "berjalan di sepanjang garis atas" (band walking) lama sekali tanpa balik.
 
-Untuk memecoin yang lagi tren kencang, tafsir kedua sering lebih tepat. Makanya **`BB : above upper` saat token pump BUKAN otomatis berarti harus jual** — bisa jadi tren baru mulai. Sebaliknya `below lower` saat dump bukan otomatis "beli murah".
+Untuk memecoin yang lagi tren kencang, tafsir kedua sering lebih tepat. Makanya **`BB : above upper` saat token pump BUKAN otomatis berarti harus jual** - bisa jadi tren baru mulai. Sebaliknya `below lower` saat dump bukan otomatis "beli murah".
 
 ## Preset `bollinger_reversion`
 
@@ -82,8 +82,8 @@ Contoh pembacaan gabungan: `BB above upper` + `RSI tinggi` + Supertrend masih bu
 
 Bollinger umumnya punya dua knob:
 
-- **Periode** — berapa candle dipakai menghitung garis tengah. Pendek = pita reaktif; panjang = pita halus.
-- **Multiplier standar deviasi** — biasanya 2. Lebih besar = pita lebar (harga jarang nembus); lebih kecil = pita sempit (sering nembus).
+- **Periode** - berapa candle dipakai menghitung garis tengah. Pendek = pita reaktif; panjang = pita halus.
+- **Multiplier standar deviasi** - biasanya 2. Lebih besar = pita lebar (harga jarang nembus); lebih kecil = pita sempit (sering nembus).
 
 Plus interval candle (5m, 15m, dst).
 
@@ -93,7 +93,7 @@ Jangan jadikan sentuhan band sebagai perintah. Tanya dulu: pasarnya **sideways**
 
 ## Intinya
 
-Bollinger Bands itu pita yang melebar/menyempit mengikuti volatilitas. Zona (`below lower` … `above upper`) dan **%B** memberi tahu seberapa ekstrem posisi harga dalam pita. Tapi jebakan terbesarnya: **nembus band bukan sinyal beli/jual otomatis** — di tren kuat harga bisa berjalan di sepanjang band. Pakai Bollinger sebagai konteks bersama Supertrend dan RSI, bukan sebagai tombol aksi sendiri.
+Bollinger Bands itu pita yang melebar/menyempit mengikuti volatilitas. Zona (`below lower` … `above upper`) dan **%B** memberi tahu seberapa ekstrem posisi harga dalam pita. Tapi jebakan terbesarnya: **nembus band bukan sinyal beli/jual otomatis** - di tren kuat harga bisa berjalan di sepanjang band. Pakai Bollinger sebagai konteks bersama Supertrend dan RSI, bukan sebagai tombol aksi sendiri.
 
 :::caution[Bukan saran finansial]
 Catatan belajar pribadi untuk edukasi. Bukan ajakan trading. Selalu riset sendiri.

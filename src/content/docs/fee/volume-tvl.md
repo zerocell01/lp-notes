@@ -11,8 +11,8 @@ Salah satu salah paham paling umum: "market cap gede = fee gede." **Salah.** Fee
 Fee yield ≈ Volume transaksi ÷ TVL pool
 ```
 
-- **Volume** — total nilai transaksi yang lewat pool dalam satu periode.
-- **TVL** (Total Value Locked) — total likuiditas yang nyangkut di pool.
+- **Volume** - total nilai transaksi yang lewat pool dalam satu periode.
+- **TVL** (Total Value Locked) - total likuiditas yang nyangkut di pool.
 
 Tiap transaksi bayar fee. Fee itu dibagi ke semua LP sesuai porsi. Jadi yang penting bukan "seberapa besar tokennya", tapi **seberapa sering diperdagangkan relatif terhadap kolam likuiditasnya.**
 
@@ -23,7 +23,7 @@ Bandingkan dua pool:
 - **Pool A**: TVL $1.000.000, volume harian $200.000 → turnover 0,2x
 - **Pool B**: TVL $40.000, volume harian $1.200.000 → turnover 30x
 
-Pool B jauh lebih kecil, tapi **turnover-nya 150x lebih tinggi**. LP di Pool B memanen fee jauh lebih tebal per dolar yang disetor — walaupun "kelihatan" kecil dan mungkin market cap tokennya lebih rendah.
+Pool B jauh lebih kecil, tapi **turnover-nya 150x lebih tinggi**. LP di Pool B memanen fee jauh lebih tebal per dolar yang disetor - walaupun "kelihatan" kecil dan mungkin market cap tokennya lebih rendah.
 
 ## Kenapa mcap menyesatkan
 
@@ -36,7 +36,7 @@ Mcap lebih relevan ke **volatilitas dan dampak harga**, bukan ke yield LP.
 
 ## Tapi hati-hati
 
-Turnover tinggi sering datang bareng **volatilitas tinggi**. Pool kecil yang rame biasanya token liar — fee tebal, tapi risiko OOR dan IL juga besar. Fee bagus tidak otomatis berarti posisi bagus. Selalu timbang dengan risiko (lihat [Hold vs Cut](/psikologi/hold-vs-cut/)).
+Turnover tinggi sering datang bareng **volatilitas tinggi**. Pool kecil yang rame biasanya token liar - fee tebal, tapi risiko OOR dan IL juga besar. Fee bagus tidak otomatis berarti posisi bagus. Selalu timbang dengan risiko (lihat [Hold vs Cut](/psikologi/hold-vs-cut/)).
 
 ## Intinya
 

@@ -3,7 +3,7 @@ title: 'Sabar: Edge yang Sering Dilupakan'
 description: Kenapa kesabaran sering jadi pembeda antara LP yang untung dan rugi.
 ---
 
-Pelajaran terpenting dari semua ini bukan teknis — tapi **psikologis**. Kesabaran sering jadi edge yang menentukan, dan paling sering dilupakan.
+Pelajaran terpenting dari semua ini bukan teknis - tapi **psikologis**. Kesabaran sering jadi edge yang menentukan, dan paling sering dilupakan.
 
 ## Masalahnya: memantau bikin gak sabar
 

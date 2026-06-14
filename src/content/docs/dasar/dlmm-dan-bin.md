@@ -17,15 +17,15 @@ Berbeda dengan AMM lama yang menyebar uangmu ke semua kemungkinan harga (banyak 
 
 ## Kenapa ini penting
 
-Karena modal terkonsentrasi, **fee per dolar yang kamu setor jauh lebih besar** — selama harga tetap di dalam bin yang kamu isi. Ini kekuatan utama DLMM.
+Karena modal terkonsentrasi, **fee per dolar yang kamu setor jauh lebih besar** - selama harga tetap di dalam bin yang kamu isi. Ini kekuatan utama DLMM.
 
 Tapi ada konsekuensinya: kalau harga **keluar** dari bin yang kamu isi, posisimu berhenti menghasilkan fee. Itu yang dibahas di halaman [Range & OOR](/dasar/range-dan-oor/).
 
 ## Istilah dasar
 
-- **Bin** — kantong harga sempit, unit terkecil likuiditas DLMM.
-- **Active bin** — bin tempat harga berada *sekarang*. Hanya bin aktif yang menghasilkan fee.
-- **Bin step** — jarak harga antar bin. Makin kecil = makin presisi, tapi makin banyak bin untuk menutup range yang sama.
+- **Bin** - kantong harga sempit, unit terkecil likuiditas DLMM.
+- **Active bin** - bin tempat harga berada *sekarang*. Hanya bin aktif yang menghasilkan fee.
+- **Bin step** - jarak harga antar bin. Makin kecil = makin presisi, tapi makin banyak bin untuk menutup range yang sama.
 
 ## Intinya
 

@@ -8,7 +8,7 @@ Kamus cepat istilah yang sering muncul di catatan ini dan di dunia LP DLMM.
 ## Likuiditas & Pool
 
 **LP (Liquidity Provider)**
-: Penyedia likuiditas — orang yang menyetor token ke pool agar bisa diperdagangkan, dan dapat fee sebagai imbalan.
+: Penyedia likuiditas - orang yang menyetor token ke pool agar bisa diperdagangkan, dan dapat fee sebagai imbalan.
 
 **DLMM (Dynamic Liquidity Market Maker)**
 : Produk likuiditas terkonsentrasi dari Meteora di Solana, di mana likuiditas ditaruh di rentang harga (bin) tertentu.
@@ -17,7 +17,7 @@ Kamus cepat istilah yang sering muncul di catatan ini dan di dunia LP DLMM.
 : Total nilai likuiditas yang ada di sebuah pool.
 
 **Turnover**
-: Rasio volume transaksi terhadap TVL. Penentu utama fee yield — lihat [Fee = Volume ÷ TVL](/fee/volume-tvl/).
+: Rasio volume transaksi terhadap TVL. Penentu utama fee yield - lihat [Fee = Volume ÷ TVL](/fee/volume-tvl/).
 
 ## Bin & Range
 
@@ -42,7 +42,7 @@ Kamus cepat istilah yang sering muncul di catatan ini dan di dunia LP DLMM.
 : Tiga pola sebaran likuiditas di Meteora. Lihat [Fitur Khas Meteora](/dasar/fitur-meteora/).
 
 **Dynamic fee**
-: Fee yang naik otomatis saat volatilitas tinggi — ciri khas DLMM Meteora.
+: Fee yang naik otomatis saat volatilitas tinggi - ciri khas DLMM Meteora.
 
 **Unclaimed fee**
 : Fee yang sudah kamu hasilkan tapi belum diklaim. Nilai nyata yang sudah dikantongi walau posisi masih merah.
@@ -59,7 +59,7 @@ Kamus cepat istilah yang sering muncul di catatan ini dan di dunia LP DLMM.
 : Ukuran besar goyangan harga (bukan arah). Dasar penentuan lebar range. Lihat [ATR](/volatilitas/atr/).
 
 **ATR%**
-: ATR dibagi harga, jadi persentase — bisa dibandingkan adil antar token.
+: ATR dibagi harga, jadi persentase - bisa dibandingkan adil antar token.
 
 **RSI (Relative Strength Index)**
 : Indikator momentum 0–100. Oversold ekstrem sering memantul, jadi bukan sinyal jual otomatis.

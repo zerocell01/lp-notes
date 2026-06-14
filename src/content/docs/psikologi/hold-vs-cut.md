@@ -16,7 +16,7 @@ Kalau fee > rugi dan masih in-range, posisi itu pada dasarnya masih bekerja untu
 
 ## Jebakan umum: RSI oversold ekstrem
 
-Sering muncul godaan menutup posisi cuma karena indikator seperti **RSI menunjukkan oversold ekstrem**. Tapi RSI ekstrem **sering memantul** — justru kebalikan dari sinyal jual.
+Sering muncul godaan menutup posisi cuma karena indikator seperti **RSI menunjukkan oversold ekstrem**. Tapi RSI ekstrem **sering memantul** - justru kebalikan dari sinyal jual.
 
 Selama posisi masih in-range dan fee > rugi, RSI oversold **sendirian bukan alasan valid** untuk menutup. Jangan biarkan satu indikator memicu panik.
 
@@ -24,14 +24,14 @@ Selama posisi masih in-range dan fee > rugi, RSI oversold **sendirian bukan alas
 
 Tutup posisi ketika ada alasan **struktural**, bukan emosional:
 
-- **OOR berkepanjangan** — harga benar-benar keluar range dan tidak balik; modal nganggur terus.
-- **Volume mati** — turnover pool ambruk; tidak ada lagi fee yang berarti dihasilkan.
-- **Stop-loss tercapai** — kerugian menembus batas yang sudah kamu tetapkan sebelumnya.
-- **Tesis rusak** — alasan kamu masuk sudah tidak berlaku (misal token ternyata bermasalah).
+- **OOR berkepanjangan** - harga benar-benar keluar range dan tidak balik; modal nganggur terus.
+- **Volume mati** - turnover pool ambruk; tidak ada lagi fee yang berarti dihasilkan.
+- **Stop-loss tercapai** - kerugian menembus batas yang sudah kamu tetapkan sebelumnya.
+- **Tesis rusak** - alasan kamu masuk sudah tidak berlaku (misal token ternyata bermasalah).
 
 ## Tentang token yang "tiba-tiba pump"
 
-Hati-hati dengan token lama yang sudah lama sepi lalu tiba-tiba melonjak. Lonjakan seperti itu sering jadi **risiko dump** — naik cepat, lalu jatuh lebih cepat. Momentum yang sudah lewat puncaknya bukan tempat yang aman untuk masuk.
+Hati-hati dengan token lama yang sudah lama sepi lalu tiba-tiba melonjak. Lonjakan seperti itu sering jadi **risiko dump** - naik cepat, lalu jatuh lebih cepat. Momentum yang sudah lewat puncaknya bukan tempat yang aman untuk masuk.
 
 ## Kerangka ringkas
 
@@ -46,4 +46,4 @@ Masih in-range DAN fee > rugi?
 
 ## Intinya
 
-Putuskan aturan keluar saat kepala dingin, lalu ikuti saat panas. Hold kalau sehat (in-range + fee > rugi). Cut kalau ada alasan struktural nyata — bukan cuma karena satu indikator atau perasaan tidak enak.
+Putuskan aturan keluar saat kepala dingin, lalu ikuti saat panas. Hold kalau sehat (in-range + fee > rugi). Cut kalau ada alasan struktural nyata - bukan cuma karena satu indikator atau perasaan tidak enak.

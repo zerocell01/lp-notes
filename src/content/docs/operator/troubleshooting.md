@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting Operator
-description: Solusi cepat untuk error umum saat memasang dan menjalankan agent LP DLMM dan operator-nya — connection refused, 401, RPC, PM2, gateway mati.
+description: Solusi cepat untuk error umum saat memasang dan menjalankan agent LP DLMM dan operator-nya - connection refused, 401, RPC, PM2, gateway mati.
 ---
 
 Halaman ini kumpulan masalah yang paling sering muncul saat setup dan menjalankan agent di VPS, beserta cara cek dan solusinya. Cari gejala-mu di bawah.
@@ -33,11 +33,11 @@ Lihat [Install Meridian](/operator/install-meridian-vps/) bagian provider.
 
 **Cek:**
 - Pastikan field API key di config benar-benar terisi (bukan string kosong).
-- Pastikan `base_url` mengarah ke provider yang benar — kalau key untuk gateway lokal, base URL juga harus ke gateway lokal, bukan ke provider cloud.
+- Pastikan `base_url` mengarah ke provider yang benar - kalau key untuk gateway lokal, base URL juga harus ke gateway lokal, bukan ke provider cloud.
 
 **Solusi:**
 - Isi API key yang valid, atau arahkan base URL ke gateway lokal yang memang menerima key dummy.
-- Setelah ubah config, **mulai sesi/proses baru** — sebagian setting hanya dibaca saat start.
+- Setelah ubah config, **mulai sesi/proses baru** - sebagian setting hanya dibaca saat start.
 
 :::tip
 Kalau 401-nya instan dan 0 token terpakai, hampir pasti masalah routing/kredensial, bukan kuota habis. Kuota habis biasanya balas 429, bukan 401.
@@ -94,7 +94,7 @@ RPC publik gratis cocok untuk tes, tapi tidak untuk operasi nyata. Sebagian besa
 
 ## PM2: proses restart terus-menerus
 
-**Gejala:** di `pm2 list`, kolom restart naik cepat — proses crash-loop.
+**Gejala:** di `pm2 list`, kolom restart naik cepat - proses crash-loop.
 
 **Cek:**
 
@@ -111,7 +111,7 @@ Cari error paling atas dari tiap crash (biasanya config hilang, `.env` salah, at
 
 ## Dua instance jalan bersamaan (bentrok)
 
-**Gejala:** perilaku aneh — pesan dobel, atau proses tiba-tiba dapat `SIGTERM`.
+**Gejala:** perilaku aneh - pesan dobel, atau proses tiba-tiba dapat `SIGTERM`.
 
 **Artinya:** kamu menjalankan agent manual (`node index.js ...`) padahal versi PM2-nya juga jalan. Dua instance berebut.
 
@@ -143,7 +143,7 @@ pm2 logs --lines 30                        # ada error terbaru?
 ```
 
 :::tip[Prinsip debugging]
-Selalu mulai dari **log**, bukan tebakan. `pm2 logs --err` dan `hermes gateway status` hampir selalu menunjukkan akar masalah dalam beberapa baris. Perbaiki satu hal, restart, cek lagi — jangan ubah banyak hal sekaligus.
+Selalu mulai dari **log**, bukan tebakan. `pm2 logs --err` dan `hermes gateway status` hampir selalu menunjukkan akar masalah dalam beberapa baris. Perbaiki satu hal, restart, cek lagi - jangan ubah banyak hal sekaligus.
 :::
 
 :::caution[Bukan saran finansial]

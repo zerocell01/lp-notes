@@ -1,9 +1,9 @@
 ---
-title: Cheat Sheet — Membaca Laporan Posisi
-description: Ringkasan baca-cepat semua indikator agent LP DLMM dalam satu halaman — RSI, Supertrend, Bollinger, Fibonacci, ATR, dan fee/TVL.
+title: Cheat Sheet - Membaca Laporan Posisi
+description: Ringkasan baca-cepat semua indikator agent LP DLMM dalam satu halaman - RSI, Supertrend, Bollinger, Fibonacci, ATR, dan fee/TVL.
 ---
 
-Halaman ini menyatukan semua indikator yang muncul di laporan posisi agent jadi satu tempat baca-cepat. Setiap baris punya catatan lengkapnya sendiri — di sini cuma intisarinya, biar kamu bisa membaca laporan dalam hitungan detik.
+Halaman ini menyatukan semua indikator yang muncul di laporan posisi agent jadi satu tempat baca-cepat. Setiap baris punya catatan lengkapnya sendiri - di sini cuma intisarinya, biar kamu bisa membaca laporan dalam hitungan detik.
 
 ## Contoh laporan posisi
 
@@ -16,7 +16,7 @@ Laporan posisi biasanya tampil seperti ini:
      RSI : 72.3 overbought
      ST  : bullish │ above line
      BB  : above upper │ %B 0.96
-     Fib : 0.618 (0.0004213) — support
+     Fib : 0.618 (0.0004213) - support
      Px  : +2.1% vs prev
 ```
 
@@ -24,50 +24,50 @@ Tiap baris menjawab pertanyaan yang berbeda. Berikut cara membacanya.
 
 ## Tabel baca-cepat
 
-**RSI — tekanan beli/jual** ([detail](/volatilitas/rsi/))
+**RSI - tekanan beli/jual** ([detail](/volatilitas/rsi/))
 - Angka 0–100. Rendah = baru banyak dijual; tinggi = baru banyak dibeli.
 - `oversold` (rendah) sering mantul; `overbought` (tinggi) belum tentu jatuh.
 - Periode pendek = sering ekstrem. Jangan jual cuma karena RSI merah saat masih in-range.
 
-**ST (Supertrend) — arah tren** ([detail](/volatilitas/supertrend/))
+**ST (Supertrend) - arah tren** ([detail](/volatilitas/supertrend/))
 - `bullish` = tren naik (garis jadi support); `bearish` = tren turun (garis jadi resistance).
 - `flip` = momen ganti arah. Ini sering jadi pemicu entry/exit utama.
 - Lemah di pasar sideways (whipsaw); selalu telat sedikit.
 
-**BB (Bollinger) — harga relatif mahal/murah** ([detail](/volatilitas/bollinger/))
+**BB (Bollinger) - harga relatif mahal/murah** ([detail](/volatilitas/bollinger/))
 - `above upper` / `below lower` = ekstrem dibanding pergerakan sendiri.
 - `%B`: 0.00 = garis bawah, 0.50 = tengah, 1.00 = garis atas.
 - Nembus band ≠ sinyal otomatis. Saat tren kuat, harga bisa "band walking".
 
-**Fib (Fibonacci) — lantai/atap** ([detail](/volatilitas/fibonacci/))
+**Fib (Fibonacci) - lantai/atap** ([detail](/volatilitas/fibonacci/))
 - Level penting: 0.5, 0.618, 0.786.
 - `support` = level di bawah harga (lantai); `resistance` = di atas harga (atap).
 - Level psikologis berupa zona, bukan garis pasti. Lemah di token baru.
 
-**ATR — volatilitas / lebar goyangan** ([detail](/volatilitas/atr/))
+**ATR - volatilitas / lebar goyangan** ([detail](/volatilitas/atr/))
 - Mengukur seberapa jauh harga biasa goyang (bukan arah).
 - ATR tinggi → range deploy dibuat lebih lebar biar tahan banting.
 
-**Fee = Volume ÷ TVL — kelayakan pool** ([detail](/fee/volume-tvl/))
+**Fee = Volume ÷ TVL - kelayakan pool** ([detail](/fee/volume-tvl/))
 - Yield LP ditentukan turnover (volume ÷ TVL), bukan market cap.
 - Turnover tinggi = fee tebal. Volume gede + TVL gede = fee bisa tetap tipis.
 
 ## Cara baca cepat baris emoji & angka
 
-- **🟢 / status** — penanda kondisi posisi (in-range/sehat).
-- **Deposited** — modal awal, dihitung dari jumlah SOL × harga SOL live.
-- **PnL** — untung/rugi posisi saat ini.
-- **Fee** — fee yang sudah terkumpul. Selama fee > rugi & posisi in-range, sabar dulu.
-- **Px** — perubahan harga vs candle sebelumnya.
+- **🟢 / status** - penanda kondisi posisi (in-range/sehat).
+- **Deposited** - modal awal, dihitung dari jumlah SOL × harga SOL live.
+- **PnL** - untung/rugi posisi saat ini.
+- **Fee** - fee yang sudah terkumpul. Selama fee > rugi & posisi in-range, sabar dulu.
+- **Px** - perubahan harga vs candle sebelumnya.
 
 ## Pola membaca yang sehat
 
 Jangan baca indikator satu-satu lalu panik. Baca sebagai **gabungan**:
 
 1. **Posisi masih in-range?** Kalau ya, indikator merah sendirian bukan alasan jual.
-2. **Fee > rugi?** Kalau ya, kamu masih untung secara bersih — beri waktu.
+2. **Fee > rugi?** Kalau ya, kamu masih untung secara bersih - beri waktu.
 3. **Apa kata arah (Supertrend)?** Bullish + ekstrem (RSI tinggi / BB above upper) sering = tren kuat lagi jalan, bukan saat jual.
-4. **Trigger close yang valid:** OOR aktual cukup lama, volume mati, stop-loss kena, atau tesis pool jelas gagal — bukan sekadar satu indikator ekstrem.
+4. **Trigger close yang valid:** OOR aktual cukup lama, volume mati, stop-loss kena, atau tesis pool jelas gagal - bukan sekadar satu indikator ekstrem.
 
 ## Filosofi di balik semua angka
 

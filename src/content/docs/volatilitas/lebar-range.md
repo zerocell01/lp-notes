@@ -24,17 +24,17 @@ Banyak pendekatan memetakan volatilitas ke lebar range secara bertahap, dengan b
 | Ekstrem | Maksimum (ceiling) |
 
 :::note
-Angka persisnya sengaja tidak dicantumkan — itu sangat tergantung token, bin step, dan toleransi risiko masing-masing. Yang penting **polanya**: naik bertahap, dengan batas bawah dan atas yang wajar.
+Angka persisnya sengaja tidak dicantumkan - itu sangat tergantung token, bin step, dan toleransi risiko masing-masing. Yang penting **polanya**: naik bertahap, dengan batas bawah dan atas yang wajar.
 :::
 
 ## Kenapa pakai floor dan ceiling
 
-- **Floor (batas bawah)** — supaya range tidak pernah terlalu sempit sampai gampang OOR walau token sedang sepi sesaat.
-- **Ceiling (batas atas)** — supaya range tidak melebar tanpa batas sampai fee jadi terlalu encer dan modal tidak produktif.
+- **Floor (batas bawah)** - supaya range tidak pernah terlalu sempit sampai gampang OOR walau token sedang sepi sesaat.
+- **Ceiling (batas atas)** - supaya range tidak melebar tanpa batas sampai fee jadi terlalu encer dan modal tidak produktif.
 
 ## Hubungan dengan fee
 
-Range lebih lebar = lebih aman dari OOR, tapi fee per bin lebih kecil. Ini trade-off klasik (lihat [In-Range vs OOR](/dasar/range-dan-oor/)). Tujuannya bukan "selebar mungkin" atau "sesempit mungkin", tapi **pas dengan goyangan token** — cukup lebar untuk bertahan, cukup sempit untuk tetap menghasilkan.
+Range lebih lebar = lebih aman dari OOR, tapi fee per bin lebih kecil. Ini trade-off klasik (lihat [In-Range vs OOR](/dasar/range-dan-oor/)). Tujuannya bukan "selebar mungkin" atau "sesempit mungkin", tapi **pas dengan goyangan token** - cukup lebar untuk bertahan, cukup sempit untuk tetap menghasilkan.
 
 ## Intinya
 

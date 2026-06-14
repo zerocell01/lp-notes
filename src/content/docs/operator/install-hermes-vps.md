@@ -1,22 +1,22 @@
 ---
 title: Install Hermes Agent di VPS (Operator)
-description: Panduan pemula memasang Hermes Agent di VPS sebagai operator yang menjaga dan mengoperasikan agent LP DLMM (Meridian) — lengkap dengan model gratis dan setup bot Telegram.
+description: Panduan pemula memasang Hermes Agent di VPS sebagai operator yang menjaga dan mengoperasikan agent LP DLMM (Meridian) - lengkap dengan model gratis dan setup bot Telegram.
 ---
 
-Meridian (agent LP DLMM) menjalankan trading-nya sendiri. Tapi siapa yang menjaga *Meridian*-nya? Di sinilah **Hermes Agent** masuk: dia jadi **operator** — lapisan AI di atas Meridian yang bisa diajak ngobrol lewat Telegram, baca log, cek posisi, perbaiki bug, restart service, dan jawab pertanyaan soal kondisi pool — semua dari chat HP-mu.
+Meridian (agent LP DLMM) menjalankan trading-nya sendiri. Tapi siapa yang menjaga *Meridian*-nya? Di sinilah **Hermes Agent** masuk: dia jadi **operator** - lapisan AI di atas Meridian yang bisa diajak ngobrol lewat Telegram, baca log, cek posisi, perbaiki bug, restart service, dan jawab pertanyaan soal kondisi pool - semua dari chat HP-mu.
 
 Panduan ini ditulis untuk **pemula**. Ikuti dari atas ke bawah, copy-paste tiap perintah. Nggak perlu jago Linux.
 
 :::note[Konteks]
-Hermes itu framework agent open-source dari Nous Research yang jalan di terminal dan platform chat (Telegram, Discord, dll). Dia provider-agnostic — bisa pakai model apa pun, termasuk yang **gratis**. Di setup-ku, Hermes jadi operator; Meridian tetap program trading yang terpisah.
+Hermes itu framework agent open-source dari Nous Research yang jalan di terminal dan platform chat (Telegram, Discord, dll). Dia provider-agnostic - bisa pakai model apa pun, termasuk yang **gratis**. Di setup-ku, Hermes jadi operator; Meridian tetap program trading yang terpisah.
 :::
 
 ## Kenapa pakai operator terpisah?
 
-Meridian = **eksekutor** (screening, deploy, close — otomatis 24/7).
+Meridian = **eksekutor** (screening, deploy, close - otomatis 24/7).
 Hermes = **operator** (mengawasi, mendiagnosis, memperbaiki, menjawab).
 
-Kamu nggak mau model yang sama yang mengeksekusi trading juga yang kamu mintai tolong debug atau ngobrol. Operator terpisah bisa baca log Meridian, edit kodenya, restart prosesnya, dan lapor ke kamu di Telegram — tanpa ikut campur di jalur eksekusi trading yang harus cepat dan deterministik.
+Kamu nggak mau model yang sama yang mengeksekusi trading juga yang kamu mintai tolong debug atau ngobrol. Operator terpisah bisa baca log Meridian, edit kodenya, restart prosesnya, dan lapor ke kamu di Telegram - tanpa ikut campur di jalur eksekusi trading yang harus cepat dan deterministik.
 
 ## Yang kamu butuhkan
 
@@ -29,7 +29,7 @@ Kamu nggak mau model yang sama yang mengeksekusi trading juga yang kamu mintai t
 git --version
 ```
 
-Kalau muncul nomor versi (mis. `git version 2.40.1`), aman — lanjut.
+Kalau muncul nomor versi (mis. `git version 2.40.1`), aman - lanjut.
 
 **Kalau muncul `command not found`,** berarti git belum ada. Install dulu sesuai jenis VPS-mu:
 
@@ -46,11 +46,11 @@ sudo dnf install -y git
 
 Habis install, cek lagi `git --version` buat memastikan sudah masuk.
 
-Python, Node.js, dan tetek bengek lain **diurus otomatis** sama installer — kamu nggak perlu pasang apa-apa lagi.
+Python, Node.js, dan tetek bengek lain **diurus otomatis** sama installer - kamu nggak perlu pasang apa-apa lagi.
 
 ---
 
-## Langkah 1 — Install Hermes
+## Langkah 1 - Install Hermes
 
 SSH ke VPS, lalu tempel satu baris ini dan tekan Enter:
 
@@ -78,7 +78,7 @@ Kalau hijau-hijau, lanjut.
 
 ---
 
-## Langkah 2 — Pilih model GRATIS
+## Langkah 2 - Pilih model GRATIS
 
 Hermes butuh otak (LLM). Buat mulai tanpa bayar, pakai model gratis dulu.
 
@@ -100,12 +100,12 @@ OpenRouter butuh API key gratis:
 3. Saat `hermes model` minta API key, tempel key itu
 
 :::tip[Catatan jujur soal model gratis]
-Model gratis cocok buat belajar dan tugas ringan (baca log, jawab pertanyaan, cek posisi). Tapi buat kerja berat seperti **trace bug di kode Meridian atau patch yang presisi**, model gratis sering kurang pintar. Kalau nanti operator-mu terasa "kurang nyambung" saat debug, naikkan ke model berbayar yang lebih kuat. Mulai gratis dulu — upgrade kalau perlu.
+Model gratis cocok buat belajar dan tugas ringan (baca log, jawab pertanyaan, cek posisi). Tapi buat kerja berat seperti **trace bug di kode Meridian atau patch yang presisi**, model gratis sering kurang pintar. Kalau nanti operator-mu terasa "kurang nyambung" saat debug, naikkan ke model berbayar yang lebih kuat. Mulai gratis dulu - upgrade kalau perlu.
 :::
 
 ---
 
-## Langkah 3 — Bikin bot Telegram (dari nol)
+## Langkah 3 - Bikin bot Telegram (dari nol)
 
 Biar operator bisa diajak ngobrol dari HP, kamu perlu bot Telegram. Ikuti pelan-pelan:
 
@@ -113,15 +113,15 @@ Biar operator bisa diajak ngobrol dari HP, kamu perlu bot Telegram. Ikuti pelan-
 
 1. Buka Telegram, cari **@BotFather** (yang ada centang biru)
 2. Kirim perintah: `/newbot`
-3. BotFather tanya **nama tampilan** bot — ketik bebas, mis. `Operator Meridianku`
-4. Lalu tanya **username** bot — harus unik dan **diakhiri kata `bot`**, mis. `meridian_operator_bot`
+3. BotFather tanya **nama tampilan** bot - ketik bebas, mis. `Operator Meridianku`
+4. Lalu tanya **username** bot - harus unik dan **diakhiri kata `bot`**, mis. `meridian_operator_bot`
 5. BotFather kasih **token** seperti ini:
 
 ```text
 123456789:ABCdefGHIjklMNOpqrSTUvwxYZ
 ```
 
-**Copy token itu dan simpan.** Jangan kasih ke siapa pun — siapa pun yang punya token bisa kendalikan bot-mu.
+**Copy token itu dan simpan.** Jangan kasih ke siapa pun - siapa pun yang punya token bisa kendalikan bot-mu.
 
 ### 3b. Cari ID Telegram-mu
 
@@ -131,7 +131,7 @@ Hermes pakai **ID angka**, bukan username. Cara dapat:
 2. Kirim pesan apa aja (atau `/start`)
 3. Dia balas dengan **ID angka** kamu (mis. `804389215`)
 
-Simpan angka itu — ini buat memastikan **cuma kamu** yang bisa nyuruh-nyuruh operator.
+Simpan angka itu - ini buat memastikan **cuma kamu** yang bisa nyuruh-nyuruh operator.
 
 ### 3c. Sambungkan ke Hermes
 
@@ -149,7 +149,7 @@ Sudah. Operator sekarang cuma mau dengar perintah dari ID-mu.
 
 ---
 
-## Langkah 4 — Jalankan terus-menerus
+## Langkah 4 - Jalankan terus-menerus
 
 Supaya operator tetap hidup walau kamu tutup SSH, pasang sebagai service background:
 
@@ -159,17 +159,17 @@ hermes gateway start
 hermes gateway status
 ```
 
-Satu langkah penting di VPS — biar service nggak mati pas SSH ditutup:
+Satu langkah penting di VPS - biar service nggak mati pas SSH ditutup:
 
 ```bash
 sudo loginctl enable-linger $USER
 ```
 
-Sekarang buka Telegram, chat ke bot-mu — ketik `halo` atau `/help`. Kalau dia balas, **berhasil!** 🎉
+Sekarang buka Telegram, chat ke bot-mu - ketik `halo` atau `/help`. Kalau dia balas, **berhasil!** 🎉
 
 ---
 
-## Langkah 5 — Kenalkan ke Meridian
+## Langkah 5 - Kenalkan ke Meridian
 
 Meridian dan Hermes adalah **dua proses terpisah**. Meridian tetap jalan di process manager-nya sendiri (mis. PM2); Hermes jalan lewat gateway service-nya. Tinggal kasih tahu operator di mana folder Meridian dan file log-nya, lalu kamu bisa minta lewat chat:
 
@@ -186,7 +186,7 @@ Operator punya akses penuh ke VPS, jadi perlakukan serius:
 
 - **Token bot itu rahasia.** Kalau bocor, langsung cabut lewat `/revoke` di BotFather, bikin baru.
 - **Secret masuk file `.env`** (`~/.hermes/.env`), bukan di config yang ke-share.
-- **Redaksi secret aktif default.** Hermes menyensor string yang kelihatan seperti key dari output tool — biarkan menyala.
+- **Redaksi secret aktif default.** Hermes menyensor string yang kelihatan seperti key dari output tool - biarkan menyala.
 - **Cuma ID-mu yang diizinkan.** Pastikan allowed user hanya ID-mu, biar orang lain nggak bisa kendalikan operator.
 - **Wallet trading bukan urusan operator.** Private key wallet tetap di domain Meridian.
 
@@ -215,8 +215,8 @@ hermes gateway status
 
 ## Intinya
 
-Pola dua-lapis ini — eksekutor cepat (Meridian) + operator yang bisa diajak ngobrol (Hermes) — bikin LP otomatis jauh lebih nyaman dikelola. Mulai dengan model gratis buat belajar; upgrade kalau butuh otak lebih kuat. Dan karena dua-duanya proses terpisah, ngutak-atik operator nggak pernah ganggu jalur eksekusi trading.
+Pola dua-lapis ini - eksekutor cepat (Meridian) + operator yang bisa diajak ngobrol (Hermes) - bikin LP otomatis jauh lebih nyaman dikelola. Mulai dengan model gratis buat belajar; upgrade kalau butuh otak lebih kuat. Dan karena dua-duanya proses terpisah, ngutak-atik operator nggak pernah ganggu jalur eksekusi trading.
 
 :::caution[Bukan saran finansial]
-Catatan ini soal infrastruktur, bukan strategi trading. Menjalankan agent dengan akses penuh ke VPS dan wallet itu berisiko — pahami dulu apa yang kamu jalankan sebelum memberinya kendali.
+Catatan ini soal infrastruktur, bukan strategi trading. Menjalankan agent dengan akses penuh ke VPS dan wallet itu berisiko - pahami dulu apa yang kamu jalankan sebelum memberinya kendali.
 :::
