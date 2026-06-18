@@ -36,182 +36,72 @@
 
 /* ---------- LIGHT MODE ---------- */
 :root[data-theme='light'] {
-  --sl-color-accent-low: #cffafe;
-  --sl-color-accent: #0891b2;
-  --sl-color-accent-high: #155e75;
+  --sl-color-accent-low: #ede9fe;
+  --sl-color-accent: #6d28d9;
+  --sl-color-accent-high: #4c1d95;
 
-  --sl-color-bg: #f0f9fc;
-  --sl-color-bg-nav: #ecf8fc;
-  --sl-color-bg-sidebar: #ecf8fc;
-  --sl-color-bg-inline-code: #e0f2fe;
-  --sl-color-text: #164e63;
-  --sl-color-text-accent: #0891b2;
+  --sl-color-bg: #faf8ff;
+  --sl-color-bg-nav: #f5f3ff;
+  --sl-color-bg-sidebar: #f5f3ff;
+  --sl-color-bg-inline-code: #ede9fe;
+  --sl-color-text: #2e1065;
+  --sl-color-text-accent: #6d28d9;
 
   --card-bg: rgba(255, 255, 255, 0.98);
-  --card-border: rgba(8, 145, 178, 0.1);
+  --card-border: rgba(109, 40, 217, 0.12);
   --header-bg: rgba(255, 255, 255, 0.98);
-
-  /* Override brand colors untuk light mode - Sky/Cyan */
-  --brand-navy: #0891b2;
-  --brand-navy-glow: rgba(8, 145, 178, 0.3);
-  --brand-blue: #06b6d4;
-  --brand-blue-glow: rgba(6, 182, 212, 0.25);
-  --brand-dark: #164e63;
-  --brand-cyan: #22d3ee;
-  --brand-cyan-glow: rgba(34, 211, 238, 0.2);
-  --brand-slate: #7dd3fc;
 }
 
 /* ============================================================
    LIGHT MODE SPECIFIC OVERRIDES
    ============================================================ */
 
+/* ============================================================
+   LIGHT MODE SPECIFIC OVERRIDES
+   ============================================================ */
+
 :root[data-theme='light'] .hero h1 {
-  background: linear-gradient(115deg, #0891b2, #06b6d4 50%, #22d3ee 85%);
+  background: linear-gradient(115deg, #6d28d9, #7c3aed 50%, #a78bfa 85%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
-}
-
-:root[data-theme='light'] .hero::before {
-  background:
-    radial-gradient(55% 55% at 25% 30%, rgba(8, 145, 178, 0.2), transparent 65%),
-    radial-gradient(45% 45% at 75% 25%, rgba(6, 182, 212, 0.15), transparent 65%),
-    radial-gradient(35% 35% at 60% 60%, rgba(34, 211, 238, 0.12), transparent 65%);
 }
 
 :root[data-theme='light'] .hero .action.primary {
-  background: linear-gradient(115deg, #0891b2, #06b6d4);
-  box-shadow: 0 6px 24px -4px rgba(6, 182, 212, 0.3);
+  background: linear-gradient(115deg, #6d28d9, #7c3aed);
+  box-shadow: 0 6px 24px -4px rgba(109, 40, 217, 0.25);
 }
 
 :root[data-theme='light'] .hero .action.primary:hover {
-  box-shadow: 0 10px 32px -4px rgba(6, 182, 212, 0.5);
+  box-shadow: 0 10px 32px -4px rgba(109, 40, 217, 0.4);
 }
 
 :root[data-theme='light'] .hero .action.secondary {
-  border-color: #06b6d4;
-  color: #06b6d4;
+  border-color: #7c3aed;
+  color: #7c3aed;
 }
 
 :root[data-theme='light'] .hero .action.secondary:hover {
-  background: rgba(6, 182, 212, 0.1);
-  border-color: #22d3ee;
-  color: #22d3ee;
+  background: rgba(124, 58, 237, 0.1);
+  border-color: #a78bfa;
+  color: #a78bfa;
 }
 
 :root[data-theme='light'] .site-title {
-  background: linear-gradient(100deg, #0891b2, #06b6d4);
+  background: linear-gradient(100deg, #6d28d9, #7c3aed);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
-}
-
-:root[data-theme='light'] .custom-footer .footer-brand {
-  background: linear-gradient(100deg, #0891b2, #22d3ee);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-}
-
-:root[data-theme='light'] .custom-footer a {
-  color: #06b6d4;
-}
-
-:root[data-theme='light'] .custom-footer a:hover {
-  color: #22d3ee;
 }
 
 :root[data-theme='light'] .sl-markdown-content a:not(:where(.not-content *)) {
-  color: #0891b2;
+  color: #6d28d9;
 }
 
 :root[data-theme='light'] .sl-markdown-content a:not(:where(.not-content *)):hover {
-  color: #06b6d4;
-}
-
-:root[data-theme='light'] .sl-markdown-content blockquote {
-  border-inline-start-color: #22d3ee;
-  background: rgba(34, 211, 238, 0.05);
-  border-color: rgba(6, 182, 212, 0.15);
-}
-
-:root[data-theme='light'] .starlight-aside--note {
-  background: linear-gradient(135deg, rgba(34, 211, 238, 0.1), rgba(6, 182, 212, 0.05));
-  border-color: rgba(6, 182, 212, 0.2);
-  border-inline-start-color: #22d3ee;
-}
-
-:root[data-theme='light'] .starlight-aside--tip {
-  background: linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(8, 145, 178, 0.05));
-  border-color: rgba(6, 182, 212, 0.2);
-  border-inline-start-color: #06b6d4;
-}
-
-:root[data-theme='light'] .sidebar a[aria-current='page'] {
-  background: linear-gradient(100deg, rgba(8, 145, 178, 0.12), rgba(34, 211, 238, 0.1));
-}
-
-:root[data-theme='light'] .sidebar a[aria-current='page']::before {
-  background: linear-gradient(180deg, #06b6d4, #22d3ee);
-}
-
-:root[data-theme='light'] .sidebar a:hover {
-  background: rgba(6, 182, 212, 0.1);
-}
-
-:root[data-theme='light'] #reading-progress {
-  background: linear-gradient(90deg, #0891b2, #06b6d4, #22d3ee);
-}
-
-:root[data-theme='light'] .sl-link-card {
-  background:
-    linear-gradient(var(--card-bg), var(--card-bg)) padding-box,
-    linear-gradient(135deg, #06b6d4, #22d3ee) border-box;
-}
-
-:root[data-theme='light'] .sl-link-card::after {
-  background: radial-gradient(400px at var(--mouse-x, 50%) var(--mouse-y, 50%),
-    rgba(6, 182, 212, 0.2), transparent 60%);
-}
-
-:root[data-theme='light'] .sl-link-card:hover {
-  box-shadow:
-    0 12px 32px -8px rgba(6, 182, 212, 0.25),
-    0 4px 12px -2px rgba(34, 211, 238, 0.15);
-}
-
-:root[data-theme='light'] .card-grid > .sl-link-card:nth-child(6n+1) {
-  background: linear-gradient(var(--card-bg), var(--card-bg)) padding-box,
-              linear-gradient(135deg, #06b6d4, #22d3ee) border-box;
-}
-
-:root[data-theme='light'] .card-grid > .sl-link-card:nth-child(6n+2) {
-  background: linear-gradient(var(--card-bg), var(--card-bg)) padding-box,
-              linear-gradient(135deg, #22d3ee, #7dd3fc) border-box;
-}
-
-:root[data-theme='light'] .card-grid > .sl-link-card:nth-child(6n+3) {
-  background: linear-gradient(var(--card-bg), var(--card-bg)) padding-box,
-              linear-gradient(135deg, #7dd3fc, #22d3ee) border-box;
-}
-
-:root[data-theme='light'] .card-grid > .sl-link-card:nth-child(6n+4) {
-  background: linear-gradient(var(--card-bg), var(--card-bg)) padding-box,
-              linear-gradient(135deg, #0891b2, #7dd3fc) border-box;
-}
-
-:root[data-theme='light'] .card-grid > .sl-link-card:nth-child(6n+5) {
-  background: linear-gradient(var(--card-bg), var(--card-bg)) padding-box,
-              linear-gradient(135deg, #164e63, #22d3ee) border-box;
-}
-
-:root[data-theme='light'] .card-grid > .sl-link-card:nth-child(6n) {
-  background: linear-gradient(var(--card-bg), var(--card-bg)) padding-box,
-              linear-gradient(135deg, #22d3ee, #164e63) border-box;
+  color: #7c3aed;
 }
 
 /* ---------- DARK MODE ---------- */
