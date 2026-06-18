@@ -17,93 +17,83 @@ hero:
 import { CardGrid, LinkCard } from '@astrojs/starlight/components';
 
 <div class="hero-illustration" aria-hidden="true">
-  <svg viewBox="0 0 500 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-{/* Latar: grid halus */}
+  <svg viewBox="0 0 500 180" xmlns="http://www.w3.org/2000/svg">
     <defs>
-      <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="var(--brand-violet)" stroke-width="0.3" opacity="0.15"/>
+      <pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse">
+        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#7c5cff" stroke-width="0.3" opacity="0.12"/>
       </pattern>
-      <linearGradient id="bar1" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stop-color="var(--brand-violet)" stop-opacity="0.9"/>
-        <stop offset="100%" stop-color="var(--brand-violet)" stop-opacity="0.2"/>
+      <linearGradient id="b1" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#7c5cff" stop-opacity="0.85"/>
+        <stop offset="100%" stop-color="#7c5cff" stop-opacity="0.15"/>
       </linearGradient>
-      <linearGradient id="bar2" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stop-color="var(--brand-teal)" stop-opacity="0.9"/>
-        <stop offset="100%" stop-color="var(--brand-teal)" stop-opacity="0.2"/>
+      <linearGradient id="b2" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#18c2b3" stop-opacity="0.85"/>
+        <stop offset="100%" stop-color="#18c2b3" stop-opacity="0.15"/>
       </linearGradient>
-      <linearGradient id="bar3" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stop-color="var(--brand-pink)" stop-opacity="0.9"/>
-        <stop offset="100%" stop-color="var(--brand-pink)" stop-opacity="0.2"/>
+      <linearGradient id="b3" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#ff5c98" stop-opacity="0.85"/>
+        <stop offset="100%" stop-color="#ff5c98" stop-opacity="0.15"/>
       </linearGradient>
-      <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0%" stop-color="var(--brand-violet)" stop-opacity="0.3"/>
-        <stop offset="50%" stop-color="var(--brand-pink)" stop-opacity="0.8"/>
-        <stop offset="100%" stop-color="var(--brand-teal)" stop-opacity="0.3"/>
+      <linearGradient id="bl" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#7c5cff" stop-opacity="0.3"/>
+        <stop offset="50%" stop-color="#ff5c98" stop-opacity="0.8"/>
+        <stop offset="100%" stop-color="#18c2b3" stop-opacity="0.3"/>
       </linearGradient>
     </defs>
 
-    {/* Grid background */}
-    <rect width="500" height="180" fill="url(#grid)" rx="16"/>
+    <rect width="500" height="180" fill="url(#g)" rx="16"/>
 
-    {/* Harga line */}
     <path d="M 20 140 Q 80 120 140 150 T 260 100 T 380 130 T 480 110"
-          stroke="url(#line)" stroke-width="3" fill="none" stroke-linecap="round"/>
+          stroke="url(#bl)" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.6"/>
 
-    {/* Spot at current price */}
-    <circle cx="260" cy="100" r="7" fill="var(--brand-pink)" opacity="0.9">
-      <animate attributeName="r" values="5;8;5" dur="2s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" repeatCount="indefinite"/>
+    <circle cx="260" cy="100" r="6" fill="#ff5c98" opacity="0.9">
+      <animate attributeName="r" values="4;7;4" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="260" cy="100" r="14" fill="var(--brand-pink)" opacity="0.2">
-      <animate attributeName="r" values="10;18;10" dur="2s" repeatCount="indefinite"/>
+    <circle cx="260" cy="100" r="12" fill="#ff5c98" opacity="0.15">
+      <animate attributeName="r" values="8;16;8" dur="2s" repeatCount="indefinite"/>
     </circle>
 
-    {/* Bin bars (likuiditas) */}
-    <rect x="60" y="110" width="16" height="30" rx="3" fill="url(#bar1)" opacity="0.7">
-      <animate attributeName="height" values="30;45;30" dur="3s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="110;95;110" dur="3s" repeatCount="indefinite"/>
+    <rect x="60" y="115" width="14" height="25" rx="3" fill="url(#b1)" opacity="0.7">
+      <animate attributeName="height" values="25;40;25" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="115;100;115" dur="3s" repeatCount="indefinite"/>
     </rect>
-    <rect x="100" y="95" width="16" height="45" rx="3" fill="url(#bar1)" opacity="0.8">
-      <animate attributeName="height" values="45;35;45" dur="2.5s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="95;105;95" dur="2.5s" repeatCount="indefinite"/>
+    <rect x="100" y="100" width="14" height="40" rx="3" fill="url(#b1)" opacity="0.8">
+      <animate attributeName="height" values="40;30;40" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="100;110;100" dur="2.5s" repeatCount="indefinite"/>
     </rect>
-    <rect x="180" y="85" width="16" height="55" rx="3" fill="url(#bar2)" opacity="0.9">
-      <animate attributeName="height" values="55;65;55" dur="1.8s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="85;75;85" dur="1.8s" repeatCount="indefinite"/>
+    <rect x="180" y="85" width="14" height="55" rx="3" fill="url(#b2)" opacity="0.9">
+      <animate attributeName="height" values="55;68;55" dur="1.8s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="85;72;85" dur="1.8s" repeatCount="indefinite"/>
     </rect>
-    <rect x="220" y="75" width="16" height="65" rx="3" fill="url(#bar2)" opacity="1"/>
-    <rect x="300" y="90" width="16" height="50" rx="3" fill="url(#bar3)" opacity="0.8">
-      <animate attributeName="height" values="50;40;50" dur="2.2s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="90;100;90" dur="2.2s" repeatCount="indefinite"/>
+    <rect x="220" y="75" width="14" height="65" rx="3" fill="url(#b2)" opacity="1"/>
+    <rect x="300" y="90" width="14" height="50" rx="3" fill="url(#b3)" opacity="0.8">
+      <animate attributeName="height" values="50;38;50" dur="2.2s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="90;102;90" dur="2.2s" repeatCount="indefinite"/>
     </rect>
-    <rect x="340" y="100" width="16" height="40" rx="3" fill="url(#bar3)" opacity="0.7">
-      <animate attributeName="height" values="40;50;40" dur="3.2s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="100;90;100" dur="3.2s" repeatCount="indefinite"/>
+    <rect x="340" y="102" width="14" height="38" rx="3" fill="url(#b3)" opacity="0.7">
+      <animate attributeName="height" values="38;50;38" dur="3.2s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="102;90;102" dur="3.2s" repeatCount="indefinite"/>
     </rect>
-    <rect x="420" y="115" width="16" height="25" rx="3" fill="url(#bar1)" opacity="0.6">
-      <animate attributeName="height" values="25;35;25" dur="2.8s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="115;105;115" dur="2.8s" repeatCount="indefinite"/>
+    <rect x="420" y="118" width="14" height="22" rx="3" fill="url(#b1)" opacity="0.6">
+      <animate attributeName="height" values="22;32;22" dur="2.8s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="118;108;118" dur="2.8s" repeatCount="indefinite"/>
     </rect>
 
-    {/* Labels */}
-    <text x="260" y="70" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif"
-          font-size="9" fill="var(--brand-pink)" font-weight="700" opacity="0.8">
+    <text x="260" y="62" text-anchor="middle" font-family="sans-serif"
+          font-size="8" fill="#ff5c98" font-weight="700" opacity="0.75">
       Harga Saat Ini
     </text>
-
-    {/* Fee sparkles */}
-    <text x="140" y="55" font-family="Plus Jakarta Sans, sans-serif" font-size="10"
-          fill="var(--brand-teal)" font-weight="600" opacity="0.7">
-      ✦ Fee
+    <text x="140" y="45" font-family="sans-serif" font-size="9"
+          fill="#18c2b3" font-weight="600" opacity="0.6">
+      Fee
     </text>
-    <text x="310" y="55" font-family="Plus Jakarta Sans, sans-serif" font-size="10"
-          fill="var(--brand-amber)" font-weight="600" opacity="0.7">
-      ✦ Fee
+    <text x="310" y="45" font-family="sans-serif" font-size="9"
+          fill="#ffb020" font-weight="600" opacity="0.6">
+      Fee
     </text>
-
-    {/* Bin label */}
-    <text x="228" y="155" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif"
-          font-size="8" fill="var(--brand-teal)" opacity="0.6">
+    <text x="227" y="155" text-anchor="middle" font-family="sans-serif"
+          font-size="8" fill="#18c2b3" opacity="0.5">
       bin aktif
     </text>
   </svg>
