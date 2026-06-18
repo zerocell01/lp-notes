@@ -6,10 +6,12 @@
 /* ---------- GOOGLE FONTS: Plus Jakarta Sans ---------- */
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
+/* ===========================================================
+   DARK MODE (default + explicit)
+   =========================================================== */
 :root,
-:root[data-theme='light'],
 :root[data-theme='dark'] {
-  /* Starlight gray scale — dark mode values for ALL themes */
+  /* Gray scale */
   --sl-color-white: hsl(0, 0%, 100%);
   --sl-color-gray-1: hsl(224, 20%, 94%);
   --sl-color-gray-2: hsl(224, 6%, 77%);
@@ -19,7 +21,7 @@
   --sl-color-gray-6: hsl(224, 14%, 16%);
   --sl-color-black: hsl(224, 10%, 10%);
 
-  /* Starlight semantic colors */
+  /* Semantic */
   --sl-color-text: var(--sl-color-gray-2);
   --sl-color-text-accent: var(--sl-color-accent-high);
   --sl-color-text-invert: var(--sl-color-accent-low);
@@ -37,7 +39,7 @@
   --sl-color-accent: #2563eb;
   --sl-color-accent-high: #60a5fa;
 
-  /* Brand colors */
+  /* Brand */
   --brand-navy: #1e3a8a;
   --brand-navy-glow: rgba(30, 58, 138, 0.45);
   --brand-blue: #3b82f6;
@@ -62,6 +64,55 @@
   --radius-md: 12px;
   --radius-lg: 16px;
   --radius-xl: 24px;
+}
+
+/* ===========================================================
+   LIGHT MODE
+   =========================================================== */
+:root[data-theme='light'] {
+  /* Gray scale — inverted for light bg */
+  --sl-color-white: hsl(224, 10%, 10%);
+  --sl-color-gray-1: hsl(224, 14%, 16%);
+  --sl-color-gray-2: hsl(224, 10%, 23%);
+  --sl-color-gray-3: hsl(224, 7%, 36%);
+  --sl-color-gray-4: hsl(224, 6%, 56%);
+  --sl-color-gray-5: hsl(224, 6%, 77%);
+  --sl-color-gray-6: hsl(224, 20%, 94%);
+  --sl-color-black: hsl(0, 0%, 100%);
+
+  /* Semantic */
+  --sl-color-text: var(--sl-color-gray-2);
+  --sl-color-text-accent: var(--sl-color-accent);
+  --sl-color-text-invert: var(--sl-color-accent-high);
+  --sl-color-bg: var(--sl-color-black);
+  --sl-color-bg-nav: var(--sl-color-gray-6);
+  --sl-color-bg-sidebar: var(--sl-color-gray-6);
+  --sl-color-bg-inline-code: var(--sl-color-gray-5);
+  --sl-color-bg-accent: var(--sl-color-accent);
+  --sl-color-hairline-light: var(--sl-color-gray-5);
+  --sl-color-hairline: var(--sl-color-gray-6);
+  --sl-color-hairline-shade: var(--sl-color-gray-5);
+
+  /* Accent — lebih gelap buat kontras di light bg */
+  --sl-color-accent-low: #dbeafe;
+  --sl-color-accent: #2563eb;
+  --sl-color-accent-high: #1e40af;
+
+  /* Brand — disesuaikan buat light */
+  --brand-navy: #1e3a8a;
+  --brand-navy-glow: rgba(30, 58, 138, 0.12);
+  --brand-blue: #2563eb;
+  --brand-blue-glow: rgba(37, 99, 235, 0.1);
+  --brand-dark: #0f172a;
+  --brand-cyan: #0891b2;
+  --brand-cyan-glow: rgba(8, 145, 178, 0.1);
+  --brand-slate: #475569;
+  --brand-slate-glow: rgba(71, 85, 105, 0.08);
+
+  /* Cards */
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --card-border: rgba(37, 99, 235, 0.15);
+  --header-bg: rgba(255, 255, 255, 0.92);
 }
 
 /* ============================================================
@@ -454,9 +505,6 @@ h2 {
   border-radius: 0 2px 2px 0;
 }
 
-/* ---------- HIDE THEME TOGGLE ---------- */
-starlight-theme-select { display: none !important; }
-
 /* ============================================================
    5. CALLOUT BOXES — enhanced
    ============================================================ */
@@ -706,4 +754,40 @@ starlight-theme-select { display: none !important; }
 
   h1 { font-size: 2rem; }
   h2 { font-size: 1.4rem; }
+}
+
+/* ============================================================
+   12. LIGHT MODE OVERRIDES
+   ============================================================ */
+
+/* Hero glow — subtle di light bg */
+:root[data-theme='light'] .hero::before { opacity: 0.5; }
+:root[data-theme='light'] .hero::after { opacity: 0.3; }
+
+/* Hero heading gradient — lebih kontras */
+:root[data-theme='light'] .hero h1 {
+  background: linear-gradient(115deg, #1e3a8a, #2563eb 50%, #0891b2 85%);
+}
+
+:root[data-theme='light'] .hero .tagline {
+  color: var(--sl-color-gray-2);
+}
+
+/* Cards — white bg + subtle shadow */
+:root[data-theme='light'] .sl-link-card {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+:root[data-theme='light'] .sl-link-card:hover {
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.12);
+}
+
+/* Table — alternating rows */
+:root[data-theme='light'] .sl-markdown-content tr:nth-child(even) td {
+  background: rgba(37, 99, 235, 0.03);
+}
+
+/* Sidebar link active */
+:root[data-theme='light'] [aria-current='page'] {
+  color: var(--sl-color-accent);
 }
