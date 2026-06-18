@@ -114,7 +114,7 @@ h2 {
 
 .hero {
   position: relative;
-  padding: 2rem 0 1rem;
+  padding: 0.5rem 0;
 }
 
 /* Side-by-side: title kiri + X profile kanan */
@@ -124,7 +124,7 @@ h2 {
   .hero {
     display: flex !important;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     gap: 0.5rem;
   }
 
@@ -158,11 +158,10 @@ h2 {
   .hero {
     display: flex !important;
     flex-direction: row;
-    align-items: center;
-    gap: 1rem;
+    align-items: flex-start;
+    gap: 0.5rem;
   }
 
-  /* X profile card — fixed width, di kanan */
   .hero > img:first-of-type {
     flex: 0 0 340px;
     max-width: 380px;
@@ -191,7 +190,7 @@ h2 {
 /* Full: desktop */
 @media (min-width: 900px) {
   .hero {
-    gap: 1.5rem;
+    gap: 1rem;
   }
 
   .hero > img:first-of-type {
@@ -683,7 +682,7 @@ h2 {
 /* Mobile: stacked layout (< 420px), image di atas */
 @media (max-width: 419px) {
   .hero {
-    padding: 1.5rem 0 1.5rem;
+    padding: 0.5rem 0 0.5rem;
     text-align: center;
   }
 
@@ -693,7 +692,7 @@ h2 {
     max-width: 340px;
     height: auto !important;
     aspect-ratio: auto !important;
-    margin: 0 auto 1.5rem;
+    margin: 0 auto 0.5rem;
   }
 
   .hero h1 {
