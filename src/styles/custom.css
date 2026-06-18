@@ -118,6 +118,41 @@ h2 {
 }
 
 /* Side-by-side: title kiri + X profile kanan */
+
+/* Compact: small phones landscape */
+@media (min-width: 420px) and (max-width: 639px) {
+  .hero {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .hero > img:first-of-type {
+    flex: 0 0 140px;
+    max-width: 160px;
+    height: auto !important;
+    aspect-ratio: auto !important;
+    order: 2;
+  }
+
+  .hero > .sl-flex.stack {
+    flex: 1 1 auto;
+    min-width: 0;
+    order: 1;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero .tagline {
+    max-width: 100%;
+    font-size: 0.9rem;
+  }
+}
+
+/* Medium: tablets */
 @media (min-width: 640px) {
   .hero {
     display: flex !important;
@@ -151,6 +186,7 @@ h2 {
   }
 }
 
+/* Full: desktop */
 @media (min-width: 900px) {
   .hero {
     gap: 3rem;
@@ -642,8 +678,8 @@ h2 {
    11. RESPONSIVE
    ============================================================ */
 
-/* Mobile: stacked layout, image di atas */
-@media (max-width: 639px) {
+/* Mobile: stacked layout (< 420px), image di atas */
+@media (max-width: 419px) {
   .hero {
     padding: 2rem 0 2rem;
     text-align: center;
