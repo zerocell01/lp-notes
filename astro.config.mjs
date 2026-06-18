@@ -19,9 +19,34 @@ export default defineConfig({
 			social: [
 				{ icon: 'github', label: 'GitHub', href: 'https://github.com/zerocell01/lp-notes' },
 			],
+			head: [
+				// Preconnect Google Fonts
+				{ tag: 'link', attrs: { rel: 'preconnect', href: 'https://fonts.googleapis.com' } },
+				{ tag: 'link', attrs: { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: true } },
+				// Reading progress bar script
+				{
+					tag: 'script',
+					content: `
+						document.addEventListener('DOMContentLoaded', () => {
+							const bar = document.createElement('div');
+							bar.id = 'reading-progress';
+							document.body.prepend(bar);
+							window.addEventListener('scroll', () => {
+								const scrollTop = document.documentElement.scrollTop;
+								const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+								const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+								bar.style.width = progress + '%';
+							});
+						});
+					`,
+				},
+			],
+			components: {
+				Footer: './src/components/Footer.astro',
+			},
 			sidebar: [
 				{
-					label: 'Mulai di Sini',
+					label: '🚀 Mulai di Sini',
 					items: [
 						{ label: 'Tentang Catatan Ini', slug: 'mulai/tentang' },
 						{ label: 'LP Manual vs LP dengan Agent', slug: 'mulai/lp-manual-vs-agent' },
@@ -29,7 +54,7 @@ export default defineConfig({
 					],
 				},
 				{
-					label: 'Dasar DLMM',
+					label: '📘 Dasar DLMM',
 					items: [
 						{ label: 'Apa itu DLMM & Bin', slug: 'dasar/dlmm-dan-bin' },
 						{ label: 'Range, In-Range vs OOR', slug: 'dasar/range-dan-oor' },
@@ -38,7 +63,7 @@ export default defineConfig({
 					],
 				},
 				{
-					label: 'Volatilitas & Range',
+					label: '📊 Volatilitas & Range',
 					items: [
 						{ label: 'ATR: Mengukur Goyangan Harga', slug: 'volatilitas/atr' },
 						{ label: 'Lebar Range Mengikuti Volatilitas', slug: 'volatilitas/lebar-range' },
@@ -50,13 +75,13 @@ export default defineConfig({
 					],
 				},
 				{
-					label: 'Fee & Pemilihan Pool',
+					label: '💰 Fee & Pemilihan Pool',
 					items: [
 						{ label: 'Fee = Volume ÷ TVL, Bukan Mcap', slug: 'fee/volume-tvl' },
 					],
 				},
 				{
-					label: 'Psikologi & Strategi',
+					label: '🧠 Psikologi & Strategi',
 					items: [
 						{ label: 'Sabar: Edge yang Sering Dilupakan', slug: 'psikologi/sabar' },
 						{ label: 'Kapan Hold, Kapan Cut', slug: 'psikologi/hold-vs-cut' },
@@ -64,7 +89,7 @@ export default defineConfig({
 					],
 				},
 				{
-					label: 'Operator & Otomasi',
+					label: '⚙️ Operator & Otomasi',
 					items: [
 						{ label: 'Install Hermes Agent di VPS', slug: 'operator/install-hermes-vps' },
 						{ label: 'Install Meridian (Agent LP) di VPS', slug: 'operator/install-meridian-vps' },
@@ -72,10 +97,10 @@ export default defineConfig({
 					],
 				},
 				{
-					label: 'Tips Singkat',
+					label: '💡 Tips Singkat',
 					items: [{ autogenerate: { directory: 'tips' } }],
 				},
-				{ label: 'Glossary Istilah', slug: 'glossary' },
+				{ label: '📖 Glossary Istilah', slug: 'glossary' },
 			],
 		}),
 	],
