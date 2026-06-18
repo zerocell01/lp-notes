@@ -8,7 +8,7 @@
   </defs>
 
   <!-- Card background -->
-  <rect x="0" y="12" width="340" height="170" rx="20" fill="url(#cardGrad)" stroke="rgba(157,140,255,0.22)" stroke-width="1.5"/>
+  <rect x="0" y="12" width="340" height="150" rx="20" fill="url(#cardGrad)" stroke="rgba(157,140,255,0.22)" stroke-width="1.5"/>
 
   <!-- Avatar border glow -->
   <circle cx="52" cy="72" r="44" fill="none" stroke="rgba(157,140,255,0.3)" stroke-width="2"/>
@@ -33,11 +33,5 @@
   <text x="108" y="106" fill="rgba(226,222,255,0.7)" font-size="13" font-family="'Plus Jakarta Sans', sans-serif">Belajar Web3 dari nol.</text>
   <text x="108" y="126" fill="rgba(226,222,255,0.7)" font-size="13" font-family="'Plus Jakarta Sans', sans-serif">LP • DeFi • Solidity.</text>
 
-  <!-- Followers -->
-  <g transform="translate(108, 146)">
-    <text x="0" y="12" fill="#e2deff" font-size="15" font-weight="700">0</text>
-    <text x="18" y="12" fill="rgba(226,222,255,0.5)" font-size="12">Following</text>
-    <text x="90" y="12" fill="#e2deff" font-size="15" font-weight="700">0</text>
-    <text x="108" y="12" fill="rgba(226,222,255,0.5)" font-size="12">Followers</text>
-  </g>
+
 </svg>
