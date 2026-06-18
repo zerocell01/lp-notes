@@ -125,7 +125,7 @@ h2 {
     display: flex !important;
     flex-direction: row;
     align-items: center;
-    gap: 1rem;
+    gap: 0.5rem;
   }
 
   .hero > img:first-of-type {
@@ -158,7 +158,7 @@ h2 {
     display: flex !important;
     flex-direction: row;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
   }
 
   /* X profile card — fixed width, di kanan */
@@ -189,7 +189,7 @@ h2 {
 /* Full: desktop */
 @media (min-width: 900px) {
   .hero {
-    gap: 3rem;
+    gap: 1.5rem;
   }
 
   .hero > img:first-of-type {
