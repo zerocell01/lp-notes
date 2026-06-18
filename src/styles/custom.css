@@ -789,10 +789,3 @@ h2 {
   h1 { font-size: 2rem; }
   h2 { font-size: 1.4rem; }
 }
-
-/* X profile card — readable di light theme */
-[data-theme='light'] .hero > img:first-of-type {
-  background: #13111c;
-  border-radius: 22px;
-  box-shadow: 0 0 20px rgba(120, 100, 220, 0.15);
-}
