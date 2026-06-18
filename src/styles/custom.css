@@ -163,7 +163,7 @@ h2 {
 
 /* Profile images: positioned alongside hero title, swapped per theme */
 .hero-profile-imgs {
-  display: none;
+  /* shown/hidden per .hero-profile-img children via theme rules below */
 }
 .hero-profile-img {
   width: 100%;
