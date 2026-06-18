@@ -43,7 +43,7 @@ export default defineConfig({
 				// Force dark theme only
 				{
 					tag: 'script',
-					content: `document.documentElement.dataset.theme = 'dark';`,
+					content: `localStorage.setItem('starlight-theme', 'dark');document.documentElement.dataset.theme = 'dark';`,
 				},
 			],
 			components: {
