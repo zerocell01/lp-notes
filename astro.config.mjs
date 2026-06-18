@@ -8,7 +8,7 @@ export default defineConfig({
 	site: 'https://meridiannotes.vercel.app',
 	integrations: [
 		starlight({
-			title: 'Catatan Belajar Web3',
+			title: 'Ananta Notes',
 			customCss: ['./src/styles/custom.css'],
 			description:
 				'Catatan publik belajar Web3 dari nol: blockchain, smart contract, DeFi, NFT, dan tools developer. Konsep, tutorial praktis, dan pelajaran — ditulis dari pemula untuk pemula.',
