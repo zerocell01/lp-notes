@@ -36,30 +36,30 @@
 
 /* ---------- LIGHT MODE ---------- */
 :root[data-theme='light'] {
-  --sl-color-accent-low: #f3f4f6;
-  --sl-color-accent: #4b5563;
-  --sl-color-accent-high: #1f2937;
+  --sl-color-accent-low: #cffafe;
+  --sl-color-accent: #0891b2;
+  --sl-color-accent-high: #155e75;
 
-  --sl-color-bg: #ffffff;
-  --sl-color-bg-nav: #fafafa;
-  --sl-color-bg-sidebar: #fafafa;
-  --sl-color-bg-inline-code: #f0f0f0;
-  --sl-color-text: #1f2937;
-  --sl-color-text-accent: #4b5563;
+  --sl-color-bg: #f0f9fc;
+  --sl-color-bg-nav: #ecf8fc;
+  --sl-color-bg-sidebar: #ecf8fc;
+  --sl-color-bg-inline-code: #e0f2fe;
+  --sl-color-text: #164e63;
+  --sl-color-text-accent: #0891b2;
 
   --card-bg: rgba(255, 255, 255, 0.98);
-  --card-border: rgba(75, 85, 99, 0.08);
+  --card-border: rgba(8, 145, 178, 0.1);
   --header-bg: rgba(255, 255, 255, 0.98);
 
-  /* Override brand colors untuk light mode */
-  --brand-navy: #4b5563;
-  --brand-navy-glow: rgba(75, 85, 99, 0.25);
-  --brand-blue: #6b7280;
-  --brand-blue-glow: rgba(107, 114, 128, 0.2);
-  --brand-dark: #1f2937;
-  --brand-cyan: #9ca3af;
-  --brand-cyan-glow: rgba(156, 163, 175, 0.15);
-  --brand-slate: #d1d5db;
+  /* Override brand colors untuk light mode - Sky/Cyan */
+  --brand-navy: #0891b2;
+  --brand-navy-glow: rgba(8, 145, 178, 0.3);
+  --brand-blue: #06b6d4;
+  --brand-blue-glow: rgba(6, 182, 212, 0.25);
+  --brand-dark: #164e63;
+  --brand-cyan: #22d3ee;
+  --brand-cyan-glow: rgba(34, 211, 238, 0.2);
+  --brand-slate: #7dd3fc;
 }
 
 /* ============================================================
@@ -67,7 +67,7 @@
    ============================================================ */
 
 :root[data-theme='light'] .hero h1 {
-  background: linear-gradient(115deg, #4b5563, #6b7280 50%, #9ca3af 85%);
+  background: linear-gradient(115deg, #0891b2, #06b6d4 50%, #22d3ee 85%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -76,33 +76,33 @@
 
 :root[data-theme='light'] .hero::before {
   background:
-    radial-gradient(55% 55% at 25% 30%, rgba(75, 85, 99, 0.15), transparent 65%),
-    radial-gradient(45% 45% at 75% 25%, rgba(107, 114, 128, 0.1), transparent 65%),
-    radial-gradient(35% 35% at 60% 60%, rgba(156, 163, 175, 0.08), transparent 65%);
+    radial-gradient(55% 55% at 25% 30%, rgba(8, 145, 178, 0.2), transparent 65%),
+    radial-gradient(45% 45% at 75% 25%, rgba(6, 182, 212, 0.15), transparent 65%),
+    radial-gradient(35% 35% at 60% 60%, rgba(34, 211, 238, 0.12), transparent 65%);
 }
 
 :root[data-theme='light'] .hero .action.primary {
-  background: linear-gradient(115deg, #4b5563, #6b7280);
-  box-shadow: 0 6px 24px -4px rgba(107, 114, 128, 0.2);
+  background: linear-gradient(115deg, #0891b2, #06b6d4);
+  box-shadow: 0 6px 24px -4px rgba(6, 182, 212, 0.3);
 }
 
 :root[data-theme='light'] .hero .action.primary:hover {
-  box-shadow: 0 10px 32px -4px rgba(107, 114, 128, 0.4);
+  box-shadow: 0 10px 32px -4px rgba(6, 182, 212, 0.5);
 }
 
 :root[data-theme='light'] .hero .action.secondary {
-  border-color: #6b7280;
-  color: #6b7280;
+  border-color: #06b6d4;
+  color: #06b6d4;
 }
 
 :root[data-theme='light'] .hero .action.secondary:hover {
-  background: rgba(107, 114, 128, 0.08);
-  border-color: #9ca3af;
-  color: #9ca3af;
+  background: rgba(6, 182, 212, 0.1);
+  border-color: #22d3ee;
+  color: #22d3ee;
 }
 
 :root[data-theme='light'] .site-title {
-  background: linear-gradient(100deg, #4b5563, #6b7280);
+  background: linear-gradient(100deg, #0891b2, #06b6d4);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -110,7 +110,7 @@
 }
 
 :root[data-theme='light'] .custom-footer .footer-brand {
-  background: linear-gradient(100deg, #4b5563, #9ca3af);
+  background: linear-gradient(100deg, #0891b2, #22d3ee);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -118,100 +118,100 @@
 }
 
 :root[data-theme='light'] .custom-footer a {
-  color: #6b7280;
+  color: #06b6d4;
 }
 
 :root[data-theme='light'] .custom-footer a:hover {
-  color: #9ca3af;
+  color: #22d3ee;
 }
 
 :root[data-theme='light'] .sl-markdown-content a:not(:where(.not-content *)) {
-  color: #4b5563;
+  color: #0891b2;
 }
 
 :root[data-theme='light'] .sl-markdown-content a:not(:where(.not-content *)):hover {
-  color: #6b7280;
+  color: #06b6d4;
 }
 
 :root[data-theme='light'] .sl-markdown-content blockquote {
-  border-inline-start-color: #9ca3af;
-  background: rgba(156, 163, 175, 0.05);
-  border-color: rgba(107, 114, 128, 0.15);
+  border-inline-start-color: #22d3ee;
+  background: rgba(34, 211, 238, 0.05);
+  border-color: rgba(6, 182, 212, 0.15);
 }
 
 :root[data-theme='light'] .starlight-aside--note {
-  background: linear-gradient(135deg, rgba(156, 163, 175, 0.08), rgba(107, 114, 128, 0.05));
-  border-color: rgba(107, 114, 128, 0.15);
-  border-inline-start-color: #9ca3af;
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.1), rgba(6, 182, 212, 0.05));
+  border-color: rgba(6, 182, 212, 0.2);
+  border-inline-start-color: #22d3ee;
 }
 
 :root[data-theme='light'] .starlight-aside--tip {
-  background: linear-gradient(135deg, rgba(107, 114, 128, 0.08), rgba(75, 85, 99, 0.04));
-  border-color: rgba(107, 114, 128, 0.15);
-  border-inline-start-color: #6b7280;
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(8, 145, 178, 0.05));
+  border-color: rgba(6, 182, 212, 0.2);
+  border-inline-start-color: #06b6d4;
 }
 
 :root[data-theme='light'] .sidebar a[aria-current='page'] {
-  background: linear-gradient(100deg, rgba(75, 85, 99, 0.1), rgba(156, 163, 175, 0.08));
+  background: linear-gradient(100deg, rgba(8, 145, 178, 0.12), rgba(34, 211, 238, 0.1));
 }
 
 :root[data-theme='light'] .sidebar a[aria-current='page']::before {
-  background: linear-gradient(180deg, #6b7280, #9ca3af);
+  background: linear-gradient(180deg, #06b6d4, #22d3ee);
 }
 
 :root[data-theme='light'] .sidebar a:hover {
-  background: rgba(107, 114, 128, 0.08);
+  background: rgba(6, 182, 212, 0.1);
 }
 
 :root[data-theme='light'] #reading-progress {
-  background: linear-gradient(90deg, #4b5563, #6b7280, #9ca3af);
+  background: linear-gradient(90deg, #0891b2, #06b6d4, #22d3ee);
 }
 
 :root[data-theme='light'] .sl-link-card {
   background:
     linear-gradient(var(--card-bg), var(--card-bg)) padding-box,
-    linear-gradient(135deg, #6b7280, #9ca3af) border-box;
+    linear-gradient(135deg, #06b6d4, #22d3ee) border-box;
 }
 
 :root[data-theme='light'] .sl-link-card::after {
   background: radial-gradient(400px at var(--mouse-x, 50%) var(--mouse-y, 50%),
-    rgba(107, 114, 128, 0.15), transparent 60%);
+    rgba(6, 182, 212, 0.2), transparent 60%);
 }
 
 :root[data-theme='light'] .sl-link-card:hover {
   box-shadow:
-    0 12px 32px -8px rgba(107, 114, 128, 0.15),
-    0 4px 12px -2px rgba(107, 114, 128, 0.1);
+    0 12px 32px -8px rgba(6, 182, 212, 0.25),
+    0 4px 12px -2px rgba(34, 211, 238, 0.15);
 }
 
 :root[data-theme='light'] .card-grid > .sl-link-card:nth-child(6n+1) {
   background: linear-gradient(var(--card-bg), var(--card-bg)) padding-box,
-              linear-gradient(135deg, #6b7280, #9ca3af) border-box;
+              linear-gradient(135deg, #06b6d4, #22d3ee) border-box;
 }
 
 :root[data-theme='light'] .card-grid > .sl-link-card:nth-child(6n+2) {
   background: linear-gradient(var(--card-bg), var(--card-bg)) padding-box,
-              linear-gradient(135deg, #9ca3af, #d1d5db) border-box;
+              linear-gradient(135deg, #22d3ee, #7dd3fc) border-box;
 }
 
 :root[data-theme='light'] .card-grid > .sl-link-card:nth-child(6n+3) {
   background: linear-gradient(var(--card-bg), var(--card-bg)) padding-box,
-              linear-gradient(135deg, #d1d5db, #9ca3af) border-box;
+              linear-gradient(135deg, #7dd3fc, #22d3ee) border-box;
 }
 
 :root[data-theme='light'] .card-grid > .sl-link-card:nth-child(6n+4) {
   background: linear-gradient(var(--card-bg), var(--card-bg)) padding-box,
-              linear-gradient(135deg, #6b7280, #d1d5db) border-box;
+              linear-gradient(135deg, #0891b2, #7dd3fc) border-box;
 }
 
 :root[data-theme='light'] .card-grid > .sl-link-card:nth-child(6n+5) {
   background: linear-gradient(var(--card-bg), var(--card-bg)) padding-box,
-              linear-gradient(135deg, #4b5563, #9ca3af) border-box;
+              linear-gradient(135deg, #164e63, #22d3ee) border-box;
 }
 
 :root[data-theme='light'] .card-grid > .sl-link-card:nth-child(6n) {
   background: linear-gradient(var(--card-bg), var(--card-bg)) padding-box,
-              linear-gradient(135deg, #9ca3af, #4b5563) border-box;
+              linear-gradient(135deg, #22d3ee, #164e63) border-box;
 }
 
 /* ---------- DARK MODE ---------- */
