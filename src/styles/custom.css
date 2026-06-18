@@ -790,6 +790,3 @@ h2 {
   h2 { font-size: 1.4rem; }
 }
 
-/* Force dark mode only — hide theme toggle */
-starlight-theme-select { display: none !important; }
-

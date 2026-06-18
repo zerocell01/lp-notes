@@ -40,10 +40,27 @@ export default defineConfig({
 						});
 					`,
 				},
-				// Force dark theme only
+				// Theme-aware hero profile image swap
 				{
 					tag: 'script',
-					content: `document.documentElement.dataset.theme = 'dark';`,
+					content: `
+						document.addEventListener('DOMContentLoaded', () => {
+							const img = document.querySelector('.hero > img:first-of-type');
+							if (!img) return;
+							const darkSrc = img.src;
+							const lightSrc = darkSrc.replace('x-profile.svg', 'x-profile-light.svg');
+
+							function update() {
+								const isLight = document.documentElement.dataset.theme === 'light';
+								img.src = isLight ? lightSrc : darkSrc;
+							}
+
+							update();
+							new MutationObserver(update).observe(document.documentElement, {
+								attributes: true, attributeFilter: ['data-theme']
+							});
+						});
+					`,
 				},
 			],
 			components: {
