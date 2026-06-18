@@ -130,7 +130,8 @@ h2 {
   .hero > img:first-of-type {
     flex: 0 0 340px;
     max-width: 380px;
-    height: auto;
+    height: auto !important;
+    aspect-ratio: auto !important;
     order: 2;
   }
 
@@ -158,6 +159,8 @@ h2 {
   .hero > img:first-of-type {
     flex: 0 0 380px;
     max-width: 420px;
+    height: auto !important;
+    aspect-ratio: auto !important;
   }
 
   .hero h1 {
@@ -639,13 +642,24 @@ h2 {
    11. RESPONSIVE
    ============================================================ */
 
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2rem;
+/* Mobile: stacked layout, image di atas */
+@media (max-width: 639px) {
+  .hero {
+    padding: 2rem 0 2rem;
+    text-align: center;
   }
 
-  .hero {
-    padding: 2.5rem 0 2rem;
+  .hero > img:first-of-type {
+    display: block;
+    width: 75% !important;
+    max-width: 340px;
+    height: auto !important;
+    aspect-ratio: auto !important;
+    margin: 0 auto 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
   }
 
   .hero::before {
