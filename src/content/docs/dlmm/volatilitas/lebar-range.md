@@ -3,7 +3,7 @@ title: Lebar Range Mengikuti Volatilitas
 description: Prinsip umum menyesuaikan lebar range dengan seberapa liar token bergerak.
 ---
 
-Prinsip intinya sederhana: **makin liar token, makin lebar range yang dibutuhkan** supaya posisi tidak gampang keluar dari range (OOR).
+Prinsip intinya sederhana: **makin liar token, makin lebar range yang dibutuhkan** supaya posisi tidak mudah keluar dari range (OOR).
 
 ## Logikanya
 
@@ -27,14 +27,14 @@ Banyak pendekatan memetakan volatilitas ke lebar range secara bertahap, dengan b
 Angka persisnya sengaja tidak dicantumkan - itu sangat tergantung token, bin step, dan toleransi risiko masing-masing. Yang penting **polanya**: naik bertahap, dengan batas bawah dan atas yang wajar.
 :::
 
-## Kenapa pakai floor dan ceiling
+## Mengapa pakai floor dan ceiling
 
-- **Floor (batas bawah)** - supaya range tidak pernah terlalu sempit sampai gampang OOR walau token sedang sepi sesaat.
+- **Floor (batas bawah)** - supaya range tidak pernah terlalu sempit sampai mudah OOR walau token sedang sepi sesaat.
 - **Ceiling (batas atas)** - supaya range tidak melebar tanpa batas sampai fee jadi terlalu encer dan modal tidak produktif.
 
 ## Hubungan dengan fee
 
-Range lebih lebar = lebih aman dari OOR, tapi fee per bin lebih kecil. Ini trade-off klasik (lihat [In-Range vs OOR](/dasar/range-dan-oor/)). Tujuannya bukan "selebar mungkin" atau "sesempit mungkin", tapi **pas dengan goyangan token** - cukup lebar untuk bertahan, cukup sempit untuk tetap menghasilkan.
+Range lebih lebar = lebih aman dari OOR, tetapi fee per bin lebih kecil. Ini trade-off klasik (lihat [In-Range vs OOR](/dasar/range-dan-oor/)). Tujuannya bukan "selebar mungkin" atau "sesempit mungkin", tetapi **pas dengan goyangan token** - cukup lebar untuk bertahan, cukup sempit untuk tetap menghasilkan.
 
 ## Intinya
 

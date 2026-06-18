@@ -1,6 +1,6 @@
 ---
 title: Bollinger Bands - Pita Volatilitas
-description: Memahami Bollinger Bands di agent LP DLMM - cara membaca zona BB, apa arti %B, dan kenapa "harga nembus band" bukan sinyal beli/jual otomatis.
+description: Memahami Bollinger Bands di agent LP DLMM - cara membaca zona BB, apa arti %B, dan mengapa "harga nembus band" bukan sinyal beli/jual otomatis.
 ---
 
 Bollinger Bands (BB) sering muncul di laporan posisi sebagai baris `BB`. Indikator ini menggambar **tiga garis** yang membungkus harga seperti pita, dan dipakai untuk menjawab: **harga ini sekarang relatif mahal atau murah dibanding pergerakannya sendiri belakangan?**
@@ -22,15 +22,15 @@ Karena atas dan bawah dihitung dari **standar deviasi** (ukuran sebaran), pita i
 Di laporan posisi, baris BB tampil seperti ini:
 
 ```text
-BB  : below lower │ %B 0.04
+BB : below lower │ %B 0.04
 ```
 
 Zona menunjukkan posisi harga relatif ke pita:
 
 - **`below lower`** - harga di bawah garis bawah. Bergerak turun ekstrem dibanding biasanya.
 - **`above upper`** - harga di atas garis atas. Bergerak naik ekstrem dibanding biasanya.
-- **`upper half`** - di atas garis tengah tapi masih dalam pita (condong kuat).
-- **`lower half`** - di bawah garis tengah tapi masih dalam pita (condong lemah).
+- **`upper half`** - di atas garis tengah tetapi masih dalam pita (condong kuat).
+- **`lower half`** - di bawah garis tengah tetapi masih dalam pita (condong lemah).
 - **`mid`** - pas di sekitar tengah.
 
 ## Apa itu %B?
@@ -93,7 +93,7 @@ Jangan jadikan sentuhan band sebagai perintah. Tanya dulu: pasarnya **sideways**
 
 ## Intinya
 
-Bollinger Bands itu pita yang melebar/menyempit mengikuti volatilitas. Zona (`below lower` … `above upper`) dan **%B** memberi tahu seberapa ekstrem posisi harga dalam pita. Tapi jebakan terbesarnya: **nembus band bukan sinyal beli/jual otomatis** - di tren kuat harga bisa berjalan di sepanjang band. Pakai Bollinger sebagai konteks bersama Supertrend dan RSI, bukan sebagai tombol aksi sendiri.
+Bollinger Bands itu pita yang melebar/menyempit mengikuti volatilitas. Zona (`below lower` … `above upper`) dan **%B** memberi tahu seberapa ekstrem posisi harga dalam pita. Tetapi jebakan terbesarnya: **nembus band bukan sinyal beli/jual otomatis** - di tren kuat harga bisa berjalan di sepanjang band. Pakai Bollinger sebagai konteks bersama Supertrend dan RSI, bukan sebagai tombol aksi sendiri.
 
 :::caution[Bukan saran finansial]
 Catatan belajar pribadi untuk edukasi. Bukan ajakan trading. Selalu riset sendiri.

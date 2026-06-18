@@ -6,22 +6,22 @@ description: Daftar istilah Web3 yang sering muncul — dari ABI sampai zk-rollu
 ## A
 
 **ABI (Application Binary Interface)**
-Deskripsi teknis fungsi kontrak — kayak "API spec" buat smart contract. Dibutuhkan Ethers.js/web3.py buat interaksi.
+Deskripsi teknis fungsi kontrak — seperti "API spec" untuk smart contract. Dibutuhkan Ethers.js/web3.py untuk interaksi.
 
 **Account Abstraction (ERC-4337)**
-Bikin wallet bisa dikustomisasi — gasless tx, social recovery, multisig — tanpa mengubah protokol Ethereum.
+Membuat wallet bisa dikustomisasi — gasless tx, social recovery, multisig — tanpa mengubah protokol Ethereum.
 
 **Address**
 Identitas di blockchain, format `0x...` 40 karakter hex. Bisa wallet atau kontrak.
 
 **Airdrop**
-Distribusi token gratis ke banyak address. Biasanya buat marketing atau reward early user.
+Distribusi token gratis ke banyak address. Biasanya untuk marketing atau reward early user.
 
 **Altcoin**
 Semua crypto selain Bitcoin.
 
 **AMM (Automated Market Maker)**
-DEX yang pake rumus matematika (bukan order book) buat tentuin harga. Contoh: Uniswap.
+DEX yang menggunakan rumus matematika (bukan order book) untuk tentuin harga. Contoh: Uniswap.
 
 **APR / APY**
 Annual Percentage Rate (bunga sederhana) vs Annual Percentage Yield (bunga berbunga, termasuk compounding).
@@ -40,19 +40,19 @@ Layer-2 Ethereum dari Coinbase, berbasis OP Stack.
 Kumpulan transaksi yang diproses barengan. Satu blok ≈ satu halaman di buku besar.
 
 **Block Explorer**
-Tool buat cari & lihat data blockchain (transaksi, alamat, kontrak). Contoh: Etherscan.
+Tool untuk cari & lihat data blockchain (transaksi, alamat, kontrak). Contoh: Etherscan.
 
 **Blockchain**
-Database terdesentralisasi yang gak bisa diubah. Ethereum, Solana, Polygon adalah blockchain.
+Database terdesentralisasi yang tidak bisa diubah. Ethereum, Solana, Polygon adalah blockchain.
 
 **Bridge**
-Jembatan buat mindahin aset antar blockchain (Ethereum ↔ Arbitrum).
+Jembatan untuk mindahin aset antar blockchain (Ethereum ↔ Arbitrum).
 
 **Burn**
-Hancurin token secara permanen — kirim ke address yang gak ada kuncinya.
+Hancurin token secara permanen — kirim ke address yang tidak ada kuncinya.
 
 **Byzantine Fault Tolerance (BFT)**
-Kemampuan sistem terdesentralisasi buat tetap jalan meskipun ada node jahat / rusak.
+Kemampuan sistem terdesentralisasi untuk tetap jalan meskipun ada node jahat / rusak.
 
 ---
 
@@ -71,7 +71,7 @@ Layer Ethereum yang handle validasi blok — sebelumnya execution layer.
 Alamat di blockchain tempat smart contract di-deploy.
 
 **Custodial**
-Pihak ketiga yang megang private key lo. "Not your keys, not your coins."
+Pihak ketiga yang memegang private key lo. "Not your keys, not your coins."
 
 ---
 
@@ -106,7 +106,7 @@ Penurunan nilai token karena supply bertambah (inflasi).
 ## E
 
 **ECDSA**
-Algoritma kriptografi yang dipake Ethereum buat tanda tangan digital.
+Algoritma kriptografi yang digunakan Ethereum untuk tanda tangan digital.
 
 **EIP (Ethereum Improvement Proposal)**
 Proposal perubahan teknis Ethereum. EIP-1559 (fee burn), EIP-4337 (account abstraction).
@@ -118,10 +118,10 @@ Address yang dikontrol private key — wallet biasa, bukan kontrak.
 Standard teknis di Ethereum. ERC-20 (token), ERC-721 (NFT), ERC-1155 (multi-token).
 
 **Ethereum**
-Blockchain paling populer buat smart contract & DeFi. Native token: ETH.
+Blockchain paling populer untuk smart contract & DeFi. Native token: ETH.
 
 **EVM (Ethereum Virtual Machine)**
-Mesin virtual yang eksekusi smart contract di Ethereum. Semua EVM-compatible chain (Polygon, Arbitrum) bisa jalanin kontrak yang sama.
+Mesin virtual yang eksekusi smart contract di Ethereum. Semua EVM-compatible chain (Polygon, Arbitrum) bisa menjalankan kontrak yang sama.
 
 **Execution Layer**
 Layer Ethereum yang eksekusi transaksi & smart contract — sebelumnya execution layer.
@@ -131,10 +131,10 @@ Layer Ethereum yang eksekusi transaksi & smart contract — sebelumnya execution
 ## F
 
 **Faucet**
-Website yang ngasih testnet token gratis. Contoh: Sepolia Faucet.
+Website yang memberikan testnet token gratis. Contoh: Sepolia Faucet.
 
 **Finality**
-Titik di mana transaksi "final" — gak bisa di-reverse. Di Ethereum PoS: ~12.8 menit.
+Titik di mana transaksi "final" — tidak bisa di-reverse. Di Ethereum PoS: ~12.8 menit.
 
 **Flash Loan**
 Pinjaman tanpa jaminan yang harus dikembalikan dalam 1 transaksi yang sama.
@@ -149,10 +149,10 @@ Percabangan blockchain. Soft fork (update backward-compatible), hard fork (split
 NFT yang dipecah jadi token ERC-20 — kepemilikan kolektif.
 
 **Front-running**
-Bot lihat transaksi pending lo → kirim transaksi duluan dengan gas lebih tinggi. Jenis MEV.
+Bot lihat transaksi pending Anda → kirim transaksi duluan dengan gas lebih tinggi. Jenis MEV.
 
 **FUD**
-Fear, Uncertainty, Doubt — narasi negatif (biasanya buat manipulasi harga).
+Fear, Uncertainty, Doubt — narasi negatif (biasanya untuk manipulasi harga).
 
 **Fungible**
 Token yang tiap unit identik (1 USDC = 1 USDC lain). Lawannya: non-fungible (NFT).
@@ -162,13 +162,13 @@ Token yang tiap unit identik (1 USDC = 1 USDC lain). Lawannya: non-fungible (NFT
 ## G
 
 **Gas**
-Unit komputasi di Ethereum. Tiap operasi butuh gas → lo bayar dalam ETH.
+Unit komputasi di Ethereum. Tiap operasi butuh gas → Anda bayar dalam ETH.
 
 **Gas Limit**
-Maksimum gas yang lo siap bayar buat 1 transaksi.
+Maksimum gas yang Anda siap bayar untuk 1 transaksi.
 
 **Gas Price**
-Harga per unit gas (gwei). Semakin tinggi → semakin cepet diproses.
+Harga per unit gas (gwei). Semakin tinggi → semakin cepat diproses.
 
 **Genesis Block**
 Blok pertama di blockchain.
@@ -177,7 +177,7 @@ Blok pertama di blockchain.
 Good Morning / Good Night — salam khas komunitas crypto.
 
 **Governance Token**
-Token buat voting keputusan protokol. Contoh: UNI (Uniswap), AAVE.
+Token untuk voting keputusan protokol. Contoh: UNI (Uniswap), AAVE.
 
 **Gwei**
 Satuan kecil ETH: 1 gwei = 0.000000001 ETH = 1 nano-ETH.
@@ -203,20 +203,20 @@ Wallet yang online (software). Lawannya: cold wallet (hardware, paper).
 ## I
 
 **Immutable**
-Gak bisa diubah. Smart contract immutable setelah deploy (kecuali ada upgrade mechanism).
+Tidak bisa diubah. Smart contract immutable setelah deploy (kecuali ada upgrade mechanism).
 
 **Impermanent Loss (IL)**
 Kerugian sementara LP karena harga aset berubah — dibanding hold biasa.
 
 **IPFS (InterPlanetary File System)**
-Penyimpanan terdesentralisasi. Tempat nyimpen metadata & gambar NFT.
+Penyimpanan terdesentralisasi. Tempat menyimpan metadata & gambar NFT.
 
 ---
 
 ## J,K
 
 **JSON-RPC**
-Protokol komunikasi antara aplikasi lo dan node Ethereum.
+Protokol komunikasi antara aplikasi Anda dan node Ethereum.
 
 **KYC**
 Know Your Customer — verifikasi identitas (wajib di CEX, opsional di DeFi).
@@ -229,20 +229,20 @@ Know Your Customer — verifikasi identitas (wajib di CEX, opsional di DeFi).
 Blockchain utama: Ethereum, Solana, Bitcoin.
 
 **Layer 2 (L2)**
-Protokol di atas L1 buat skalabilitas: Arbitrum, Optimism, Base, Polygon zkEVM.
+Protokol di atas L1 untuk skalabilitas: Arbitrum, Optimism, Base, Polygon zkEVM.
 
 **Liquidity Pool**
-Kolam berisi 2 token yang dipake AMM buat fasilitasi swap.
+Kolam berisi 2 token yang digunakan AMM untuk fasilitasi swap.
 
 **LP (Liquidity Provider)**
-Orang yang nyetor aset ke liquidity pool, dapet fee dari swap.
+Orang yang nyetor aset ke liquidity pool, mendapatkan fee dari swap.
 
 ---
 
 ## M
 
 **Mainnet**
-Blockchain produksi — transaksi beneran, aset punya nilai asli.
+Blockchain produksi — transaksi benar-benar, aset punya nilai asli.
 
 **Market Cap (Mcap)**
 Total nilai token = harga × supply beredar.
@@ -254,39 +254,39 @@ Profit yang bisa diekstrak validator/miner dengan nyusun ulang transaksi.
 Antrian transaksi yang belum diproses (pending).
 
 **Merkle Tree**
-Struktur data efisien buat verifikasi data besar — basis airdrop & whitelist.
+Struktur data efisien untuk verifikasi data besar — basis airdrop & whitelist.
 
 **MetaMask**
-Wallet browser paling populer buat akses Web3.
+Wallet browser paling populer untuk akses Web3.
 
 **Mint**
-Bikin token/NFT baru. Dari "minting" — cetak koin.
+Membuat token/NFT baru. Dari "minting" — cetak koin.
 
 **Multisig**
-Wallet yang butuh >1 tanda tangan buat transaksi.
+Wallet yang butuh >1 tanda tangan untuk transaksi.
 
 ---
 
 ## N
 
 **NFT (Non-Fungible Token)**
-Token unik yang gak bisa ditukar 1:1. Dipake buat seni, koleksi, domain, game item.
+Token unik yang tidak bisa ditukar 1:1. Dipake untuk seni, koleksi, domain, game item.
 
 **Node**
-Komputer yang jalanin software blockchain & simpan salinan data.
+Komputer yang menjalankan software blockchain & simpan salinan data.
 
 **Nonce**
 Counter transaksi — mulai dari 0, naik tiap transaksi. Cegah double-spend.
 
 **Non-Custodial**
-Lo yang megang private key — bukan pihak ketiga.
+Anda yang memegang private key — bukan pihak ketiga.
 
 ---
 
 ## O
 
 **Off-Chain**
-Di luar blockchain. Data/gas/perhitungan yang gak butuh on-chain transaction.
+Di luar blockchain. Data/gas/perhitungan yang tidak butuh on-chain transaction.
 
 **On-Chain**
 Di dalam blockchain. Semua transaksi & state yang tersimpan permanen.
@@ -308,7 +308,7 @@ Jembatan data off-chain ke on-chain. Contoh: Chainlink (harga token).
 Bisa diakses siapa pun tanpa izin. Lawannya: permissioned (harus di-whitelist).
 
 **Phishing**
-Penipuan buat curi private key / seed phrase. Selalu cek URL sebelum connect wallet.
+Penipuan untuk curi private key / seed phrase. Selalu cek URL sebelum connect wallet.
 
 **Polygon**
 EVM-compatible sidechain / L2 — transaksi murah.
@@ -320,10 +320,10 @@ Konsensus validasi blok berdasarkan jumlah token yang di-stake. Dipake Ethereum 
 Konsensus berbasis komputasi (mining). Dipake Bitcoin, Ethereum dulu sebelum Merge.
 
 **Private Key**
-Kunci rahasia 64 karakter hex. Siapa yang megang = pemilik wallet.
+Kunci rahasia 64 karakter hex. Siapa yang memegang = pemilik wallet.
 
 **Public Key**
-Turunan private key, dipake buat verifikasi tanda tangan. Dari public key → address.
+Turunan private key, digunakan untuk verifikasi tanda tangan. Dari public key → address.
 
 **Proxy Contract**
 Pattern upgrade kontrak — logic bisa diganti meskipun address tetap.
@@ -333,7 +333,7 @@ Pattern upgrade kontrak — logic bisa diganti meskipun address tetap.
 ## R
 
 **RPC (Remote Procedure Call)**
-Cara aplikasi ngomong sama node Ethereum. Endpoint = URL provider.
+Cara aplikasi berbicara sama node Ethereum. Endpoint = URL provider.
 
 **Rug Pull**
 Developer kabur bawa dana investor. Scam paling umum di DeFi.
@@ -351,7 +351,7 @@ Teknologi L2 yang "gulung" transaksi off-chain → submit bukti ke L1.
 12/24 kata yang bisa restore wallet. Simpan offline, jangan di cloud.
 
 **Self-Custody**
-Lo megang private key sendiri. Lawan dari kustodian.
+Anda memegang private key sendiri. Lawan dari kustodian.
 
 **Sepolia**
 Testnet Ethereum yang direkomendasikan. Gantiin Goerli.
@@ -360,23 +360,23 @@ Testnet Ethereum yang direkomendasikan. Gantiin Goerli.
 Perbedaan harga expected vs actual akibat pergerakan harga saat transaksi diproses.
 
 **Smart Contract**
-Program yang jalan di blockchain — immutable, self-executing, transparan.
+Program yang berjalan di blockchain — immutable, self-executing, transparan.
 
 **Solidity**
-Bahasa pemrograman buat nulis smart contract Ethereum.
+Bahasa pemrograman untuk menulis smart contract Ethereum.
 
 **Stablecoin**
 Token yang nilainya dipatok ke aset stabil (USD). USDC, USDT, DAI.
 
 **Staking**
-Ngunci token buat bantu amankan jaringan (PoS) atau dapet reward.
+Ngunci token untuk bantu amankan jaringan (PoS) atau mendapatkan reward.
 
 ---
 
 ## T
 
 **Testnet**
-Blockchain latihan — token gratis, buat development & testing.
+Blockchain latihan — token gratis, untuk development & testing.
 
 **Token**
 Aset digital di blockchain. Bisa represent uang, governance, utility, atau koleksi.
@@ -391,27 +391,27 @@ Total nilai aset yang "terkunci" di protokol DeFi.
 Operasi on-chain: kirim ETH, panggil kontrak, deploy, dll.
 
 **Trustless**
-Gak perlu percaya siapa pun. Verifikasi sendiri dari data on-chain.
+Tidak perlu percaya siapa pun. Verifikasi sendiri dari data on-chain.
 
 ---
 
 ## V
 
 **Validator**
-Node yang validasi & usul blok di PoS. Stake 32 ETH buat jadi validator Ethereum.
+Node yang validasi & usul blok di PoS. Stake 32 ETH untuk jadi validator Ethereum.
 
 **Vanity Address**
 Address custom — misal `0xDEAD...BEEF`. Hasil brute-force generation.
 
 **Vault**
-Kontrak yang nyimpen & kelola aset user — kayak reksadana DeFi. Contoh: Yearn vaults.
+Kontrak yang menyimpan & kelola aset user — seperti reksadana DeFi. Contoh: Yearn vaults.
 
 ---
 
 ## W
 
 **Wallet**
-Alat buat interaksi sama Web3: bikin key pair, tanda tangan TX, konek ke dApp.
+Alat untuk interaksi sama Web3: membuat key pair, tanda tangan TX, konek ke dApp.
 
 **Wei**
 Satuan terkecil ETH: 1 ETH = 10^18 wei.
@@ -437,11 +437,11 @@ Strategi maksimalin yield dengan mindahin aset antar protokol.
 ## Z
 
 **Zero-Knowledge Proof (ZKP)**
-Bukti kriptografi bahwa lo tahu sesuatu tanpa mengungkapkan apa yang lo tahu. Basis ZK rollup + privasi.
+Bukti kriptografi bahwa Anda tahu sesuatu tanpa mengungkapkan apa yang Anda tahu. Basis ZK rollup + privasi.
 
 **zk-Rollup**
-L2 yang pake ZK proof buat validasi batch transaksi.
+L2 yang menggunakan ZK proof untuk validasi batch transaksi.
 
 ---
 
-> \* Glossary ini terus ditambah seiring gue belajar. Kalau ada istilah yang kurang atau salah, buka issue di [GitHub](https://github.com/zerocell01/lp-notes).
+> \* Glossary ini terus ditambah seiring saya belajar. Kalau ada istilah yang kurang atau salah, buka issue di [GitHub](https://github.com/zerocell01/lp-notes).

@@ -16,7 +16,7 @@ Kalau fee > rugi dan masih in-range, posisi itu pada dasarnya masih bekerja untu
 
 ## Jebakan umum: RSI oversold ekstrem
 
-Sering muncul godaan menutup posisi cuma karena indikator seperti **RSI menunjukkan oversold ekstrem**. Tapi RSI ekstrem **sering memantul** - justru kebalikan dari sinyal jual.
+Sering muncul godaan menutup posisi hanya karena indikator seperti **RSI menunjukkan oversold ekstrem**. Tetapi RSI ekstrem **sering memantul** - justru kebalikan dari sinyal jual.
 
 Selama posisi masih in-range dan fee > rugi, RSI oversold **sendirian bukan alasan valid** untuk menutup. Jangan biarkan satu indikator memicu panik.
 
@@ -24,10 +24,10 @@ Selama posisi masih in-range dan fee > rugi, RSI oversold **sendirian bukan alas
 
 Tutup posisi ketika ada alasan **struktural**, bukan emosional:
 
-- **OOR berkepanjangan** - harga benar-benar keluar range dan tidak balik; modal nganggur terus.
+- **OOR berkepanjangan** - harga benar-benar keluar range dan tidak balik; modal menganggur terus.
 - **Volume mati** - turnover pool ambruk; tidak ada lagi fee yang berarti dihasilkan.
-- **Stop-loss tercapai** - kerugian menembus batas yang sudah kamu tetapkan sebelumnya.
-- **Tesis rusak** - alasan kamu masuk sudah tidak berlaku (misal token ternyata bermasalah).
+- **Stop-loss tercapai** - kerugian menembus batas yang sudah Anda tetapkan sebelumnya.
+- **Tesis rusak** - alasan Anda masuk sudah tidak berlaku (misal token ternyata bermasalah).
 
 ## Tentang token yang "tiba-tiba pump"
 
@@ -37,13 +37,13 @@ Hati-hati dengan token lama yang sudah lama sepi lalu tiba-tiba melonjak. Lonjak
 
 ```
 Masih in-range DAN fee > rugi?
-├── Ya  → default HOLD (jangan panik karena noise / RSI ekstrem)
+├── Ya → default HOLD (jangan panik karena noise / RSI ekstrem)
 └── Tidak → cek trigger keluar:
-            OOR lama? volume mati? stop-loss kena? tesis rusak?
-            ├── Ada salah satu → CUT
-            └── Tidak ada      → HOLD, beri waktu
+ OOR lama? volume mati? stop-loss terkena? tesis rusak?
+ ├── Ada salah satu → CUT
+ └── Tidak ada → HOLD, beri waktu
 ```
 
 ## Intinya
 
-Putuskan aturan keluar saat kepala dingin, lalu ikuti saat panas. Hold kalau sehat (in-range + fee > rugi). Cut kalau ada alasan struktural nyata - bukan cuma karena satu indikator atau perasaan tidak enak.
+Putuskan aturan keluar saat kepala dingin, lalu ikuti saat panas. Hold kalau sehat (in-range + fee > rugi). Cut kalau ada alasan struktural nyata - bukan hanya karena satu indikator atau perasaan tidak enak.

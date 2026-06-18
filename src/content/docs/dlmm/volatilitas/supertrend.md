@@ -1,6 +1,6 @@
 ---
 title: Supertrend - Pengukur Arah Tren
-description: Memahami indikator Supertrend di agent LP DLMM - cara membacanya, apa arti "flip" bullish/bearish, dan kenapa dia cocok jadi pemicu entry/exit untuk memecoin.
+description: Memahami indikator Supertrend di agent LP DLMM - cara membacanya, apa arti "flip" bullish/bearish, dan mengapa dia cocok jadi pemicu entry/exit untuk memecoin.
 ---
 
 Kalau [RSI](/volatilitas/rsi/) mengukur *tekanan* beli/jual dan [ATR](/volatilitas/atr/) mengukur *goyangan*, maka **Supertrend** menjawab pertanyaan paling sederhana sekaligus paling penting: **harga ini lagi tren naik atau turun?** Indikator ini sering jadi pemicu utama kapan agent masuk dan keluar posisi.
@@ -14,7 +14,7 @@ Supertrend menggambar **satu garis** di chart yang mengikuti harga, dan garis it
 
 Selama harga bertahan di sisi yang sama, tren dianggap masih berlanjut. Yang menarik terjadi saat harga **menembus** garis ke sisi lain - itu disebut **flip**.
 
-> Analogi: bayangkan pagar yang selalu pindah ke belakang arah jalanmu. Selama kamu jalan maju, pagar ada di belakang (support). Begitu kamu balik arah dan melompati pagar, pagar pindah ke depanmu - sinyal kamu ganti arah.
+> Analogi: bayangkan pagar yang selalu pindah ke belakang arah jalanmu. Selama Anda jalan maju, pagar ada di belakang (support). Begitu Anda balik arah dan melompati pagar, pagar pindah ke depanmu - sinyal Anda ganti arah.
 
 ## Apa itu "flip"?
 
@@ -39,25 +39,25 @@ Artinya: agent mau masuk saat momentum sudah jelas naik, bukan saat masih turun.
 - Supertrend baru saja **flip bearish**, ATAU
 - Tren sudah bearish DAN harga sekarang **di bawah** garis Supertrend
 
-Artinya: begitu tren berbalik turun, agent ambil sinyal keluar - nggak menunggu harga jatuh jauh dulu.
+Artinya: begitu tren berbalik turun, agent ambil sinyal keluar - tidak menunggu harga jatuh jauh dulu.
 
-:::tip[Kenapa pakai "flip ATAU sudah di sisi yang benar"]
-Dua kondisi itu menangkap dua situasi: (1) momen pembalikan yang baru terjadi (flip), dan (2) tren yang memang sudah berjalan saat agent baru mengevaluasi. Jadi agent nggak ketinggalan sinyal cuma karena flip-nya terjadi beberapa candle sebelum dia sempat ngecek.
+:::tip[Mengapa pakai "flip ATAU sudah di sisi yang benar"]
+Dua kondisi itu menangkap dua situasi: (1) momen pembalikan yang baru terjadi (flip), dan (2) tren yang memang sudah berjalan saat agent baru mengevaluasi. Jadi agent tidak ketinggalan sinyal hanya karena flip-nya terjadi beberapa candle sebelum dia sempat ngecek.
 :::
 
-## Kenapa Supertrend cocok untuk memecoin
+## Mengapa Supertrend cocok untuk memecoin
 
 - **Mengikuti tren, bukan melawan.** Berbeda dari RSI yang sering memancing "beli saat oversold" (melawan arah), Supertrend menyuruh ikut arah. Untuk memecoin yang bisa lari kencang satu arah, ikut tren sering lebih aman daripada nebak pembalikan.
-- **Sinyal jelas dan biner.** Bullish atau bearish - nggak ada zona abu-abu yang bikin ragu. Cocok untuk eksekusi otomatis.
-- **Exit yang disiplin.** Flip bearish memberi alasan objektif untuk keluar, mengurangi godaan "tahan dulu, siapa tahu balik" yang sering bikin rugi makin dalam.
+- **Sinyal jelas dan biner.** Bullish atau bearish - tidak ada zona abu-abu yang membuat ragu. Cocok untuk eksekusi otomatis.
+- **Exit yang disiplin.** Flip bearish memberi alasan objektif untuk keluar, mengurangi godaan "tahan dulu, siapa tahu balik" yang sering membuat rugi makin dalam.
 
-## Keterbatasan yang harus kamu sadari
+## Keterbatasan yang harus Anda sadari
 
 Supertrend bukan ajaib. Kelemahannya:
 
 - **Buruk di pasar sideways.** Saat harga gerak datar naik-turun tipis, Supertrend bisa flip bolak-balik terus (**whipsaw**) - memberi banyak sinyal palsu. Ini paling menyebalkan.
-- **Selalu telat sedikit.** Karena dia mengikuti harga, sinyal flip muncul *setelah* pembalikan mulai, bukan saat titik balik persis. Kamu nggak akan dapat harga terbaik, tapi kamu dapat konfirmasi.
-- **Nggak tahu konteks.** Dia cuma lihat harga, nggak tahu soal volume, fee pool, atau likuiditas. Makanya Supertrend dipakai **bersama** gate lain (turnover, [fee/TVL](/fee/volume-tvl/), PVP), bukan sendirian.
+- **Selalu telat sedikit.** Karena dia mengikuti harga, sinyal flip muncul *setelah* pembalikan mulai, bukan saat titik balik persis. Anda tidak akan dapat harga terbaik, tetapi Anda dapat konfirmasi.
+- **Nggak tahu konteks.** Dia hanya lihat harga, tidak tahu soal volume, fee pool, atau likuiditas. Makanya Supertrend dipakai **bersama** gate lain (turnover, [fee/TVL](/fee/volume-tvl/), PVP), bukan sendirian.
 
 ## Supertrend + indikator lain
 
@@ -68,7 +68,7 @@ Di praktik, Supertrend jarang dipakai sendirian. Pola umum:
 - **[RSI](/volatilitas/rsi/)** → info tambahan kondisi jenuh beli/jual
 - **[Fee = Volume ÷ TVL](/fee/volume-tvl/)** → memastikan pool-nya memang layak di-LP
 
-Supertrend jawab "kapan", indikator lain jawab "seberapa lebar" dan "layak nggak".
+Supertrend jawab "kapan", indikator lain jawab "seberapa lebar" dan "layak tidak".
 
 ## Apa yang bisa dikonfigurasi
 
@@ -80,7 +80,7 @@ Umumnya Supertrend punya dua knob utama:
 Plus pilihan **interval candle** (5m, 15m, dst) dan **preset** mana yang dipakai untuk entry/exit.
 
 :::tip[Aturan praktis]
-Kalau Supertrend-mu terlalu sering flip dan bikin masuk-keluar berisik, **perbesar multiplier** atau **perpanjang periode** - garisnya jadi lebih jauh dari harga dan lebih tahan noise. Trade-off-nya: sinyal jadi lebih telat.
+Kalau Supertrend-mu terlalu sering flip dan membuat masuk-keluar berisik, **perbesar multiplier** atau **perpanjang periode** - garisnya jadi lebih jauh dari harga dan lebih tahan noise. Trade-off-nya: sinyal jadi lebih telat.
 :::
 
 ## Intinya

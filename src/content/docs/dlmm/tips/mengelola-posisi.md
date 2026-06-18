@@ -2,14 +2,14 @@
 title: Tips Mengelola Posisi
 description: Catatan singkat saat posisi sudah berjalan.
 sidebar:
-  order: 2
+ order: 2
 ---
 
 Catatan cepat untuk mengelola posisi yang sudah aktif.
 
 ## Biarkan winner matang
 
-Fee butuh waktu mengumpul. Posisi sehat yang ditahan berjam-jam sering berakhir untung walau sempat merah di tengah. Jangan potong terlalu cepat. ([kenapa](/psikologi/sabar/))
+Fee butuh waktu mengumpul. Posisi sehat yang ditahan berjam-jam sering berakhir untung walau sempat merah di tengah. Jangan potong terlalu cepat. ([mengapa](/psikologi/sabar/))
 
 ## Merah sementara itu normal
 
@@ -29,4 +29,4 @@ Putuskan stop-loss dan kondisi keluar **sebelum** deploy, saat kepala dingin. Ja
 
 ## Setelah keluar, lepaskan
 
-Setelah menutup, harga bergerak ke mana pun bukan urusanmu lagi. Jangan kejar token yang sudah kamu lepas hanya karena ia naik setelahnya.
+Setelah menutup, harga bergerak ke mana pun bukan urusanmu lagi. Jangan kejar token yang sudah Anda lepas hanya karena ia naik setelahnya.

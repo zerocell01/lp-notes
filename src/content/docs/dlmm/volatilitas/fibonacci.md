@@ -1,6 +1,6 @@
 ---
 title: Fibonacci - Level Support & Resistance
-description: Memahami level Fibonacci di agent LP DLMM - apa arti level 0.5, 0.618, 0.786, kenapa disebut support/resistance, dan kenapa ini level psikologis bukan hukum pasti.
+description: Memahami level Fibonacci di agent LP DLMM - apa arti level 0.5, 0.618, 0.786, mengapa disebut support/resistance, dan mengapa ini level psikologis bukan hukum pasti.
 ---
 
 Baris terakhir yang sering muncul di laporan posisi adalah **Fib** - level Fibonacci terdekat dari harga sekarang. Indikator ini menandai **harga-harga penting** tempat pergerakan sering berhenti, mantul, atau berbalik. Halaman ini menjelaskan cara membacanya tanpa mistik.
@@ -31,12 +31,12 @@ Artinya:
 - **`0.618`** - level Fibonacci terdekat dari harga saat ini.
 - **`(0.0004213)`** - harga di level itu.
 - **`support`** atau **`resistance`** - perannya relatif ke harga sekarang:
-  - **support** = level ada **di bawah** harga sekarang → lantai yang mungkin menahan kalau harga turun.
-  - **resistance** = level ada **di atas** harga sekarang → atap yang mungkin menahan kalau harga naik.
+ - **support** = level ada **di bawah** harga sekarang → lantai yang mungkin menahan kalau harga turun.
+ - **resistance** = level ada **di atas** harga sekarang → atap yang mungkin menahan kalau harga naik.
 
 Jadi laporan itu memberitahu: "level penting terdekat ada di harga sekian, dan dia berperan sebagai lantai/atap."
 
-## Support vs resistance - dan kenapa bisa bertukar
+## Support vs resistance - dan mengapa bisa bertukar
 
 - **Support** = harga tempat tekanan beli cenderung muncul (lantai).
 - **Resistance** = harga tempat tekanan jual cenderung muncul (atap).
@@ -71,7 +71,7 @@ Fib jadi pelengkap, bukan bintang utama:
 - **Fibonacci** → di harga berapa kemungkinan ada lantai/atap
 - **[ATR](/volatilitas/atr/)** → lebar goyangan untuk range
 
-Contoh pembacaan gabungan: harga turun mendekati **Fib 0.618 sebagai support**, RSI rendah, dan Supertrend masih bullish → ada peluang level itu menahan. Tapi tetap: selama posisi in-range dan fee jalan, ini **konteks**, bukan perintah aksi.
+Contoh pembacaan gabungan: harga turun mendekati **Fib 0.618 sebagai support**, RSI rendah, dan Supertrend masih bullish → ada peluang level itu menahan. Tetapi tetap: selama posisi in-range dan fee jalan, ini **konteks**, bukan perintah aksi.
 
 ## Intinya
 

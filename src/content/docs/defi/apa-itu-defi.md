@@ -5,29 +5,29 @@ description: Decentralized Finance — sistem keuangan tanpa bank, tanpa birokra
 
 ## DeFi = Bank Tanpa Bank
 
-DeFi (Decentralized Finance) adalah **sistem keuangan yang jalan di blockchain**. Bedanya sama keuangan tradisional:
+DeFi (Decentralized Finance) adalah **sistem keuangan yang berjalan di blockchain**. Bedanya sama keuangan tradisional:
 
 | Aspek | TradFi (Bank) | DeFi |
 |-------|:--------------:|:----:|
 | **Kontrol** | Bank / pemerintah | Smart contract |
 | **Jam operasional** | Sen-Jum, 08:00-15:00 | 24/7/365 |
-| **Identitas** | KTP, NPWP, slip gaji | Cuma wallet address |
+| **Identitas** | KTP, NPWP, slip gaji | Hanya wallet address |
 | **Akses** | Harus punya rekening bank | Siapa pun dengan internet |
-| **Transparansi** | Lo gak tahu uang lo dipake apa | Semua transaksi on-chain |
+| **Transparansi** | Anda tidak tahu uang Anda digunakan apa | Semua transaksi on-chain |
 
 ## Prinsip inti DeFi
 
 ### Permissionless
-Gak ada verifikasi KTP, gak ada minimum saldo, gak ada "ditolak". Siapa pun bisa akses.
+Tidak ada verifikasi KTP, tidak ada minimum saldo, tidak ada "ditolak". Siapa pun bisa akses.
 
 ### Non-Custodial
-Lo megang kunci (private key), lo kontrol aset. Bukan bank, bukan exchange.
+Anda memegang kunci (private key), Anda kontrol aset. Bukan bank, bukan exchange.
 
 ### Transparent
-Semua transaksi, semua kode kontrak — bisa dilihat siapa pun. Gak ada "di belakang layar".
+Semua transaksi, semua kode kontrak — bisa dilihat siapa pun. Tidak ada "di belakang layar".
 
 ### Composable
-Protokol DeFi bisa saling "nyambung" kayak LEGO. Pinjam uang di Aave, taro LP di Uniswap, auto-compound di Yearn — semua sekaligus.
+Protokol DeFi bisa saling "nyambung" seperti LEGO. Pinjam uang di Aave, menaruh LP di Uniswap, auto-compound di Yearn — semua sekaligus.
 
 ## Komponen utama DeFi
 
@@ -40,19 +40,19 @@ Protokol DeFi bisa saling "nyambung" kayak LEGO. Pinjam uang di Aave, taro LP di
 | **Derivatives** | GMX, Synthetix | Trading leverage on-chain |
 | **Insurance** | Nexus Mutual | Asuransi risiko kontrak |
 
-## Kenapa pake DeFi?
+## Mengapa menggunakan DeFi?
 
-- **Bunga lebih tinggi** — yield DeFi jauh di atas bunga bank (tapi risk juga tinggi)
-- **Akses global** — lo di Indonesia bisa pinjam USDC dari Aave langsung
-- **Tanpa sensor** — gak ada yang bisa bekukan rekening lo
+- **Bunga lebih tinggi** — yield DeFi jauh di atas bunga bank (tetapi risk juga tinggi)
+- **Akses global** — Anda di Indonesia bisa pinjam USDC dari Aave langsung
+- **Tanpa sensor** — tidak ada yang bisa bekukan rekening Anda
 
 ## Risiko DeFi
 
 1. **Smart contract bug** — kode bisa di-hack, dana raib
 2. **Impermanent loss** — yield tinggi bisa ilang karena harga naik/turun
 3. **Rug pull** — developer kabur bawa dana
-4. **MEV** — bot front-run transaksi lo
+4. **MEV** — bot front-run transaksi Anda
 
-> **DeFi = keuangan yang lo kontrol penuh. Konsekuensinya: tanggung jawab penuh juga. Gak ada CS yang bisa lo telpon kalau salah kirim.**
+> **DeFi = keuangan yang Anda kontrol penuh. Konsekuensinya: tanggung jawab penuh juga. Tidak ada CS yang bisa Anda telpon kalau salah kirim.**
 
 Lanjut: [DEX vs CEX →](/defi/dex-vs-cex/)

@@ -1,26 +1,26 @@
 ---
 title: Apa itu Smart Contract?
-description: Program yang jalan di blockchain — gak bisa dimatiin, gak bisa diubah, gak perlu perantara.
+description: Program yang berjalan di blockchain — tidak bisa dimatiin, tidak bisa diubah, tidak perlu perantara.
 ---
 
-## Kontrak, tapi "Pintar"
+## Kontrak, tetapi "Pintar"
 
 Smart contract = **program yang di-deploy ke blockchain**. Begitu di-deploy:
 
-- Kodenya gak bisa diubah (immutable)
-- Jalannya otomatis — gak ada yang bisa stop
+- Kodenya tidak bisa diubah (immutable)
+- Jalannya otomatis — tidak ada yang bisa stop
 - Semua orang bisa lihat isinya (transparan)
 - Semua orang bisa panggil fungsinya (permissionless)
 
 ## Analogi: Mesin Jual Otomatis
 
-Bayangin vending machine:
+Bayangkan vending machine:
 
-- Lo masukin uang → dia keluarin minuman
-- Gak ada kasir, gak ada yang kontrol
-- Aturannya keras: "Rp10.000 = 1 Aqua. Gak ada negosiasi."
+- Anda masukin uang → dia keluarin minuman
+- Tidak ada kasir, tidak ada yang kontrol
+- Aturannya keras: "Rp10.000 = 1 Aqua. Tidak ada negosiasi."
 
-Smart contract itu vending machine digital. Aturannya ditulis di kode, dan **gak bisa dilanggar.**
+Smart contract itu vending machine digital. Aturannya ditulis di kode, dan **tidak bisa dilanggar.**
 
 ## Contoh sederhana
 
@@ -29,46 +29,46 @@ Smart contract itu vending machine digital. Aturannya ditulis di kode, dan **gak
 pragma solidity ^0.8.20;
 
 contract Celengan {
-    // Simpen siapa yang nyimpen berapa
-    mapping(address => uint256) public tabungan;
+ // Simpen siapa yang menyimpan berapa
+ mapping(address => uint256) public tabungan;
 
-    // Fungsi nabung
-    function nabung() public payable {
-        tabungan[msg.sender] += msg.value;
-    }
+ // Fungsi nabung
+ function nabung() public payable {
+ tabungan[msg.sender] += msg.value;
+ }
 
-    // Fungsi tarik
-    function tarik() public {
-        uint256 jumlah = tabungan[msg.sender];
-        tabungan[msg.sender] = 0;
-        payable(msg.sender).transfer(jumlah);
-    }
+ // Fungsi tarik
+ function tarik() public {
+ uint256 jumlah = tabungan[msg.sender];
+ tabungan[msg.sender] = 0;
+ payable(msg.sender).transfer(jumlah);
+ }
 }
 ```
 
 Kontrak ini:
-1. Lo panggil `nabung()` sambil kirim ETH → ETH nyangkut di kontrak
-2. Lo panggil `tarik()` → ETH balik ke lo
-3. Gak ada yang bisa ambil ETH lo — aturannya udah fixed di kode
+1. Anda panggil `nabung()` sambil kirim ETH → ETH tersangkut di kontrak
+2. Anda panggil `tarik()` → ETH balik ke Anda
+3. Tidak ada yang bisa ambil ETH Anda — aturannya sudah fixed di kode
 
 ## Karakteristik Smart Contract
 
 | Sifat | Artinya |
 |-------|---------|
-| **Immutable** | Begitu deploy, kode gak bisa diubah (kecuali pake proxy pattern) |
+| **Immutable** | Begitu deploy, kode tidak bisa diubah (kecuali menggunakan proxy pattern) |
 | **Deterministic** | Input yang sama → output yang sama, selalu |
 | **Transparent** | Semua orang bisa baca kode & state |
-| **Self-executing** | Gak ada manusia yang perlu approve |
+| **Self-executing** | Tidak ada manusia yang perlu approve |
 
 ## Keterbatasan
 
-- **Gak bisa akses internet** — kontrak gak bisa HTTP request sendiri. Butuh oracle (Chainlink) buat data dari luar.
-- **Gas mahal** — tiap operasi kena biaya. Kode harus efisien.
-- **Bug = bencana** — gak bisa di-patch. Kalau ada celah, semua dana bisa raib.
+- **Tidak bisa akses internet** — kontrak tidak bisa HTTP request sendiri. Butuh oracle (Chainlink) untuk data dari luar.
+- **Gas mahal** — tiap operasi terkena biaya. Kode harus efisien.
+- **Bug = bencana** — tidak bisa di-patch. Kalau ada celah, semua dana bisa raib.
 
-## EVM: Mesin yang Jalanin Kontrak
+## EVM: Mesin yang Menjalankan Kontrak
 
-EVM (Ethereum Virtual Machine) = "CPU"-nya Ethereum. Semua node jalanin EVM, dan EVM yang eksekusi smart contract. Bahasa paling populer: **Solidity**.
+EVM (Ethereum Virtual Machine) = "CPU"-nya Ethereum. Semua node menjalankan EVM, dan EVM yang eksekusi smart contract. Bahasa paling populer: **Solidity**.
 
 > **Smart contract = program yang dijamin jalan sesuai aturan, tanpa bisa diintervensi. Konsekuensinya: bug = permanen.**
 

@@ -1,15 +1,15 @@
 ---
 title: Disclaimer
-description: Yang perlu kamu tahu sebelum baca catatan ini.
+description: Yang perlu Anda tahu sebelum baca catatan ini.
 ---
 
 ## Bukan Saran Finansial
 
-Semua konten di situs ini murni **edukasi teknologi**. Gak ada rekomendasi beli/jual aset crypto, gak ada analisis harga, gak ada ajakan investasi.
+Semua konten di situs ini murni **edukasi teknologi**. Tidak ada rekomendasi beli/jual aset crypto, tidak ada analisis harga, tidak ada ajakan investasi.
 
 ## Belum Tentu Akurat
 
-Gue bukan developer Web3 profesional. Catatan ini hasil belajar mandiri — mungkin ada kesalahan konsep atau informasi yang udah outdated. Selalu cross-check dengan sumber resmi:
+Saya bukan developer Web3 profesional. Catatan ini hasil belajar mandiri — mungkin ada kesalahan konsep atau informasi yang sudah outdated. Selalu cross-check dengan sumber resmi:
 
 - [Ethereum.org](https://ethereum.org)
 - [Solidity Docs](https://docs.soliditylang.org)

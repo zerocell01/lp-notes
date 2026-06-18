@@ -3,7 +3,7 @@ title: Cheat Sheet - Membaca Laporan Posisi
 description: Ringkasan baca-cepat semua indikator agent LP DLMM dalam satu halaman - RSI, Supertrend, Bollinger, Fibonacci, ATR, dan fee/TVL.
 ---
 
-Halaman ini menyatukan semua indikator yang muncul di laporan posisi agent jadi satu tempat baca-cepat. Setiap baris punya catatan lengkapnya sendiri - di sini cuma intisarinya, biar kamu bisa membaca laporan dalam hitungan detik.
+Halaman ini menyatukan semua indikator yang muncul di laporan posisi agent jadi satu tempat baca-cepat. Setiap baris punya catatan lengkapnya sendiri - di sini hanya intisarinya, biar Anda bisa membaca laporan dalam hitungan detik.
 
 ## Contoh laporan posisi
 
@@ -11,13 +11,13 @@ Laporan posisi biasanya tampil seperti ini:
 
 ```text
 🟢 SOCCER-SOL
-   Deposited $270 │ PnL +1.41% │ Fee $4.30
-   Signal (5m):
-     RSI : 72.3 overbought
-     ST  : bullish │ above line
-     BB  : above upper │ %B 0.96
-     Fib : 0.618 (0.0004213) - support
-     Px  : +2.1% vs prev
+ Deposited $270 │ PnL +1.41% │ Fee $4.30
+ Signal (5m):
+ RSI : 72.3 overbought
+ ST : bullish │ above line
+ BB : above upper │ %B 0.96
+ Fib : 0.618 (0.0004213) - support
+ Px : +2.1% vs prev
 ```
 
 Tiap baris menjawab pertanyaan yang berbeda. Berikut cara membacanya.
@@ -27,7 +27,7 @@ Tiap baris menjawab pertanyaan yang berbeda. Berikut cara membacanya.
 **RSI - tekanan beli/jual** ([detail](/volatilitas/rsi/))
 - Angka 0–100. Rendah = baru banyak dijual; tinggi = baru banyak dibeli.
 - `oversold` (rendah) sering mantul; `overbought` (tinggi) belum tentu jatuh.
-- Periode pendek = sering ekstrem. Jangan jual cuma karena RSI merah saat masih in-range.
+- Periode pendek = sering ekstrem. Jangan jual hanya karena RSI merah saat masih in-range.
 
 **ST (Supertrend) - arah tren** ([detail](/volatilitas/supertrend/))
 - `bullish` = tren naik (garis jadi support); `bearish` = tren turun (garis jadi resistance).
@@ -50,7 +50,7 @@ Tiap baris menjawab pertanyaan yang berbeda. Berikut cara membacanya.
 
 **Fee = Volume ÷ TVL - kelayakan pool** ([detail](/fee/volume-tvl/))
 - Yield LP ditentukan turnover (volume ÷ TVL), bukan market cap.
-- Turnover tinggi = fee tebal. Volume gede + TVL gede = fee bisa tetap tipis.
+- Turnover tinggi = fee besar. Volume besar + TVL besar = fee bisa tetap tipis.
 
 ## Cara baca cepat baris emoji & angka
 
@@ -65,15 +65,15 @@ Tiap baris menjawab pertanyaan yang berbeda. Berikut cara membacanya.
 Jangan baca indikator satu-satu lalu panik. Baca sebagai **gabungan**:
 
 1. **Posisi masih in-range?** Kalau ya, indikator merah sendirian bukan alasan jual.
-2. **Fee > rugi?** Kalau ya, kamu masih untung secara bersih - beri waktu.
+2. **Fee > rugi?** Kalau ya, Anda masih untung secara bersih - beri waktu.
 3. **Apa kata arah (Supertrend)?** Bullish + ekstrem (RSI tinggi / BB above upper) sering = tren kuat lagi jalan, bukan saat jual.
-4. **Trigger close yang valid:** OOR aktual cukup lama, volume mati, stop-loss kena, atau tesis pool jelas gagal - bukan sekadar satu indikator ekstrem.
+4. **Trigger close yang valid:** OOR aktual cukup lama, volume mati, stop-loss terkena, atau tesis pool jelas gagal - bukan sekadar satu indikator ekstrem.
 
 ## Filosofi di balik semua angka
 
-Indikator itu **alat baca kondisi, bukan tombol aksi**. Edge terbesar bukan dari membaca indikator paling jago, tapi dari [kesabaran](/psikologi/sabar/) dan [tahu kapan hold vs cut](/psikologi/hold-vs-cut/). Angka membantu kamu memahami situasi; disiplin yang menentukan hasil.
+Indikator itu **alat baca kondisi, bukan tombol aksi**. Edge terbesar bukan dari membaca indikator paling jago, tetapi dari [kesabaran](/psikologi/sabar/) dan [tahu kapan hold vs cut](/psikologi/hold-vs-cut/). Angka membantu Anda memahami situasi; disiplin yang menentukan hasil.
 
-> Kalau dipantau terus, jadi gak sabar. Tapi bagusnya, mainnya jadi aman dan minim risiko.
+> Kalau dipantau terus, jadi tidak sabar. Tetapi bagusnya, mainnya jadi aman dan minim risiko.
 
 :::tip[Aturan emas]
 Selama posisi **in-range** dan **fee lebih besar dari rugi**, indikator ekstrem (RSI oversold, BB below lower, dll) adalah **konteks, bukan perintah**. Pemicu close yang sah datang dari struktur (OOR, volume mati, stop-loss), bukan dari satu angka yang merah.

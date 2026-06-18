@@ -5,13 +5,13 @@ description: Cara pakai Etherscan, verifikasi kontrak, baca transaksi, dan debug
 
 ## Apa itu Block Explorer?
 
-Block explorer = **Google untuk blockchain**. Lo bisa cari:
+Block explorer = **Google untuk blockchain**. Anda bisa cari:
 
-- Alamat wallet → liat saldo, history transaksi, token holding
-- Transaksi → liat status, gas, value
+- Alamat wallet → lihat saldo, history transaksi, token holding
+- Transaksi → lihat status, gas, value
 - Kontrak → baca kode, panggil fungsi, lihat event
-- Blok → liat transaksi dalam 1 blok
-- Token → liat holder, supply, transfer history
+- Blok → lihat transaksi dalam 1 blok
+- Token → lihat holder, supply, transfer history
 
 Explorer populer:
 - **Etherscan** — Ethereum
@@ -24,7 +24,7 @@ Explorer populer:
 
 Buka `https://sepolia.etherscan.io/tx/0xTX_HASH`
 
-Informasi yang lo dapet:
+Informasi yang Anda mendapatkan:
 
 | Field | Artinya |
 |-------|---------|
@@ -40,7 +40,7 @@ Informasi yang lo dapet:
 
 ### Decode Input Data
 
-Kalau transaksi ke kontrak, "Input Data" bisa lo decode:
+Kalau transaksi ke kontrak, "Input Data" bisa Anda decode:
 
 1. Scroll ke input data
 2. Klik "Decode Input Data"
@@ -62,9 +62,9 @@ npm install --save-dev @nomicfoundation/hardhat-verify
 import "@nomicfoundation/hardhat-verify";
 
 const config = {
-  etherscan: {
-    apiKey: "YOUR_ETHERSCAN_API_KEY"  // daftar di etherscan.io
-  }
+ etherscan: {
+ apiKey: "YOUR_ETHERSCAN_API_KEY" // daftar di etherscan.io
+ }
 };
 
 # Verify
@@ -78,9 +78,9 @@ npx hardhat verify --network sepolia DEPLOYED_CONTRACT_ADDRESS "Constructor arg 
 3. Buka Sepolia Etherscan → search address
 4. Tab "Contract" → "Verify and Publish"
 5. Isi:
-   - Compiler Type: `Solidity (Single file)`
-   - Compiler Version: `0.8.20`
-   - Open Source License: `MIT`
+ - Compiler Type: `Solidity (Single file)`
+ - Compiler Version: `0.8.20`
+ - Open Source License: `MIT`
 6. Copy-paste kode kontrak
 7. Kalau constructor ada parameter → isi ABI-encoded
 8. Submit
@@ -89,11 +89,11 @@ npx hardhat verify --network sepolia DEPLOYED_CONTRACT_ADDRESS "Constructor arg 
 
 ```bash
 forge verify-contract \
-  --rpc-url $SEPOLIA_RPC \
-  --etherscan-api-key $ETHERSCAN_API_KEY \
-  DEPLOYED_ADDRESS \
-  src/MyContract.sol:MyContract \
-  --constructor-args $(cast abi-encode "constructor(uint256)" 1000000)
+ --rpc-url $SEPOLIA_RPC \
+ --etherscan-api-key $ETHERSCAN_API_KEY \
+ DEPLOYED_ADDRESS \
+ src/MyContract.sol:MyContract \
+ --constructor-args $(cast abi-encode "constructor(uint256)" 1000000)
 ```
 
 ## Baca Kontrak di Etherscan
@@ -102,9 +102,9 @@ Kalau kontrak terverifikasi:
 - **Tab Code** → baca source code
 - **Tab Read Contract** → panggil fungsi view lewat UI
 - **Tab Write Contract** → panggil fungsi write (connect wallet)
-- **Tab Events** → liat log event
+- **Tab Events** → lihat log event
 
-Gak perlu nulis kode buat interaksi — Etherscan UI handle semuanya.
+Tidak perlu menulis kode untuk interaksi — Etherscan UI handle semuanya.
 
 ## Cek Wallet
 
@@ -119,7 +119,7 @@ Informasi yang keluar:
 
 ### Token Holdings vs Transaction History
 
-Token yang lo terima **gak selalu** muncul di transaction list lo. Transfer token dicatat di **event log kontrak token**, bukan di transaksi lo. Etherscan auto-index ini.
+Token yang Anda terima **tidak selalu** muncul di transaction list lo. Transfer token dicatat di **event log kontrak token**, bukan di transaksi lo. Etherscan auto-index ini.
 
 ## Event Log
 
@@ -131,25 +131,25 @@ Setiap emit `event` di kontrak menghasilkan log yang bisa dicari:
 
 ## API Etherscan
 
-Etherscan punya API buat akses data programmatically:
+Etherscan punya API untuk akses data programmatically:
 
 ```
 https://api-sepolia.etherscan.io/api
-  ?module=account
-  &action=txlist
-  &address=0x...
-  &apikey=YOUR_API_KEY
+ ?module=account
+ &action=txlist
+ &address=0x...
+ &apikey=YOUR_API_KEY
 ```
 
 Contoh use case: monitor transaksi masuk, cek status kontrak, download history.
 
 ## Tips
 
-1. **Bookmark explorer testnet** — sering kepake buat debug
+1. **Bookmark explorer testnet** — sering terpakai untuk debug
 2. **Gunakan testnet explorer** — jangan cari testnet address di mainnet explorer
-3. **Verifikasi kontrak selalu** — kontrak unverified = black box, susah debug
-4. **Simpan tx hash** — screenshot / copy paste pas deploy, jadi gampang dicari
+3. **Verifikasi kontrak selalu** — kontrak unverified = black box, sulit debug
+4. **Simpan tx hash** — screenshot / copy paste pas deploy, jadi mudah dicari
 
-> **Etherscan = mata publik blockchain. Semua transaksi on-chain bisa dilihat siapa pun — gak ada privasi, tapi ada transparansi total.**
+> **Etherscan = mata publik blockchain. Semua transaksi on-chain bisa dilihat siapa pun — tidak ada privasi, tetapi ada transparansi total.**
 
 Lanjut: [Glossary Istilah →](/glossary/)

@@ -1,54 +1,54 @@
 ---
 title: Deploy ke Testnet Pertama Kali
-description: Panduan step-by-step deploy smart contract pertama lo ke Sepolia testnet pake Remix (no CLI).
+description: Panduan step-by-step deploy smart contract pertama Anda ke Sepolia testnet menggunakan Remix (no CLI).
 ---
 
 ## Prasyarat
 
 Sebelum mulai:
 1. **Install MetaMask** di browser
-2. **Bikin wallet** (simpen seed phrase di kertas!)
+2. **Membuat wallet** (simpen seed phrase di kertas!)
 3. **Tambahin Sepolia testnet** ke MetaMask:
-   - Klik network dropdown → "Add network" → "Add manually"
-   - Network Name: `Sepolia Testnet`
-   - RPC URL: `https://sepolia.infura.io/v3/` (atau `https://rpc.sepolia.org`)
-   - Chain ID: `11155111`
-   - Currency Symbol: `ETH`
-   - Block Explorer: `https://sepolia.etherscan.io`
+ - Klik network dropdown → "Add network" → "Add manually"
+ - Network Name: `Sepolia Testnet`
+ - RPC URL: `https://sepolia.infura.io/v3/` (atau `https://rpc.sepolia.org`)
+ - Chain ID: `11155111`
+ - Currency Symbol: `ETH`
+ - Block Explorer: `https://sepolia.etherscan.io`
 
 ## Step 1: Ambil Testnet ETH (Faucet)
 
-Lo butuh ETH Sepolia buat bayar gas deploy. Dapetin gratis:
+Anda butuh ETH Sepolia untuk bayar gas deploy. Dapetin gratis:
 
 1. Buka [sepoliafaucet.com](https://sepoliafaucet.com) atau [faucet.quicknode.com/ethereum/sepolia](https://faucet.quicknode.com/ethereum/sepolia)
-2. Masukin address wallet lo
+2. Masukin address wallet Anda
 3. Tunggu ~1 menit → 0.05 - 0.5 ETH masuk
 
 ## Step 2: Buka Remix IDE
 
-Buka [remix.ethereum.org](https://remix.ethereum.org) — IDE browser, gak perlu install apa-apa.
+Buka [remix.ethereum.org](https://remix.ethereum.org) — IDE browser, tidak perlu install apa-apa.
 
-## Step 3: Bikin File Kontrak
+## Step 3: Membuat File Kontrak
 
-Di Remix, bikin file baru `MyFirstContract.sol`:
+Di Remix, membuat file baru `MyFirstContract.sol`:
 
 ```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
 contract MyFirstContract {
-    string public message;
-    address public owner;
+ string public message;
+ address public owner;
 
-    constructor(string memory _message) {
-        message = _message;
-        owner = msg.sender;
-    }
+ constructor(string memory _message) {
+ message = _message;
+ owner = msg.sender;
+ }
 
-    function setMessage(string memory _newMessage) public {
-        require(msg.sender == owner, "Only owner can change message");
-        message = _newMessage;
-    }
+ function setMessage(string memory _newMessage) public {
+ require(msg.sender == owner, "Only owner can change message");
+ message = _newMessage;
+ }
 }
 ```
 
@@ -64,7 +64,7 @@ Kalau sukses: ada centang hijau.
 
 1. Klik tab "Deploy & Run Transactions" (ikon Ethereum)
 2. Environment: pilih **"Injected Provider - MetaMask"**
-3. MetaMask akan popup → connect wallet lo
+3. MetaMask akan popup → connect wallet Anda
 4. Pastikan network di MetaMask = **Sepolia**
 5. Di bagian "Deploy", isi parameter constructor: `"Hello Web3!"`
 6. Klik **"Deploy"**
@@ -77,22 +77,22 @@ Tunggu ~15-30 detik. Kalau sukses, kontrak muncul di "Deployed Contracts".
 Klik panah kecil di deployed contract → muncul semua function.
 
 - Klik `message` → lihat isinya ("Hello Web3!")
-- Klik `owner` → lihat address lo
+- Klik `owner` → lihat address Anda
 - Isi `setMessage` dengan `"Halo dari Sepolia!"` → klik → konfirmasi di MetaMask
 
 ## Done!
 
-Kontrak pertama lo udah jalan di blockchain. Cek di [Sepolia Etherscan](https://sepolia.etherscan.io) — masukin address kontraknya.
+Kontrak pertama Anda sudah jalan di blockchain. Cek di [Sepolia Etherscan](https://sepolia.etherscan.io) — masukin address kontraknya.
 
 ## Kalau gagal?
 
 | Error | Fix |
 |-------|-----|
 | "insufficient funds" | Belum ambil faucet |
-| "network mismatch" | MetaMask gak di Sepolia |
+| "network mismatch" | MetaMask tidak di Sepolia |
 | "gas estimation failed" | Ada `require()` yang gagal |
 | Transaction stuck | Klik "Speed up" di MetaMask |
 
-> **Remix itu taman bermain. Di sini lo bisa eksperimen tanpa konsekuensi. Rusak? Deploy lagi. Semua gratis (di testnet).**
+> **Remix itu taman bermain. Di sini Anda bisa eksperimen tanpa konsekuensi. Rusak? Deploy lagi. Semua gratis (di testnet).**
 
 Lanjut: [DeFi Dasar →](/defi/apa-itu-defi/)

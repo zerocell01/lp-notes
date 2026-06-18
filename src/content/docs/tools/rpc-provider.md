@@ -1,45 +1,45 @@
 ---
 title: RPC, Provider, & Endpoint
-description: Apa itu RPC, gimana aplikasi ngomong sama blockchain, dan provider mana yang dipakai.
+description: Apa itu RPC, bagaimana aplikasi berbicara sama blockchain, dan provider mana yang dipakai.
 ---
 
-## Gimana aplikasi ngomong sama blockchain?
+## Bagaimana aplikasi berbicara sama blockchain?
 
-Blockchain Ethereum jalan di ribuan node. Lo butuh **jembatan** buat ngomong sama mereka. Jembatan itu = **RPC (Remote Procedure Call)**.
+Blockchain Ethereum jalan di ribuan node. Anda butuh **jembatan** untuk berbicara sama mereka. Jembatan itu = **RPC (Remote Procedure Call)**.
 
 ```
-Aplikasi lo  →  RPC Endpoint  →  Node Ethereum  →  Blockchain
-(Ethers.js)     (Infura)          (Geth/Nethermind)
+Aplikasi Anda → RPC Endpoint → Node Ethereum → Blockchain
+(Ethers.js) (Infura) (Geth/Nethermind)
 ```
 
 ## Apa itu RPC?
 
-RPC = cara program manggil function yang jalan di komputer lain. Di Web3, lo manggil fungsi blockchain (cek saldo, kirim transaksi, panggil kontrak) lewat HTTP/WebSocket.
+RPC = cara program manggil function yang berjalan di komputer lain. Di Web3, Anda manggil fungsi blockchain (cek saldo, kirim transaksi, panggil kontrak) lewat HTTP/WebSocket.
 
 ### Request contoh (JSON-RPC)
 ```json
 {
-  "jsonrpc": "2.0",
-  "method": "eth_getBalance",
-  "params": ["0x742d35Cc6634C0532925a3b844Bc9e7595f0bEb7", "latest"],
-  "id": 1
+ "jsonrpc": "2.0",
+ "method": "eth_getBalance",
+ "params": ["0x742d35Cc6634C0532925a3b844Bc9e7595f0bEb7", "latest"],
+ "id": 1
 }
 ```
 
 ### Response
 ```json
 {
-  "jsonrpc": "2.0",
-  "id": 1,
-  "result": "0x0234c8a3397aab58"  // balance dalam wei (hex)
+ "jsonrpc": "2.0",
+ "id": 1,
+ "result": "0x0234c8a3397aab58" // balance dalam wei (hex)
 }
 ```
 
-Lo gak perlu nulis JSON-RPC manual — Ethers.js (dan library lain) handle ini.
+Anda tidak perlu menulis JSON-RPC manual — Ethers.js (dan library lain) handle ini.
 
 ## Provider
 
-Provider = objek yang konek ke RPC endpoint. Dia jembatan antara kode lo dan Ethereum.
+Provider = objek yang konek ke RPC endpoint. Dia jembatan antara kode Anda dan Ethereum.
 
 ```javascript
 const { ethers } = require("ethers");
@@ -59,7 +59,7 @@ const wallet = new ethers.Wallet("PRIVATE_KEY", provider);
 | **Alchemy** | 300M CU/bulan | Tooling lengkap, webhook |
 | **QuickNode** | 25M req/bulan | Cepat, analytics bagus |
 | **Chainstack** | 3M req/bulan | Enterprise-friendly |
-| **Public RPC** | Rate-limited | `rpc.sepolia.org`, gak reliable |
+| **Public RPC** | Rate-limited | `rpc.sepolia.org`, tidak reliable |
 
 ## RPC Method yang sering dipakai
 
@@ -79,28 +79,28 @@ const wallet = new ethers.Wallet("PRIVATE_KEY", provider);
 | **Use case** | Transaksi, query | Subscribe event real-time |
 | **Contoh** | `provider.getBalance()` | `contract.on("Transfer", ...)` |
 
-WebSocket bagus buat dengerin event kontrak (misal: notifikasi tiap ada transfer).
+WebSocket bagus untuk dengerin event kontrak (misal: notifikasi tiap ada transfer).
 
-## Bikin RPC endpoint sendiri?
+## Membuat RPC endpoint sendiri?
 
-Bisa. Lo bisa jalanin node Ethereum sendiri (Geth, Nethermind). Tapi:
+Bisa. Anda bisa menjalankan node Ethereum sendiri (Geth, Nethermind). Tetapi:
 - Storage: 1TB+ (archive node lebih besar)
 - Bandwidth: besar
 - Maintenance: 24/7
 
-Untuk development: pake provider gratis. Untuk production dengan SLA: pake provider berbayar.
+Untuk development: menggunakan provider gratis. Untuk production dengan SLA: menggunakan provider berbayar.
 
 ## Rate Limiting
 
-Provider gratis ada limit. Kalau kena limit:
-- Request lo ditolak (HTTP 429)
+Provider gratis ada limit. Kalau terkena limit:
+- Request Anda ditolak (HTTP 429)
 - Transaksi tetap kepending (gagal broadcast)
 
 Solusi:
 - Gunakan lebih dari 1 provider (fallback)
 - Gunakan `StaticJsonRpcProvider` (Ethers.js) — batch request
-- Upgrade ke plan berbayar kalau udah production
+- Upgrade ke plan berbayar kalau sudah production
 
-> **Provider = kartu tol lo ke blockchain. Tanpa provider, kode lo cuma teks biasa — gak bisa ngapa-ngapain on-chain.**
+> **Provider = kartu tol Anda ke blockchain. Tanpa provider, kode Anda hanya teks biasa — tidak bisa ngapa-ngapain on-chain.**
 
 Lanjut: [Baca Blockchain dengan Ethers.js →](/tools/ethers-baca/)

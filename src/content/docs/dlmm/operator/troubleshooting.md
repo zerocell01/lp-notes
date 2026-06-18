@@ -9,7 +9,7 @@ Halaman ini kumpulan masalah yang paling sering muncul saat setup dan menjalanka
 
 **Gejala:** agent error `ECONNREFUSED` atau `connect failed` ke `localhost:20128`.
 
-**Artinya:** agent mencari gateway model lokal (9Router) tapi prosesnya belum jalan.
+**Artinya:** agent mencari gateway model lokal (9Router) tetapi prosesnya belum jalan.
 
 **Cek:**
 
@@ -45,7 +45,7 @@ Kalau 401-nya instan dan 0 token terpakai, hampir pasti masalah routing/kredensi
 
 ## Gateway mati saat keluar SSH
 
-**Gejala:** operator (Hermes) berhenti merespons begitu kamu menutup koneksi SSH.
+**Gejala:** operator (Hermes) berhenti merespons begitu Anda menutup koneksi SSH.
 
 **Artinya:** proses ikut mati saat sesi login berakhir.
 
@@ -63,13 +63,13 @@ hermes gateway start
 hermes gateway status
 ```
 
-## Agent jalan tapi diam di Telegram
+## Agent jalan tetapi diam di Telegram
 
-**Gejala:** proses agent online di PM2, tapi command di Telegram tidak dibalas.
+**Gejala:** proses agent online di PM2, tetapi command di Telegram tidak dibalas.
 
 **Cek berurutan:**
 1. **Token & chat ID benar?** Salah satu salah = bot diam.
-2. **Kamu user yang diizinkan?** Agent yang aman membatasi siapa yang boleh memerintah. Pastikan chat ID-mu masuk allow-list.
+2. **Anda user yang diizinkan?** Agent yang aman membatasi siapa yang boleh memerintah. Pastikan chat ID-mu masuk allow-list.
 3. **Log error:**
 
 ```bash
@@ -89,7 +89,7 @@ pm2 logs --err --lines 50
 - Kalau transaksi sering gagal saat ramai, pertimbangkan menaikkan priority fee.
 
 :::caution
-RPC publik gratis cocok untuk tes, tapi tidak untuk operasi nyata. Sebagian besar masalah "transaksi gagal acak" hilang setelah pindah RPC dedicated.
+RPC publik gratis cocok untuk tes, tetapi tidak untuk operasi nyata. Sebagian besar masalah "transaksi gagal acak" hilang setelah pindah RPC dedicated.
 :::
 
 ## PM2: proses restart terus-menerus
@@ -113,13 +113,13 @@ Cari error paling atas dari tiap crash (biasanya config hilang, `.env` salah, at
 
 **Gejala:** perilaku aneh - pesan dobel, atau proses tiba-tiba dapat `SIGTERM`.
 
-**Artinya:** kamu menjalankan agent manual (`node index.js ...`) padahal versi PM2-nya juga jalan. Dua instance berebut.
+**Artinya:** Anda menjalankan agent manual (`node index.js ...`) padahal versi PM2-nya juga jalan. Dua instance berebut.
 
 **Solusi:** jangan jalankan manual saat versi PM2 aktif. Untuk query satu kali, pakai jalur yang aman (mis. command read-only), atau hentikan dulu yang PM2.
 
 ## Perubahan config tidak terasa
 
-**Gejala:** sudah ubah setting tapi perilaku agent tidak berubah.
+**Gejala:** sudah ubah setting tetapi perilaku agent tidak berubah.
 
 **Artinya:** banyak setting hanya dibaca **saat start**. Mengubah file saja tidak cukup.
 
@@ -136,10 +136,10 @@ hermes gateway restart
 Satu blok untuk memastikan semua hidup:
 
 ```bash
-pm2 list                                   # agent jalan?
-curl -s http://localhost:20128/api/health  # gateway model hidup? (kalau pakai lokal)
-hermes gateway status                      # operator hidup?
-pm2 logs --lines 30                        # ada error terbaru?
+pm2 list # agent jalan?
+curl -s http://localhost:20128/api/health # gateway model hidup? (kalau pakai lokal)
+hermes gateway status # operator hidup?
+pm2 logs --lines 30 # ada error terbaru?
 ```
 
 :::tip[Prinsip debugging]

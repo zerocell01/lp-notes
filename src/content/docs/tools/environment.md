@@ -21,7 +21,7 @@ Pemula → **Hardhat**. Lebih familiar (JS), dokumentasi lengkap, plugin banyak.
 ### Step-by-step
 
 ```bash
-# 1. Buat folder project
+# 1. Untuk folder project
 mkdir belajar-web3
 cd belajar-web3
 
@@ -41,12 +41,12 @@ Pilih "Create a TypeScript project" (kalau mau JS, pilih JavaScript). Ikuti prom
 
 ```
 belajar-web3/
-├── contracts/        # Kontrak Solidity di sini
-│   └── Lock.sol
-├── scripts/          # Script deploy & interaksi
-│   └── deploy.ts
-├── test/             # Unit test
-│   └── Lock.ts
+├── contracts/ # Kontrak Solidity di sini
+│ └── Lock.sol
+├── scripts/ # Script deploy & interaksi
+│ └── deploy.ts
+├── test/ # Unit test
+│ └── Lock.ts
 ├── hardhat.config.ts # Konfigurasi
 └── package.json
 ```
@@ -57,13 +57,13 @@ import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
 
 const config: HardhatUserConfig = {
-  solidity: "0.8.20",
-  networks: {
-    sepolia: {
-      url: "https://sepolia.infura.io/v3/YOUR_INFURA_KEY",
-      accounts: ["YOUR_PRIVATE_KEY"]  // ⚠️ Jangan commit ini!
-    }
-  }
+ solidity: "0.8.20",
+ networks: {
+ sepolia: {
+ url: "https://sepolia.infura.io/v3/YOUR_INFURA_KEY",
+ accounts: ["YOUR_PRIVATE_KEY"] // ⚠️ Jangan commit ini!
+ }
+ }
 };
 
 export default config;
@@ -86,22 +86,22 @@ cd belajar-web3-foundry
 Struktur:
 ```
 belajar-web3-foundry/
-├── src/           # Kontrak di sini
-├── script/        # Deploy script (Solidity)
-├── test/          # Test (Solidity)
-└── foundry.toml   # Config
+├── src/ # Kontrak di sini
+├── script/ # Deploy script (Solidity)
+├── test/ # Test (Solidity)
+└── foundry.toml # Config
 ```
 
 ### Deploy dengan Foundry
 ```solidity
 // script/Deploy.s.sol
 contract DeployScript is Script {
-    function run() external {
-        uint256 deployerPrivateKey = vm.envUint("PRIVATE_KEY");
-        vm.startBroadcast(deployerPrivateKey);
-        new MyContract();
-        vm.stopBroadcast();
-    }
+ function run() external {
+ uint256 deployerPrivateKey = vm.envUint("PRIVATE_KEY");
+ vm.startBroadcast(deployerPrivateKey);
+ new MyContract();
+ vm.stopBroadcast();
+ }
 }
 ```
 
@@ -114,7 +114,7 @@ forge script script/Deploy.s.sol --rpc-url $SEPOLIA_RPC --broadcast
 | Situasi | Pilih |
 |---------|-------|
 | Baru belajar Web3 | Hardhat |
-| Udah jago TypeScript | Hardhat |
+| Sudah jago TypeScript | Hardhat |
 | Pengen fokus Solidity | Foundry |
 | Gas optimization | Foundry |
 | Debugging kompleks | Foundry (cast, anvil) |
@@ -122,12 +122,12 @@ forge script script/Deploy.s.sol --rpc-url $SEPOLIA_RPC --broadcast
 
 ## Infura / Alchemy — RPC Endpoint
 
-Lo butuh RPC endpoint buat konek ke Ethereum. Daftar gratis:
+Anda butuh RPC endpoint untuk konek ke Ethereum. Daftar gratis:
 
 1. [infura.io](https://infura.io) — 100k request/bulan gratis
 2. [alchemy.com](https://alchemy.com) — 300M compute units/bulan gratis
 
-Bikin project → pilih Sepolia → copy HTTPS endpoint URL.
+Membuat project → pilih Sepolia → copy HTTPS endpoint URL.
 
 ## .env & Keamanan
 
@@ -136,7 +136,7 @@ Bikin project → pilih Sepolia → copy HTTPS endpoint URL.
 ```bash
 # .env
 SEPOLIA_RPC_URL=https://sepolia.infura.io/v3/KEY_KAMU
-PRIVATE_KEY=0x...  # Wallet DEV, bukan wallet asli!
+PRIVATE_KEY=0x... # Wallet DEV, bukan wallet asli!
 ```
 
 Install dotenv:

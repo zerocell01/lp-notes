@@ -1,24 +1,24 @@
 ---
 title: Yield Farming & Staking
-description: Gimana caranya "uang bekerja" di DeFi — staking, farming, compounding, dan risikonya.
+description: Bagaimana caranya "uang bekerja" di DeFi — staking, farming, compounding, dan risikonya.
 ---
 
 ## Yield = Hasil / Imbal Balik
 
-Yield dalam DeFi = imbal hasil yang lo dapet karena **nyediain likuiditas** atau **ngunci token**.
+Yield dalam DeFi = imbal hasil yang Anda mendapatkan karena **nyediain likuiditas** atau **ngunci token**.
 
 Bedakan:
-- **Staking** = kunci token di protokol buat dapet reward
-- **Yield Farming** = nyetor LP token atau aset ke protokol buat dapet yield + insentif token
+- **Staking** = kunci token di protokol untuk mendapatkan reward
+- **Yield Farming** = nyetor LP token atau aset ke protokol untuk mendapatkan yield + insentif token
 - **Liquidity Mining** = farming yang reward-nya token asli protokol
 
 ## Staking
 
 ### Proof of Stake (PoS)
-Lo stake ETH buat bantu amankan jaringan Ethereum → dapet reward (mirip deposito, tapi lo bantu validasi transaksi). Contoh: Lido, Rocket Pool.
+Anda stake ETH untuk bantu amankan jaringan Ethereum → mendapatkan reward (mirip deposito, tetapi Anda bantu validasi transaksi). Contoh: Lido, Rocket Pool.
 
 ### Protocol Staking
-Lo kunci token suatu protokol buat dapet:
+Anda kunci token suatu protokol untuk mendapatkan:
 - Voting power (governance)
 - Bagi hasil (revenue share)
 - veToken model (lock lebih lama = boost lebih besar)
@@ -28,12 +28,12 @@ Contoh: Curve (veCRV), Convex (cvxCRV).
 ## Yield Farming
 
 ### Cara kerja LP + Farming
-1. Lo setor ETH-USDC ke Uniswap → dapet LP token
-2. Lo setor LP token ke farming pool (misal SushiSwap) → dapet SUSHI token
-3. SUSHI bisa lo jual atau compound (tambah LP lagi)
+1. Anda setor ETH-USDC ke Uniswap → mendapatkan LP token
+2. Anda setor LP token ke farming pool (misal SushiSwap) → mendapatkan SUSHI token
+3. SUSHI bisa Anda jual atau compound (tambah LP lagi)
 
 ### APR vs APY
-- **APR** (Annual Percentage Rate) — bunga sederhana, gak termasuk compounding
+- **APR** (Annual Percentage Rate) — bunga sederhana, tidak termasuk compounding
 - **APY** (Annual Percentage Yield) — bunga berbunga, termasuk compounding
 
 APY selalu lebih tinggi dari APR. Contoh: APR 100% dengan compounding harian = APY ~171%.
@@ -56,17 +56,17 @@ APY selalu lebih tinggi dari APR. Contoh: APR 100% dengan compounding harian = A
 2. **Token dump** — reward token harganya turun terus
 3. **Smart contract risk** — protokol di-hack
 4. **Rug pull** — dev kabur
-5. **Liquidations** — kalau pake leverage
+5. **Liquidations** — kalau menggunakan leverage
 6. **Depeg** — stablecoin LP bisa jeblok kalau salah satu stablecoin depeg
 
 ## Compounding: Bunga Berbunga
 
-Auto-compound = hasil farming otomatis ditambahin ke posisi → hasil berikutnya lebih besar.
+Auto-compound = hasil farming otomatis ditambahkan ke posisi → hasil berikutnya lebih besar.
 
 Tools: Yearn, Beefy, Autofarm. Mereka otomatis claim reward → swap → tambah LP, bolak-balik.
 
 ## Rule of thumb
 
-> **Kalau yield-nya di atas 20% APY, tanya: "dari mana duitnya?" Kalau gak ada jawaban jelas → kemungkinan besar lo yang jadi yield.** Token baru inflasi tinggi pake yield tinggi buat narik likuiditas — 99% gak sustainable.
+> **Kalau yield-nya di atas 20% APY, tanya: "dari mana duitnya?" Kalau tidak ada jawaban jelas → kemungkinan besar Anda yang jadi yield.** Token baru inflasi tinggi menggunakan yield tinggi untuk narik likuiditas — 99% tidak sustainable.
 
 Lanjut: [Token & NFT →](/token/token-standard/)
