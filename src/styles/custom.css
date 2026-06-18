@@ -319,7 +319,7 @@ h2 {
   font-weight: 800;
   line-height: 1.15;
   letter-spacing: -0.03em;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
 }
 
 .hero .tagline {
@@ -328,7 +328,12 @@ h2 {
   opacity: 0.8;
   max-width: 640px;
   line-height: 1.7;
-  margin-bottom: 2rem;
+  margin-bottom: 0;
+}
+
+/* Hilangkan gap setelah hero section */
+.hero + * {
+  margin-top: 0 !important;
 }
 
 /* Tombol hero */
