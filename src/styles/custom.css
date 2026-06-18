@@ -767,6 +767,8 @@ h2 {
 /* Hero heading gradient — lebih kontras */
 :root[data-theme='light'] .hero h1 {
   background-image: linear-gradient(115deg, #1e3a8a, #2563eb 50%, #0891b2 85%);
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 :root[data-theme='light'] .hero .tagline {
