@@ -1,66 +1,41 @@
 ---
 title: Ananta Notes
-description: Catatan publik belajar Web3 dari nol + DLMM Meteora — blockchain, smart contract, DeFi, dan likuiditas di Solana.
+description: Catatan harian belajar Web3 — blockchain, smart contract, DeFi, liquidity provider, dan tools developer.
 template: splash
 hero:
   title: Ananta Notes
   tagline: Catatan Harian Belajar WEB3
-  image:
-    file: ../../assets/houston.webp
   actions:
-    - text: Mulai Belajar Web3
-      link: /dasar/apa-itu-web3/
-      icon: right-arrow
-    - text: DLMM Meteora
-      link: /dlmm/dasar/dlmm-dan-bin/
-      icon: right-arrow
     - text: GitHub
       link: https://github.com/zerocell01/lp-notes
       icon: github
       variant: minimal
+---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## 🌐 Web3 dari Nol
+## 📂 Pilih Topik
 
 <CardGrid>
-  <Card title="Dasar Web3" icon="open-book">
-    Blockchain, wallet, transaksi, gas — fondasi yang harus ngerti sebelum lanjut.
+  <Card title="Web3 Dasar" icon="open-book">
+    [Blockchain, wallet, transaksi, gas fee — fondasi sebelum lanjut.](/dasar/apa-itu-web3/)
   </Card>
   <Card title="Smart Contract" icon="puzzle">
-    Dari "Hello World" sampai deploy kontrak pertama kamu ke testnet.
+    [Apa itu smart contract, Solidity dasar, sampai deploy ke testnet.](/smart-contract/apa-itu/)
   </Card>
-  <Card title="DeFi Dasar" icon="rocket">
-    DEX, liquidity pool, AMM, yield farming — mekanisme inti keuangan on-chain.
+  <Card title="DeFi" icon="rocket">
+    [DEX vs CEX, liquidity pool, AMM, yield farming & staking.](/defi/apa-itu-defi/)
   </Card>
   <Card title="Token & NFT" icon="star">
-    Bikin token sendiri, ngerti ERC-20/721/1155, dan NFT dari nol.
+    [ERC standard, bikin token sendiri, NFT dari nol.](/token/token-standard/)
   </Card>
   <Card title="Tools Developer" icon="setting">
-    Hardhat, Foundry, Ethers.js — tools yang dipake developer Web3 sehari-hari.
+    [Hardhat, Ethers.js, RPC provider, explorer & verifikasi kontrak.](/tools/environment/)
+  </Card>
+  <Card title="Liquidity Provider" icon="droplet">
+    [LP di Solana — DLMM Meteora, volatilitas, strategi, operator.](/dlmm/dasar/dlmm-dan-bin/)
+  </Card>
+  <Card title="Glossary" icon="book">
+    [Kamus istilah Web3 dari A sampai Z.](/glossary/)
   </Card>
 </CardGrid>
-
-## 💧 DLMM Meteora di Solana
-
-<CardGrid>
-  <Card title="Dasar DLMM" icon="book">
-    Apa itu DLMM, bin, range, dan fitur khas Meteora.
-  </Card>
-  <Card title="Volatilitas & Range" icon="chart">
-    ATR, RSI, Bollinger, Supertrend — indikator buat set range LP.
-  </Card>
-  <Card title="Psikologi Trading" icon="brain">
-    Sabar, kapan hold vs cut, dan kapan LP menang.
-  </Card>
-</CardGrid>
-
-## Kenapa catatan ini ada?
-
-Gue belajar Web3 dari nol, dan banyak banget resource yang:
-
-- Pake bahasa Inggris teknis — susah dicerna pemula
-- Loncat-loncat — asumsinya udah ngerti istilah dasar
-- Gak praktis — teori doang, gak ada kode yang bisa dicoba
-
-Catatan ini ditulis **dari pemula untuk pemula** — tiap konsep dijelasin pake analogi sehari-hari + kode yang bisa langsung kamu copy-paste dan jalanin.

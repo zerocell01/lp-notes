@@ -102,8 +102,7 @@ export default defineConfig({
 					items: [{ autogenerate: { directory: 'tips' } }],
 				},
 				{
-					label: '💧 DLMM Meteora (Legacy)',
-					collapsed: true,
+					label: '💧 Liquidity Provider',
 					items: [
 						{
 							label: '📘 Dasar DLMM',
