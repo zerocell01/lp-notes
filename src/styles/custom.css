@@ -161,7 +161,97 @@ h2 {
   padding: 0.5rem 0;
 }
 
-/* Hero title + tagline centered — no image */
+/* Side-by-side: title kiri + X profile kanan */
+
+/* Compact: small phones landscape */
+@media (min-width: 420px) and (max-width: 639px) {
+  .hero {
+    display: flex !important;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .hero > img:first-of-type {
+    flex: 0 0 140px;
+    max-width: 160px;
+    height: auto !important;
+    aspect-ratio: auto !important;
+    order: 2;
+  }
+
+  .hero > .sl-flex.stack {
+    flex: 1 1 auto;
+    min-width: 0;
+    order: 1;
+    gap: 0.5rem;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero .tagline {
+    max-width: 100%;
+    font-size: 0.9rem;
+  }
+}
+
+/* Medium: tablets */
+@media (min-width: 640px) {
+  .hero {
+    display: flex !important;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .hero > img:first-of-type {
+    flex: 0 0 340px;
+    max-width: 380px;
+    height: auto !important;
+    aspect-ratio: auto !important;
+    order: 2;
+  }
+
+  /* Title + tagline + actions — fleksibel, di kiri */
+  .hero > .sl-flex.stack {
+    flex: 1 1 auto;
+    min-width: 0;
+    order: 1;
+    gap: 0.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero .tagline {
+    max-width: 420px;
+  }
+}
+
+/* Full: desktop */
+@media (min-width: 900px) {
+  .hero {
+    gap: 1rem;
+  }
+
+  .hero > img:first-of-type {
+    flex: 0 0 380px;
+    max-width: 420px;
+    height: auto !important;
+    aspect-ratio: auto !important;
+  }
+
+  .hero h1 {
+    font-size: 2.6rem;
+  }
+
+  .hero .tagline {
+    max-width: 480px;
+  }
+}
 
 /* Glow background */
 .hero::before {
@@ -325,57 +415,6 @@ h2 {
   width: 100%;
   max-width: 500px;
   height: auto;
-}
-
-/* ============================================================
-   2c. HERO PROFILE CARD — inline HTML, adapts light/dark via CSS vars
-   ============================================================ */
-
-.hero-profile {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem 1.25rem;
-  margin: 1.5rem 0 0.5rem;
-  border-radius: var(--radius-lg);
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  max-width: 400px;
-}
-
-.hero-profile-avatar {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  object-fit: cover;
-  flex-shrink: 0;
-  border: 2px solid var(--brand-blue);
-}
-
-.hero-profile-text {
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
-}
-
-.hero-profile-name {
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--sl-color-white);
-  font-family: var(--sl-font);
-}
-
-.hero-profile-handle {
-  font-size: 0.85rem;
-  color: var(--sl-color-accent-high);
-  font-family: var(--sl-font-mono);
-}
-
-.hero-profile-bio {
-  font-size: 0.85rem;
-  color: var(--sl-color-text);
-  opacity: 0.75;
-  font-family: var(--sl-font);
 }
 
 /* ============================================================
