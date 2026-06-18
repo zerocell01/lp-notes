@@ -29,6 +29,12 @@ Tiap halaman = satu file `.md` di `src/content/docs/`. Untuk memunculkannya di m
 
 Auto-deploy via Vercel — tiap `git push` ke branch utama akan memicu build dan deploy otomatis.
 
+Untuk Vercel:
+
+- Build Command: `npm run build`
+- Output Directory: `dist`
+- Framework: Static Site
+
 ---
 
 ⚠️ **Bukan saran finansial.** Materi edukasi dari pengalaman belajar pribadi. LP memecoin berisiko tinggi.
