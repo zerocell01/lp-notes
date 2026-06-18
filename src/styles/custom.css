@@ -195,7 +195,76 @@ h2 {
   color: var(--brand-pink);
 }
 
-/* SVG ilustrasi di hero (akan ditambah di index.mdx) */
+/* ============================================================
+   2b. BLOCKCHAIN NETWORK SVG ANIMATION
+   ============================================================ */
+
+.hero-chain-wrap {
+  margin: 2rem 0 2.5rem;
+  opacity: 0.85;
+}
+
+.hero-chain-wrap svg {
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Garis koneksi — dash mengalir */
+.chain-line {
+  animation: dashFlow 2.5s linear infinite;
+}
+
+@keyframes dashFlow {
+  0%   { stroke-dashoffset: 20; }
+  100% { stroke-dashoffset: 0; }
+}
+
+/* Node blok — pulse halus */
+.chain-node {
+  transform-origin: center;
+  animation: nodePulse 3s ease-in-out infinite;
+}
+
+@keyframes nodePulse {
+  0%, 100% { transform: scale(1); opacity: 0.85; }
+  50%      { transform: scale(1.05); opacity: 1; }
+}
+
+/* Label dalam blok */
+.chain-label {
+  pointer-events: none;
+  user-select: none;
+  font-family: var(--sl-font-mono);
+}
+
+/* Floating particles di background hero */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(2px 2px at 15% 20%, var(--brand-violet), transparent),
+    radial-gradient(3px 3px at 85% 15%, var(--brand-teal), transparent),
+    radial-gradient(2px 2px at 70% 75%, var(--brand-pink), transparent),
+    radial-gradient(2px 2px at 30% 60%, var(--brand-blue), transparent),
+    radial-gradient(3px 3px at 55% 85%, var(--brand-amber), transparent),
+    radial-gradient(2px 2px at 10% 70%, var(--brand-teal), transparent),
+    radial-gradient(2px 2px at 60% 10%, var(--brand-pink), transparent);
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0;
+  animation: particlesAppear 1s 0.5s ease forwards;
+}
+
+@keyframes particlesAppear {
+  from { opacity: 0; }
+  to   { opacity: 0.6; }
+}
+
+/* SVG ilustrasi di hero (fallback) */
 .hero-illustration {
   margin-top: 1rem;
   opacity: 0.9;
