@@ -161,6 +161,11 @@ h2 {
   padding: 0.5rem 0;
 }
 
+/* Light mode: invert dark profile card → light bg + dark text, hue preserved */
+[data-theme='light'] .hero > img[src*="x-profile"] {
+  filter: invert(0.92) hue-rotate(180deg);
+}
+
 /* Side-by-side: title kiri + X profile kanan */
 
 /* Compact: small phones landscape */
