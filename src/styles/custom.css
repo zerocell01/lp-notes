@@ -6,7 +6,17 @@
 /* ---------- GOOGLE FONTS: Plus Jakarta Sans ---------- */
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
-:root {
+:root,
+:root[data-theme='light'],
+:root[data-theme='dark'] {
+  /* Background + text (dark mode) */
+  --sl-color-bg: #0f172a;
+  --sl-color-bg-nav: #1e293b;
+  --sl-color-bg-sidebar: #1e293b;
+  --sl-color-bg-inline-code: #334155;
+  --sl-color-text: #e2e8f0;
+  --sl-color-text-accent: #93c5fd;
+
   /* Accent */
   --sl-color-accent-low: #0f172a;
   --sl-color-accent: #2563eb;
@@ -23,6 +33,11 @@
   --brand-slate: #475569;
   --brand-slate-glow: rgba(71, 85, 105, 0.2);
 
+  /* Cards */
+  --card-bg: rgba(30, 41, 59, 0.85);
+  --card-border: rgba(59, 130, 246, 0.15);
+  --header-bg: rgba(15, 23, 42, 0.9);
+
   /* Typography */
   --sl-font: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   --sl-font-mono: 'JetBrains Mono', 'Fira Code', monospace;
@@ -32,46 +47,6 @@
   --radius-md: 12px;
   --radius-lg: 16px;
   --radius-xl: 24px;
-}
-
-/* ---------- LIGHT MODE (forced dark — both themes identical) ---------- */
-:root[data-theme='light'] {
-  --sl-color-accent-low: #0f172a;
-  --sl-color-accent: #2563eb;
-  --sl-color-accent-high: #60a5fa;
-
-  --sl-color-bg: #0f172a;
-  --sl-color-bg-nav: #1e293b;
-  --sl-color-bg-sidebar: #1e293b;
-  --sl-color-bg-inline-code: #334155;
-  --sl-color-text: #e2e8f0;
-  --sl-color-text-accent: #93c5fd;
-
-  --card-bg: rgba(30, 41, 59, 0.85);
-  --card-border: rgba(59, 130, 246, 0.15);
-  --header-bg: rgba(15, 23, 42, 0.9);
-}
-
-
-/* ---------- DARK MODE ---------- */
-:root[data-theme='dark'] {
-  --sl-color-bg: #0f172a;
-  --sl-color-bg-nav: #1e293b;
-  --sl-color-bg-sidebar: #1e293b;
-  --sl-color-bg-inline-code: #334155;
-  --sl-color-text: #e2e8f0;
-  --sl-color-text-accent: #93c5fd;
-
-  --card-bg: rgba(30, 41, 59, 0.85);
-  --card-border: rgba(59, 130, 246, 0.15);
-  --header-bg: rgba(15, 23, 42, 0.9);
-
-  --brand-navy: #1e3a8a;
-  --brand-blue: #60a5fa;
-  --brand-dark: #0f172a;
-  --brand-cyan: #22d3ee;
-  --brand-slate: #64748b;
-  --brand-amber: #ffc44d;
 }
 
 /* ============================================================
