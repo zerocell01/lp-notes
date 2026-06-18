@@ -101,6 +101,62 @@ export default defineConfig({
 					label: '💡 Tips & Pelajaran',
 					items: [{ autogenerate: { directory: 'tips' } }],
 				},
+				{
+					label: '💧 DLMM Meteora (Legacy)',
+					collapsed: true,
+					items: [
+						{
+							label: '📘 Dasar DLMM',
+							items: [
+								{ label: 'Apa itu DLMM & Bin', slug: 'dlmm/dasar/dlmm-dan-bin' },
+								{ label: 'Range, In-Range vs OOR', slug: 'dlmm/dasar/range-dan-oor' },
+								{ label: 'Fitur Khas DLMM Meteora', slug: 'dlmm/dasar/fitur-meteora' },
+								{ label: 'Impermanent Loss di DLMM', slug: 'dlmm/dasar/impermanent-loss' },
+							],
+						},
+						{
+							label: '📊 Volatilitas & Range',
+							items: [
+								{ label: 'ATR: Mengukur Goyangan Harga', slug: 'dlmm/volatilitas/atr' },
+								{ label: 'Lebar Range Mengikuti Volatilitas', slug: 'dlmm/volatilitas/lebar-range' },
+								{ label: 'RSI: Cara Baca & Konfigurasi', slug: 'dlmm/volatilitas/rsi' },
+								{ label: 'Supertrend: Pengukur Arah Tren', slug: 'dlmm/volatilitas/supertrend' },
+								{ label: 'Bollinger Bands: Pita Volatilitas', slug: 'dlmm/volatilitas/bollinger' },
+								{ label: 'Fibonacci: Support & Resistance', slug: 'dlmm/volatilitas/fibonacci' },
+								{ label: 'Cheat Sheet: Membaca Laporan Posisi', slug: 'dlmm/volatilitas/cheat-sheet' },
+							],
+						},
+						{
+							label: '💰 Fee & Pemilihan Pool',
+							items: [
+								{ label: 'Fee = Volume ÷ TVL, Bukan Mcap', slug: 'dlmm/fee/volume-tvl' },
+							],
+						},
+						{
+							label: '🧠 Psikologi & Strategi',
+							items: [
+								{ label: 'Sabar: Edge yang Sering Dilupakan', slug: 'dlmm/psikologi/sabar' },
+								{ label: 'Kapan Hold, Kapan Cut', slug: 'dlmm/psikologi/hold-vs-cut' },
+								{ label: 'Kapan LP Menang vs Kalah', slug: 'dlmm/psikologi/kapan-lp-menang' },
+							],
+						},
+						{
+							label: '⚙️ Operator & Otomasi',
+							items: [
+								{ label: 'Install Hermes Agent di VPS', slug: 'dlmm/operator/install-hermes-vps' },
+								{ label: 'Install Meridian (Agent LP) di VPS', slug: 'dlmm/operator/install-meridian-vps' },
+								{ label: 'Troubleshooting Operator', slug: 'dlmm/operator/troubleshooting' },
+							],
+						},
+						{
+							label: '💡 Tips Singkat',
+							items: [
+								{ label: 'Memilih Pool yang Tepat', slug: 'dlmm/tips/memilih-pool' },
+								{ label: 'Mengelola Posisi Aktif', slug: 'dlmm/tips/mengelola-posisi' },
+							],
+						},
+					],
+				},
 				{ label: '📖 Glossary Istilah', slug: 'glossary' },
 			],
 		}),

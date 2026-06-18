@@ -1,25 +1,27 @@
 ---
-title: Catatan Belajar Web3
-description: Catatan publik belajar Web3 dari nol — blockchain, smart contract, DeFi, NFT, dan tools developer.
+title: Catatan Belajar Web3 & DLMM
+description: Catatan publik belajar Web3 dari nol + DLMM Meteora — blockchain, smart contract, DeFi, dan likuiditas di Solana.
 template: splash
 hero:
-  title: Catatan Belajar Web3
-  tagline: Dari nol sampai ngerti — blockchain, smart contract, DeFi, dan NFT dijelaskan dengan bahasa Indonesia sehari-hari.
+  title: Catatan Belajar Web3 & DLMM
+  tagline: Web3 dari nol + LP di Meteora — dua topik, satu tempat.
   image:
     file: ../../assets/houston.webp
   actions:
-    - text: Mulai Belajar
-      link: /mulai/tentang/
+    - text: Mulai Belajar Web3
+      link: /dasar/apa-itu-web3/
+      icon: right-arrow
+    - text: DLMM Meteora
+      link: /dlmm/dasar/dlmm-dan-bin/
       icon: right-arrow
     - text: GitHub
       link: https://github.com/zerocell01/lp-notes
       icon: github
       variant: minimal
----
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## Yang bakal kamu pelajari
+## 🌐 Web3 dari Nol
 
 <CardGrid>
   <Card title="Dasar Web3" icon="open-book">
@@ -36,6 +38,20 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
   </Card>
   <Card title="Tools Developer" icon="setting">
     Hardhat, Foundry, Ethers.js — tools yang dipake developer Web3 sehari-hari.
+  </Card>
+</CardGrid>
+
+## 💧 DLMM Meteora di Solana
+
+<CardGrid>
+  <Card title="Dasar DLMM" icon="book">
+    Apa itu DLMM, bin, range, dan fitur khas Meteora.
+  </Card>
+  <Card title="Volatilitas & Range" icon="chart">
+    ATR, RSI, Bollinger, Supertrend — indikator buat set range LP.
+  </Card>
+  <Card title="Psikologi Trading" icon="brain">
+    Sabar, kapan hold vs cut, dan kapan LP menang.
   </Card>
 </CardGrid>
 

@@ -3,11 +3,10 @@ title: Tentang Catatan Ini
 description: Kenapa catatan ini dibuat, siapa targetnya, dan gimana cara bacanya.
 ---
 
-## Kenapa gue bikin ini?
+## Yang lo pelajari di sini
 
-Gue mulai belajar Web3 tahun ini. Jujur — awal-awal pusing banget. Blockchain, wallet, gas, nonce, ABI, RPC... banyak istilah yang gak dijelasin di tutorial mana pun. Semua resource ngasumsiin lo udah ngerti.
-
-Jadi gue mutusin: **tiap kali gue paham satu konsep, gue tulis di sini.** Dengan bahasa Indonesia. Dengan analogi yang gampang dicerna. Dengan kode yang bisa langsung dicoba.
+- **🌐 Web3** — blockchain, smart contract, DeFi, NFT, tools (untuk pemula)
+- **💧 DLMM Meteora** — likuiditas di Solana, indikator, strategi LP (untuk yang udah di crypto)
 
 ## Buat siapa?
 
