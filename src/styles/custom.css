@@ -161,12 +161,26 @@ h2 {
   padding: 0.5rem 0;
 }
 
-/* Light mode: invert dark profile card → light bg + dark text, hue preserved */
-[data-theme='light'] .hero > img[src*="x-profile"] {
-  filter: invert(0.92) hue-rotate(180deg);
+/* Profile images: positioned alongside hero title, swapped per theme */
+.hero-profile-imgs {
+  display: none;
+}
+.hero-profile-img {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+}
+[data-theme='dark'] .hero-profile-dark,
+[data-theme='light'] .hero-profile-light,
+:root:not([data-theme='light']) .hero-profile-dark {
+  display: block;
+}
+[data-theme='light'] .hero-profile-dark,
+[data-theme='dark'] .hero-profile-light {
+  display: none;
 }
 
-/* Side-by-side: title kiri + X profile kanan */
+/* Side-by-side: title kiri + profile kanan */
 
 /* Compact: small phones landscape */
 @media (min-width: 420px) and (max-width: 639px) {
@@ -177,12 +191,15 @@ h2 {
     gap: 0.5rem;
   }
 
-  .hero > img:first-of-type {
+  .hero > .hero-profile-imgs {
     flex: 0 0 140px;
     max-width: 160px;
-    height: auto !important;
-    aspect-ratio: auto !important;
     order: 2;
+  }
+
+  .hero > .hero-profile-imgs .hero-profile-img {
+    width: 100%;
+    height: auto;
   }
 
   .hero > .sl-flex.stack {
@@ -211,15 +228,17 @@ h2 {
     gap: 0.5rem;
   }
 
-  .hero > img:first-of-type {
+  .hero > .hero-profile-imgs {
     flex: 0 0 340px;
     max-width: 380px;
-    height: auto !important;
-    aspect-ratio: auto !important;
     order: 2;
   }
 
-  /* Title + tagline + actions — fleksibel, di kiri */
+  .hero > .hero-profile-imgs .hero-profile-img {
+    width: 100%;
+    height: auto;
+  }
+
   .hero > .sl-flex.stack {
     flex: 1 1 auto;
     min-width: 0;
@@ -242,11 +261,14 @@ h2 {
     gap: 1rem;
   }
 
-  .hero > img:first-of-type {
+  .hero > .hero-profile-imgs {
     flex: 0 0 380px;
     max-width: 420px;
-    height: auto !important;
-    aspect-ratio: auto !important;
+  }
+
+  .hero > .hero-profile-imgs .hero-profile-img {
+    width: 100%;
+    height: auto;
   }
 
   .hero h1 {

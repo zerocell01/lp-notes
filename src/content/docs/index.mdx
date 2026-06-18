@@ -5,8 +5,6 @@ template: splash
 hero:
   title: Ananta Notes
   tagline: Catatan perjalanan belajar Web3 dari nol mencakup dasar Blockchain, Smart Contract, (DeFi), Token, NFT, Airdrop, Liquidity Provider, hingga tools yang digunakan di dunia Web3 sehari-hari.
-  image:
-    file: ../../assets/x-profile.svg
   actions:
     - text: GitHub
       link: https://github.com/zerocell01
@@ -19,6 +17,11 @@ hero:
 ---
 
 import { LinkCard, CardGrid } from '@astrojs/starlight/components';
+
+<div class="hero-profile-imgs" aria-hidden="true">
+  <img class="hero-profile-img hero-profile-dark" src="../../assets/x-profile.svg" alt="Ananta" />
+  <img class="hero-profile-img hero-profile-light" src="../../assets/x-profile-light.svg" alt="Ananta" />
+</div>
 
 <div class="hero-chain-wrap" aria-hidden="true">
   <svg viewBox="0 0 800 160" class="hero-chain">
@@ -84,3 +87,12 @@ import { LinkCard, CardGrid } from '@astrojs/starlight/components';
   <LinkCard title="Liquidity Provider" description="LP di Solana — DLMM Meteora, volatilitas, strategi, operator." icon="droplet" href="/dlmm/dasar/dlmm-dan-bin/"/>
   <LinkCard title="Glossary" description="Kamus istilah Web3 dari A sampai Z." icon="book" href="/glossary/"/>
 </CardGrid>
+
+<script>
+  // Move profile images into hero div for side-by-side layout
+  (function() {
+    var imgs = document.querySelector('.hero-profile-imgs');
+    var hero = document.querySelector('.hero');
+    if (imgs && hero) hero.appendChild(imgs);
+  })();
+</script>
