@@ -464,6 +464,9 @@ h2 {
   border-radius: 0 2px 2px 0;
 }
 
+/* ---------- HIDE THEME TOGGLE ---------- */
+starlight-theme-select { display: none !important; }
+
 /* ============================================================
    5. CALLOUT BOXES — enhanced
    ============================================================ */
