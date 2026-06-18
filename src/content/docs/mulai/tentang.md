@@ -1,32 +1,32 @@
 ---
 title: Tentang Catatan Ini
-description: Kenapa catatan ini ada dan untuk siapa.
+description: Kenapa catatan ini dibuat, siapa targetnya, dan gimana cara bacanya.
 ---
 
-Ini catatan publik dari perjalanan belajar jadi penyedia likuiditas (LP) di pool **DLMM** (Dynamic Liquidity Market Maker), terutama untuk token memecoin yang volatil.
+## Kenapa gue bikin ini?
 
-Bedanya dari kebanyakan catatan LP: di sini LP-nya **tidak dijalankan manual**. Aku menjalankannya lewat **agent otonom** (namanya Meridian) yang screening pool, deploy, memantau, dan menutup posisi sendiri - dengan **model LLM** sebagai otak pengambil keputusan. Jadi banyak pelajaran di sini datang dari mengamati, mengoreksi, dan menata ulang *cara berpikir si agent*, bukan dari klik manual di aplikasi.
+Gue mulai belajar Web3 tahun ini. Jujur — awal-awal pusing banget. Blockchain, wallet, gas, nonce, ABI, RPC... banyak istilah yang gak dijelasin di tutorial mana pun. Semua resource ngasumsiin lo udah ngerti.
 
-Kalau kamu LP manual, konsep dasarnya tetap sama dan tetap berguna. Tapi sebagian catatan akan menyinggung hal yang khusus muncul saat LP dijalankan oleh agent - lihat [LP Manual vs LP dengan Agent](/mulai/lp-manual-vs-agent/).
+Jadi gue mutusin: **tiap kali gue paham satu konsep, gue tulis di sini.** Dengan bahasa Indonesia. Dengan analogi yang gampang dicerna. Dengan kode yang bisa langsung dicoba.
 
-## Kenapa ditulis
+## Buat siapa?
 
-Belajar LP itu penuh istilah dan jebakan. Banyak yang baru kelihatan setelah kena sendiri. Aku tulis ulang pelajaran-pelajaran itu dengan bahasa sederhana - supaya:
+- **Pemula absolut** — baru denger kata "Web3" minggu lalu
+- **Developer web2** — udah bisa JS/Python, pengen nyebur ke blockchain
+- **Orang curious** — pengen ngerti kenapa semua orang ngomongin crypto, tapi gak peduli harga
 
-- Konsepnya nempel (nulis = belajar dua kali)
-- Orang lain yang baru mulai punya titik berangkat
-- Aku punya tempat balik kalau lupa
+## Bukan buat siapa?
 
-## Apa yang ADA di sini
+- Yang udah jago Solidity dan pengen belajar assembly EVM
+- Yang nyari sinyal trading / airdrop hunting (ini catatan teknis, bukan finansial)
 
-- **Konsep**: cara kerja DLMM, bin, range, fee
-- **Cara berpikir**: gimana mengukur volatilitas, menilai pool, baca risiko
-- **Psikologi**: pelajaran soal sabar dan disiplin - bagian yang paling sering bikin rugi
-- **LP dengan agent**: kenapa menjalankan LP lewat agent LLM beda rasanya dari LP manual
-- **Tips singkat**: catatan kecil yang berguna
+## Cara baca
 
-## Apa yang TIDAK ada di sini
+1. **Urut dari [Dasar Web3](/dasar/apa-itu-web3/)** — tiap halaman dibangun di atas halaman sebelumnya
+2. **Jangan skip** — blockchain itu kayak bangunan, kalau fondasi bolong, nanti roboh
+3. **Coba sendiri** — tiap ada kode, copy-paste dan jalanin. Gak ada yang namanya "nanti aja"
+4. **Kalo bingung, baca ulang** — gak apa-apa. Gue juga baca halaman yang sama 5x sebelum nulis.
 
-Catatan ini sengaja **tidak** memuat angka threshold spesifik, parameter rahasia, atau strategi persis yang aku pakai. Bukan pelit - tapi (1) angka itu sangat tergantung kondisi dan modal masing-masing, dan (2) menyalin setting orang lain mentah-mentah biasanya malah bikin rugi. Yang berharga itu **paham kenapanya**, bukan ngapalin angkanya.
+---
 
-Fokusnya: bekali kamu cara berpikir, biar kamu bisa nyetel angkamu sendiri.
+> **Bukan saran finansial.** Catatan ini tentang teknologi, bukan investasi. Harga token naik-turun, tapi pengetahuan tentang cara kerja blockchain gak akan kadaluarsa.

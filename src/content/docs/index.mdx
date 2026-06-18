@@ -1,107 +1,50 @@
 ---
-title: Catatan LP DLMM
-description: Catatan publik belajar likuiditas DLMM, memecoin, dan psikologi trading. Konsep, tips, dan pelajaran nyata.
+title: Catatan Belajar Web3
+description: Catatan publik belajar Web3 dari nol — blockchain, smart contract, DeFi, NFT, dan tools developer.
 template: splash
 hero:
-  tagline: Catatan publik belajar likuiditas DLMM Meteora di Solana - dijalankan lewat agent otonom (Meridian) yang mengandalkan model LLM, bukan LP manual. Fokus ke "kenapa"-nya, bukan angka rahasia.
+  title: Catatan Belajar Web3
+  tagline: Dari nol sampai ngerti — blockchain, smart contract, DeFi, dan NFT dijelaskan dengan bahasa Indonesia sehari-hari.
+  image:
+    file: ../../assets/houston.webp
   actions:
-    - text: Mulai dari Dasar
-      link: /dasar/dlmm-dan-bin/
+    - text: Mulai Belajar
+      link: /mulai/tentang/
       icon: right-arrow
-      variant: primary
-    - text: Baca Disclaimer
-      link: /mulai/disclaimer/
-      icon: information
+    - text: GitHub
+      link: https://github.com/zerocell01/lp-notes
+      icon: github
+      variant: minimal
 ---
 
-import { CardGrid, LinkCard } from '@astrojs/starlight/components';
+import { Card, CardGrid } from '@astrojs/starlight/components';
 
-<div class="hero-illustration" aria-hidden="true">
-  <svg viewBox="0 0 500 180" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse">
-        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#7c5cff" stroke-width="0.3" opacity="0.12"/>
-      </pattern>
-      <linearGradient id="b1" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stop-color="#7c5cff" stop-opacity="0.85"/>
-        <stop offset="100%" stop-color="#7c5cff" stop-opacity="0.15"/>
-      </linearGradient>
-      <linearGradient id="b2" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stop-color="#18c2b3" stop-opacity="0.85"/>
-        <stop offset="100%" stop-color="#18c2b3" stop-opacity="0.15"/>
-      </linearGradient>
-      <linearGradient id="b3" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stop-color="#ff5c98" stop-opacity="0.85"/>
-        <stop offset="100%" stop-color="#ff5c98" stop-opacity="0.15"/>
-      </linearGradient>
-      <linearGradient id="bl" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0%" stop-color="#7c5cff" stop-opacity="0.3"/>
-        <stop offset="50%" stop-color="#ff5c98" stop-opacity="0.8"/>
-        <stop offset="100%" stop-color="#18c2b3" stop-opacity="0.3"/>
-      </linearGradient>
-    </defs>
-
-    <rect width="500" height="180" fill="url(#g)" rx="16"/>
-
-    <path d="M 20 140 Q 80 120 140 150 T 260 100 T 380 130 T 480 110"
-          stroke="url(#bl)" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.6"/>
-
-    <circle cx="260" cy="100" r="6" fill="#ff5c98" opacity="0.9">
-      <animate attributeName="r" values="4;7;4" dur="2s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="260" cy="100" r="12" fill="#ff5c98" opacity="0.15">
-      <animate attributeName="r" values="8;16;8" dur="2s" repeatCount="indefinite"/>
-    </circle>
-
-    <rect x="60" y="115" width="14" height="25" rx="3" fill="url(#b1)" opacity="0.7">
-      <animate attributeName="height" values="25;40;25" dur="3s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="115;100;115" dur="3s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="100" y="100" width="14" height="40" rx="3" fill="url(#b1)" opacity="0.8">
-      <animate attributeName="height" values="40;30;40" dur="2.5s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="100;110;100" dur="2.5s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="180" y="85" width="14" height="55" rx="3" fill="url(#b2)" opacity="0.9">
-      <animate attributeName="height" values="55;68;55" dur="1.8s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="85;72;85" dur="1.8s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="220" y="75" width="14" height="65" rx="3" fill="url(#b2)" opacity="1"/>
-    <rect x="300" y="90" width="14" height="50" rx="3" fill="url(#b3)" opacity="0.8">
-      <animate attributeName="height" values="50;38;50" dur="2.2s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="90;102;90" dur="2.2s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="340" y="102" width="14" height="38" rx="3" fill="url(#b3)" opacity="0.7">
-      <animate attributeName="height" values="38;50;38" dur="3.2s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="102;90;102" dur="3.2s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="420" y="118" width="14" height="22" rx="3" fill="url(#b1)" opacity="0.6">
-      <animate attributeName="height" values="22;32;22" dur="2.8s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="118;108;118" dur="2.8s" repeatCount="indefinite"/>
-    </rect>
-
-  </svg>
-</div>
-
-## Apa ini?
-
-Kumpulan catatan dari belajar jadi penyedia likuiditas (LP) di pool **DLMM Meteora** (Dynamic Liquidity Market Maker) di blockchain Solana. Bedanya: LP-nya **tidak dijalankan manual**, tapi lewat **agent otonom** (Meridian) yang screening, deploy, memantau, dan menutup posisi sendiri - dengan **model LLM** sebagai otak pengambil keputusan. Isinya konsep, pelajaran, dan tips yang aku rangkum sepanjang jalan - supaya orang lain (dan aku sendiri di masa depan) bisa paham fondasinya tanpa harus mulai dari nol.
-
-## Mulai dari mana?
+## Yang bakal kamu pelajari
 
 <CardGrid>
-	<LinkCard title="LP Manual vs LP dengan Agent" href="/mulai/lp-manual-vs-agent/" description="Kenapa menjalankan LP lewat agent LLM beda rasanya dari LP manual: keputusan, kecepatan, dan jenis kesalahannya." />
-	<LinkCard title="Dasar DLMM" href="/dasar/dlmm-dan-bin/" description="Apa itu bin, range, dan kenapa likuiditas terkonsentrasi mengubah cara fee dihasilkan." />
-	<LinkCard title="Fitur Khas Meteora" href="/dasar/fitur-meteora/" description="Spot, Curve, Bid-Ask, dynamic fee, dan bin step yang membedakan Meteora." />
-	<LinkCard title="Volatilitas & Range" href="/volatilitas/atr/" description="Mengukur goyangan harga dengan ATR dan menyesuaikan lebar range biar tahan banting." />
-	<LinkCard title="Cheat Sheet Indikator" href="/volatilitas/cheat-sheet/" description="Ringkasan baca-cepat semua indikator di laporan posisi: RSI, Supertrend, Bollinger, Fibonacci, ATR." />
-	<LinkCard title="Fee & Pemilihan Pool" href="/fee/volume-tvl/" description="Kenapa fee yield itu soal turnover (volume ÷ TVL), bukan market cap yang gede." />
-	<LinkCard title="Psikologi Trading" href="/psikologi/sabar/" description="Pelajaran terpenting: sabar itu edge. Kapan menahan posisi, kapan memotong." />
-	<LinkCard title="Operator di VPS" href="/operator/install-hermes-vps/" description="Pasang Hermes Agent sebagai operator yang menjaga dan mengoperasikan agent LP dari Telegram." />
-	<LinkCard title="Install Meridian di VPS" href="/operator/install-meridian-vps/" description="Pasang agent LP Meridian: pilih branch main/experimental dan setting provider OpenRouter atau 9Router." />
-	<LinkCard title="Tips Singkat" href="/tips/memilih-pool/" description="Catatan cepat saat memilih pool dan mengelola posisi yang sudah berjalan." />
+  <Card title="Dasar Web3" icon="open-book">
+    Blockchain, wallet, transaksi, gas — fondasi yang harus ngerti sebelum lanjut.
+  </Card>
+  <Card title="Smart Contract" icon="puzzle">
+    Dari "Hello World" sampai deploy kontrak pertama kamu ke testnet.
+  </Card>
+  <Card title="DeFi Dasar" icon="rocket">
+    DEX, liquidity pool, AMM, yield farming — mekanisme inti keuangan on-chain.
+  </Card>
+  <Card title="Token & NFT" icon="star">
+    Bikin token sendiri, ngerti ERC-20/721/1155, dan NFT dari nol.
+  </Card>
+  <Card title="Tools Developer" icon="setting">
+    Hardhat, Foundry, Ethers.js — tools yang dipake developer Web3 sehari-hari.
+  </Card>
 </CardGrid>
 
-:::caution[Bukan saran finansial]
-Semua di sini cuma catatan belajar pribadi untuk tujuan edukasi. Bukan ajakan, bukan saran investasi. LP memecoin itu berisiko tinggi - kamu bisa rugi. Selalu riset sendiri.
-:::
+## Kenapa catatan ini ada?
+
+Gue belajar Web3 dari nol, dan banyak banget resource yang:
+
+- Pake bahasa Inggris teknis — susah dicerna pemula
+- Loncat-loncat — asumsinya udah ngerti istilah dasar
+- Gak praktis — teori doang, gak ada kode yang bisa dicoba
+
+Catatan ini ditulis **dari pemula untuk pemula** — tiap konsep dijelasin pake analogi sehari-hari + kode yang bisa langsung kamu copy-paste dan jalanin.
