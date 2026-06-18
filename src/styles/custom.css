@@ -104,6 +104,30 @@
   color: #7c3aed;
 }
 
+:root[data-theme='light'] .custom-footer {
+  color: #2e1065;
+}
+
+:root[data-theme='light'] .custom-footer .footer-brand {
+  color: #6d28d9;
+  font-weight: 700;
+  background: none;
+  -webkit-background-clip: unset;
+  background-clip: unset;
+  -webkit-text-fill-color: unset;
+}
+
+:root[data-theme='light'] .custom-footer a {
+  color: #6d28d9;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+:root[data-theme='light'] .custom-footer a:hover {
+  color: #7c3aed;
+  text-decoration: underline;
+}
+
 /* ---------- DARK MODE ---------- */
 :root[data-theme='dark'] {
   --sl-color-bg: #0f172a;
